@@ -1,0 +1,976 @@
+.signInSection {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    gap: 1.4rem;
+    & .signImg {
+        width: 80rem;
+
+        & img {
+            width: 80rem;
+            height: 100vh;
+        }
+    }
+
+    /* sign In Container Sart Here */
+    & .signInContainer {
+        width: 90rem;
+        padding-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3.4rem;
+
+        .logContainer {
+            
+            img {
+                width: 20rem;
+            }
+        }
+
+        .headingContainer {
+            width: 40rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h2 {
+                font-family: Poppins;
+                font-size: 2.4rem;
+                font-weight: 700;
+                color: #333333;
+            }
+
+            p {
+                font-family: Poppins;
+                font-size: 1.4rem;
+                font-weight: 400;
+                color: #64748B;
+            }
+        }
+
+        .formContainer {
+            width: 37rem;
+
+            form {
+                display: flex;
+                flex-direction: column;
+
+                gap: 1.8rem;
+
+                .emal {
+                    width: 37rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: .7rem;
+
+                }
+
+                .password {
+                    width: 37rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: .7rem;
+                    position: relative;
+
+                    .iconEye {
+                        position: absolute;
+                        right: 1rem;
+                        top: 3.2rem;
+                    }
+                }
+
+                .checkBxBtn {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.8rem;
+                    width: 37rem;
+                    position: relative;
+
+                    input {
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        margin-bottom: 0;
+                    }
+
+                    label {
+                        font-size: 1.7rem;
+                    }
+
+                    .forgetPas {
+                        font-family: Poppins;
+                        font-size: 1.4rem;
+                        font-weight: 500;
+                        position: absolute;
+                        right: 3rem;
+
+                        a {
+                            color: #3563E9;
+                        }
+                    }
+                }
+
+                .signBtn {
+                    width: 37rem;
+                    height: 4.8rem;
+                }
+            }
+        }
+
+        .accountSug {
+            font-family: DM Sans;
+            font-size: 1.6rem;
+            font-weight: 400;
+
+            a {
+                color: blue;
+            }
+        }
+
+        .or {
+            margin-top: -1.8rem;
+            font-family: Inter;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #90A3BF;
+        }
+    }
+
+    /* sign In Container End Here */
+    /* Links Container Start Here */
+.linksContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 37rem;
+    .signWith{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        span {
+                font-family: Poppins;
+                font-size: 1.4rem;
+                font-weight: 500;
+                color: #333333;
+            }
+    }
+}
+    /* Links Container End Here */
+       
+
+
+       /* forget In Container Sart Here */
+   & .forgetContainer {
+    width: 90rem;
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.2rem;
+
+    .logContainer {
+        img {
+            width: 20rem;
+        }
+    }
+
+    .headingContainer {
+        width: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+        h2 {
+            font-family: Poppins;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #333333;
+        }
+
+        p {
+            font-family: Poppins;
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #64748B;
+        }
+    }
+
+    .formContainer {
+        width: 40rem;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+            align-items: center;
+            .emal {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                label{
+                    font-size: 1.7rem;
+                }
+
+            }
+            .signBtn {
+                width: 37rem;
+                height: 4.8rem;
+                display: flex;
+                justify-items: center;
+                button{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+}
+
+/* forget In Container End Here */
+
+ /* OTP In Container Sart Here */
+ & .otpContainer {
+    width: 90rem;
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.2rem;
+
+    .logContainer {
+        img {
+            width: 20rem;
+        }
+    }
+
+    .headingContainer {
+        width: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        h2 {
+            font-family: Poppins;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #333333;
+            /* margin-left: 10rem; */
+        }
+
+        p {
+            font-family: Poppins;
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #64748B;
+            /* padding-left: 2rem; */
+        }
+    }
+
+    .formContainer {
+        width: 40rem;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2.5rem;
+
+            .otp-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                /* gap: rem; */
+                padding-left: 1rem;
+                .otpInput{
+                    /* width: 8rem; */
+                    margin-left: 1rem;
+                    gap: 3rem;
+                }
+
+            }
+            .signBtn {
+                width: 40rem;
+                height: 4.8rem;
+                /* margin-left: .5rem; */
+            }
+            .resendBtn{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                button {
+                        font-family: Plus Jakarta Sans;
+                        font-size: 1.6rem;
+                        font-weight: 700;
+                        color:#333333;
+                        background: transparent;
+                        border: none;
+                    }
+            }
+                            .timer {
+                                font-family: Plus Jakarta Sans;
+                                font-size: 1.6rem;
+                                font-weight: 700;
+                                text-align: center;
+            
+                            }
+        }
+    }
+
+}
+
+/* OTP In Container End Here */
+
+
+}
+
+
+
+
+
+/* create New Password  Container Sart Here */
+
+.signInSection {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    gap: 2rem;
+
+    & .newpasswordContainer {
+        width: 90rem;
+        padding-top: 10rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.2rem;
+
+        .logContainer {
+            img {
+                width: 20rem;
+            }
+        }
+
+        .headingContainer {
+            width: 37rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h2 {
+                font-family: Poppins;
+                font-size: 2.4rem;
+                font-weight: 700;
+                color: #333333;
+            }
+
+            p {
+                font-family: Poppins;
+                font-size: 1.4rem;
+                font-weight: 400;
+                color: #64748B;
+                /* margin-left: -4rem; */
+            }
+        }
+
+        /* .formContainer {
+            width: 37rem; */
+
+            form {
+                width: 40rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1.8rem;
+
+                .emal {
+                    /* width: 40rem; */
+                    display: flex;
+                    flex-direction: column;
+                    gap: .7rem;
+
+                }
+
+                .password {
+                    /* width: 40rem; */
+                    display: flex;
+                    flex-direction: column;
+                    gap: .7rem;
+                    position: relative;
+
+                    .iconEye {
+                        position: absolute;
+                        right: 1rem;
+                        top: 3.2rem;
+                    }
+                
+
+                }
+
+                .signBtn button{
+                    width: 37rem;
+                    height: 4.8rem;
+                }
+            }
+        /* } */
+
+    }
+
+    
+    
+    
+    
+}
+/* create New Password Container End Here */
+
+
+  /* signUP Container Start  */
+  .signUpContainer{
+    width: 90rem;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    .logContainer{
+        width: 40rem;
+        display: flex;
+        justify-content: center;
+        img{
+            width: 16rem;
+        }
+    }
+    .headingContainer{
+        width: 40rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+                h2{
+        font-family: Poppins;
+        font-size: 2rem;
+        font-weight: 600;
+        color: #333333;
+        }
+        P{
+        font-family: Poppins;
+        font-size: 1rem;
+        font-weight: 400;
+        color: #64748B;
+        }
+    }
+    .formContainer{
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            input{
+                width: 33rem;
+                height: 3.8rem;
+            }
+            .checkBxBtn {
+                display: flex;
+                align-items: center;
+                gap: 0.8rem;
+                width: 33rem;
+                position: relative;
+
+                input {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    margin-bottom: 0;
+                }
+
+                label {
+                    font-size: 1.4rem;
+                }
+
+                .forgetPas {
+                    font-family: Poppins;
+                    font-size: 1.1rem;
+                    font-weight: 450;
+                    position: absolute;
+                    right: 0;
+
+                    a {
+                        color: #3563E9;
+                    }
+                }
+            }
+            .password {
+                position: relative;
+
+                .iconEye {
+                    position: absolute;
+                    right: 1rem;
+                    top: 2.8rem;
+                }
+            }
+            .signBtn {
+                width: 33rem;
+                height: 3.8rem;
+                margin-top: .7rem;
+                button{
+                    width: 33rem;
+                height: 3.8rem;
+                }
+            }
+        }
+    }
+    .accountSug {
+        font-family: DM Sans;
+        font-size: 1.3rem;
+        font-weight: 400;
+
+        a {
+            color: blue;
+        }
+    }
+
+    .or {
+        margin-top: -1rem;
+        font-family: Inter;
+        font-size: 1.3rem;
+        font-weight: 550;
+        color: #90A3BF;
+    }
+    
+    .linkContainer{
+        width: 33rem;
+        margin-bottom: 0;
+        .signWith{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            span {
+                    font-family: Poppins;
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    color: #333333;
+                }
+        }
+    }
+
+   }
+/* signUP Container End */
+ /* For Validation Styling */
+ .requireVal{
+     font-size: 1rem;
+     color: red;
+     font-weight: 500;
+     font-family: Poppins;
+    }
+    /* For Validation Styling */
+ /* media query start from here  */
+ @media screen and (max-width: 1350px){
+    .signUpContainer {
+        width: 90rem;
+        padding-top: 10rem;
+    }
+ }
+ @media screen and (max-width: 1250px){
+    /* signIn media query start */
+    .signInSection .signImg {
+        width: 80rem;
+    }
+    .signInSection .signImg img {
+        width: 75rem;
+        height: 100vh;
+    }
+    .signInSection .signInContainer .logContainer img {
+        width: 18rem;
+    }
+    .signInSection .signInContainer .headingContainer h2 {
+        font-size: 2.2rem;
+    }
+    .signInSection .signInContainer .headingContainer p {
+        font-size: 1.2rem;
+    }    
+    .signInSection .signInContainer .formContainer form {
+        width: 40rem;
+    }
+        .signInSection .signInContainer .formContainer form .emal label{
+            font-size: 1.1rem;
+        }
+        .signInSection .signInContainer .formContainer form .emal input{
+            width: 35rem;
+        }
+    .signInSection .signInContainer .formContainer form .emal {
+        width: 35rem;
+    }
+    .signInSection .signInContainer .formContainer form .password {
+        width: 35rem;
+    }
+    .signInSection .signInContainer .formContainer form .password  label{
+        font-size: 1.1rem;
+    }
+    .signInSection .signInContainer .formContainer form .password  input{
+        width: 35rem;
+    }
+    .signInSection .signInContainer .formContainer form .password .iconEye {
+        right: 1rem;
+        top: 3rem;
+    }
+    .signInSection .signInContainer .formContainer form .checkBxBtn {
+        width: 35rem;
+    }
+    .signInSection .signInContainer .formContainer form .checkBxBtn label {
+        font-size: 1.5rem;
+    }
+    .signInSection .signInContainer .formContainer form .checkBxBtn .forgetPas a {
+        font-size: 1.3rem;
+    }
+    .signInContainer .accountSug {
+        font-size: 1.4rem !important;
+    }
+    .signInSection .signInContainer .or {
+        font-size: 1.4rem;
+    }
+    .signInSection .linksContainer .signWith span {
+        font-size: 1.2rem;
+    }
+    /* signIn media query end */
+   /* forget container start here */
+   .signInSection .forgetContainer .logContainer img {
+    width: 18rem;
+}
+.signInSection .forgetContainer .headingContainer h2 {
+    font-size: 2rem;
+}
+.signInSection .forgetContainer .headingContainer p {
+    font-size: 1.2rem;
+}
+.signInSection .forgetContainer .formContainer form .emal label {
+    font-size: 1.5rem;
+}
+.signInSection .forgetContainer .formContainer form .signBtn {
+    width: 35rem;
+    height: 4.2rem;
+}
+/* forget container End here */
+/* OTP container start here */
+.signInSection .otpContainer .logContainer img {
+    width: 18rem;
+}
+.signInSection .otpContainer .headingContainer{
+    width: 35rem;
+}
+.signInSection .otpContainer .headingContainer h2{
+    font-size: 2.2rem;
+}
+.signInSection .otpContainer .formContainer form .signBtn {
+    width: 35rem;
+    height: 4.6rem;
+}
+.signInSection .otpContainer .formContainer form .resendBtn button {
+    font-size: 1.4rem;
+}
+/* OTP container End here */
+/* newpassword container End here */
+.signInSection .newpasswordContainer .logContainer img {
+    width: 18rem;
+}
+.signInSection .newpasswordContainer .headingContainer h2 {
+    font-size: 2.2rem;
+}
+.signInSection .newpasswordContainer .formContainer form .password {
+    width: 38rem;
+}
+.signInSection .newpasswordContainer .headingContainer p {
+    font-size: 1.1rem;
+}
+/* newpassword container End here */
+ }
+ @media screen and (max-width: 1100px){
+    .signInSection .signImg {
+        width: 70rem;
+    }
+    .signInSection .signImg img {
+        width: 60rem;
+        height: 100vh;
+    }
+    .signInSection .signInContainer .logContainer img {
+        width: 15rem;
+    }
+    .signInSection .signInContainer .headingContainer  {
+        width: 32rem;
+    }
+    .signInSection .signInContainer .headingContainer h2 {
+        font-size: 2rem;
+    }
+    .signInSection .signInContainer .headingContainer p {
+        font-size: 1rem;
+    }
+    .signInSection .signInContainer .formContainer{
+        width: 32rem;
+    }
+    .signInSection .signInContainer .formContainer form .emal label{
+        font-size: 1rem;
+    }
+    .signInSection .signInContainer .formContainer form .emal {
+        width: 30rem;
+    }
+    .signInSection .signInContainer .formContainer form .emal input{
+        width: 30rem;
+        height: 4rem;
+    }
+    .signInSection .signInContainer .formContainer form .password {
+        width: 30rem;
+    }
+    .signInSection .signInContainer .formContainer form .password input{
+        width: 30rem;
+        height: 4rem;
+    }
+    .signInSection .signInContainer .formContainer form .checkBxBtn {
+        width: 30rem;
+    }
+    .signInSection .linksContainer{
+            width: 32rem;
+    }
+      /* signUp media query Start */
+      .signUpContainer .logContainer img {
+        width: 14rem;
+    }
+    .signUpContainer .headingContainer h2 {
+        font-size: 1.8rem;
+    }
+    .signUpContainer .formContainer{
+        width: 32rem;
+    }
+    .signUpContainer .formContainer form input {
+        width: 32rem;
+        height: 3.8rem;
+    }
+    .signUpContainer .formContainer form .password {
+        width: 32rem;
+    }
+    .signUpContainer .formContainer form .userName {
+        width: 32rem;
+    }
+    .signUpContainer .formContainer form .telNum {
+        width: 32rem;
+    }
+    .signUpContainer .formContainer form .emal {
+        width: 32rem;
+    }
+    .signUpContainer .formContainer form .signBtn button {
+        width: 32rem;
+        height: 3.8rem;
+    }
+    .signUpContainer .linkContainer {
+        width: 32rem;
+    }
+    .signUpContainer .linkContainer .signWith {
+        width: 100%;
+        height: 4rem;
+    }
+    .signUpContainer .linkContainer .signWith span{
+       font-size: 1rem;
+    }
+    /* signUp media query end */
+    /* forget container start here */
+    .signInSection .forgetContainer .logContainer img {
+        width: 16rem;
+    }
+    .signInSection .forgetContainer .headingContainer h2 {
+        font-size: 1.8rem;
+    }
+    /* forget container End here */
+    /* OTP container start here */
+.signInSection .otpContainer .logContainer img {
+    width: 16rem;
+}
+.signInSection .otpContainer .headingContainer{
+    width: 32rem;
+}
+.signInSection .otpContainer .headingContainer h2{
+    font-size: 2rem;
+}
+.signInSection .otpContainer .formContainer form .signBtn {
+    width: 32rem;
+    height: 4.2rem;
+}
+.signInSection .otpContainer .formContainer form .resendBtn button {
+    font-size: 1.4rem;
+}
+/* OTP container End here */
+/* newpassword container Start here */
+.signInSection .newpasswordContainer .logContainer img {
+    width: 16rem;
+}
+.signInSection .newpasswordContainer .headingContainer h2 {
+    font-size: 2rem;
+}
+.signInSection .newpasswordContainer  form  .signBtn  button{
+    width: 35rem;
+    height: 4.8rem;
+} 
+/* newpassword container End here */
+ }
+ @media screen and (max-width: 992px){
+    /* signIn media query start here */
+    
+    .signInSection .signImg {
+        width: 70rem;
+        width: 55rem;
+    }
+    .signInSection .signImg img {
+        width: 50rem;
+        height: 100vh;
+    }
+    .signInSection .signInContainer .logContainer img {
+        width: 13rem;
+    }
+    .signInSection .signInContainer .headingContainer  {
+        width: 28rem;
+    }
+    .signInSection .signInContainer .headingContainer h2 {
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+    .signInSection .signInContainer .formContainer{
+        width: 30rem;
+    }
+    .signInSection .signInContainer .formContainer form {
+        width: 30rem;
+    }
+    .signInSection .signInContainer .formContainer form .emal label{
+        font-size: 1rem;
+    }
+    .signInSection .signInContainer .formContainer form .emal {
+        width: 28rem;
+    }
+    .signInSection .signInContainer .formContainer form .emal input{
+        width: 28rem;
+        height: 4rem;
+    }
+    .signInSection .signInContainer .formContainer form .password {
+        width: 28rem;
+    }
+    .signInSection .signInContainer .formContainer form .password input{
+        width: 28rem;
+        height: 4rem;
+    }
+    .signInSection .signInContainer .formContainer form .checkBxBtn label{
+        font-size: 1.3rem;
+    }
+    .signInSection .linksContainer{
+            width: 30rem;
+    }
+    .signInContainer .accountSug {
+        font-size: 1.3rem !important;
+    }
+    .signInSection .signInContainer .or {
+        font-size: 1.3rem;
+    }
+    .signInSection .linksContainer .signWith span {
+        font-size: 1rem;
+    }
+    /* signIn media query end here */
+      /* signUp media query Start */
+      .signUpContainer .logContainer img {
+        width: 14rem;
+    }
+    .signUpContainer .headingContainer h2 {
+        font-size: 1.8rem;
+    }
+    .signUpContainer .formContainer{
+        width: 28rem;
+    }
+    .signUpContainer .formContainer form input {
+        width: 28rem;
+        height: 3.8rem;
+    }
+    .signUpContainer .formContainer form .password {
+        width: 28rem;
+    }
+    .signUpContainer .formContainer form .userName {
+        width: 28rem;
+    }
+    .signUpContainer .formContainer form .telNum {
+        width: 28rem;
+    }
+    .signUpContainer .formContainer form .emal {
+        width: 28rem;
+    }
+    .signUpContainer .formContainer form .signBtn button {
+        width: 28rem;
+        height: 3.8rem;
+    }
+    .signUpContainer .linkContainer {
+        width: 28rem;
+    }
+    .signUpContainer .linkContainer .signWith {
+        width: 100%;
+        height: 3.8rem;
+    }
+    
+    /* signUp media query end */
+       /* forget container start here */
+   .signInSection .forgetContainer .logContainer img {
+    width: 15rem;
+}
+.signInSection .forgetContainer .headingContainer h2 {
+    font-size: 1.6rem;
+}
+
+.signInSection .forgetContainer .formContainer form .emal label {
+    font-size: 1.2rem;
+}
+.signInSection .forgetContainer .formContainer form .signBtn {
+    width: 30rem;
+    height: 4.2rem;
+    button{
+        font-size: 1rem;
+    }
+}
+/* forget container End here */
+/* OTP container start here */
+   /* OTP container start here */
+   .signInSection .otpContainer .logContainer img {
+    width: 14rem;
+}
+.signInSection .otpContainer .headingContainer{
+    width: 28rem;
+}
+.signInSection .otpContainer .headingContainer h2{
+    font-size: 1.8rem;
+}
+.signInSection .otpContainer .headingContainer p{
+    font-size: 1.2rem;
+}
+.signInSection .otpContainer .formContainer form .signBtn {
+        width: 28rem;
+        height: 4rem;
+        font-size: 1rem;
+}
+.signInSection .otpContainer .formContainer form .resendBtn button {
+    font-size: 1.2rem;
+
+}
+/* OTP container End here */
+/* newpassword container Start here */
+.signInSection .newpasswordContainer .logContainer img {
+    width: 14rem;
+}
+.signInSection .newpasswordContainer .headingContainer h2 {
+    font-size: 1.8rem;
+}
+.signInSection .newpasswordContainer  form  .signBtn  button{
+    width: 30rem;
+    height: 4rem;
+    font-size: 1rem;
+} 
+/* newpassword container End here */
+ }
+ @media screen and (max-width: 800px){
+
+ }
+ @media screen and (max-width: 576px){
+
+ }
+ /* media query End here  */

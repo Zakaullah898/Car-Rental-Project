@@ -1,0 +1,26 @@
+<div class="card" >
+    <div class="headingContainer">
+        <div class="carNam">{{carName}}</div>
+
+        <div class="likeImg"><img [src]="isVisible? 'heart.png': 'Like.png' " alt="" (click)="getImg()"></div>
+    </div>
+    <h2>Sport</h2>
+    <div class="imgContainer" (click)="carsDetailPage()">
+        <!-- <img src="`data:image/jpeg;base64,${carImg}`" alt=""> -->
+        <img [src]="carImg" alt="Car Image">
+
+    </div>
+    <div class="menueSpecific">
+        <div class="gasolin"><img src="./petrol.png" alt=""><span>{{tankCapacity}}</span></div>
+        <div class="manual"><img src="./staring.png" alt=""><span>{{transmission}}</span></div>
+        <div class="profile"><img src="./profile.png" alt=""> <span>{{sittingCapacity}}</span></div>
+    </div>
+    <div class="rentApplyContainer">
+        <div class="price"><span class="pkr">pkr.</span><span class="pkrNum">{{pkr}}/</span><span class="day">day</span>
+        </div>
+        <button class="rentBtn" (click)="goToRental()">Rent Now</button>
+    </div>
+</div>
+        
+   
+        

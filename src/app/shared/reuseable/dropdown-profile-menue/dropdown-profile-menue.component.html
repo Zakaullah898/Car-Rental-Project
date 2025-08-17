@@ -1,0 +1,41 @@
+<div class="dropdown-menu" >
+    <div class="profile-header">
+      <img src="./rohan.png" alt="Profile Image" class="profile-img" />
+      <div class="profile-info">
+        <p class="profile-name">Taimoor A</p>
+        <p class="profile-subtext">View and Edit your Profile</p>
+      </div>
+      <!-- <div class="profile-icon">
+        <div class="notification-badge">H</div>
+      </div> -->
+    </div>
+    <ul class="menu-list">
+      <li (click)="userProfile()">
+        <i class="icon-user" >
+            <fa-icon [icon]="faUser"></fa-icon>
+        </i>
+        <span>Profile</span>
+      </li>
+      <li (click)="favourite()">
+        <i class="icon-heart">
+            <fa-icon [icon]="faHeart"></fa-icon>
+        </i>
+        <span>Favourite</span>
+      </li>
+      <li (click)="history()">
+        <i class="icon-history">
+            <fa-icon [icon]="faClipboard"></fa-icon>
+
+        </i>
+        <span>History</span>
+      </li>
+ 
+    <li (click)="onLogOut()">
+        <i class="icon-logout">
+            <fa-icon [icon]="faShare"></fa-icon>
+        </i>
+        <span>Logout</span>
+      </li>
+    </ul>
+  </div>
+  

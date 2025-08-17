@@ -1,0 +1,268 @@
+<div class="signInSection">
+    
+    @if (isSignImgVisi) {
+    <div class="signImg">
+        <img src="./signformImg.png" alt="" >
+    </div>
+}
+    <!-- Sign Container Start -->
+    <div class="signInContainer" *ngIf="currentRoute == 'signIn'">
+        
+      
+        <div class="logContainer">
+                <img src="./logoB.png" alt="">
+            </div>
+        
+        <div class="headingContainer">
+            <h2>Sign in to your Account</h2>
+            <p>Welcome back! please enter your detail</p>
+        </div>
+        <div class="formContainer">
+            <form [formGroup]="logInForm">
+
+                <div class="emal">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" placeholder="Enter your email" formControlName="email">
+                    @if(logInForm.controls['email'].touched && logInForm.controls['email'].errors?.['email']){
+
+                        <div class="requireVal">This is mandatory</div>
+                    }
+                </div>
+                <div class="password">
+                    <label for="password">Password</label>
+                    <input [type]="changeType? 'text': 'password'" name="password" id="password" placeholder="Enter your password"  formControlName="password">
+                    <span class="iconEye" (click)="showPass()"><img [src]="isIconVIs?'./openEye.png ' :'./eyeoff.png'" alt=""></span>
+                    
+                </div>
+                <div class="checkBxBtn">
+                    <input type="checkbox" name="checkbox" id="remember">
+                    <label for="remember">Remember me</label>
+                    <div class="forgetPas"><a routerLink="/forgetPassword">Forgot Password?</a>
+                    </div>
+                </div>
+                <div class="signBtn">
+                    <button class="signInBtn"  (click)="onSignIn()" >Sign In</button>
+                </div>
+                <div class="accountSug">
+                    Dont have an account? <span><a (click)="goToSignUp()">Sign Up</a></span>
+                    <!-- [routerLink]="['/signUp']" -->
+                </div>
+            </form>
+        </div>
+        <div class="or">OR</div>
+        <div class="linksContainer">
+            <div class="signWith iconContainer">
+                <img src="./gIcon.png" alt="" class="icomImg">
+                <span>Sign in with Google</span>
+            </div>
+            <div class="signWith iconContainer">
+                <img src="./fIcon.png" alt="" class="icomImg">
+                <span>Sign in with Facebook</span>
+            </div>
+            <div class="signWith iconContainer">
+                <img src="./apIcon.png" alt="" class="icomImg">
+                <span>Sign in with Apple</span>
+            </div>
+        </div>
+    </div>
+    <!-- Sign Container End -->
+     <!-- SignUp Container Start  -->
+     <div class="signUpContainer" *ngIf="currentRoute == 'signUp'">
+        <div class="logContainer">
+            <img src="./logoB.png" alt="">
+        </div>
+        <div class="headingContainer">
+            <h2>Sign Up to your Account</h2>
+            <p>Welcome back! please enter your detail</p>
+        </div>
+        <div class="formContainer">
+            <form [formGroup]="logInForm">
+                <div class="userName inputRow">
+                    <label for="userName">Name</label>
+                    <input type="text" id="userName" name="userName" placeholder="Enter your Name" formControlName="name">
+                    @if(logInForm.controls['name'].touched && logInForm.controls['name'].errors?.['required']){
+
+                        <div class="requireVal">This is mandatory</div>
+                    }
+                </div>
+                <div class="telNum inputRow">
+                    <label for="phoneNum">Phone</label>
+                    <input type="tel" id="phoneNum" name="emaphoneNumil" placeholder="Enter your phone No" formControlName="phoneNumber">
+                    @if(logInForm.controls['phoneNumber'].touched && logInForm.controls['phoneNumber'].errors?.['required']){
+
+                        <div class="requireVal">This is mandatory</div>
+                    }
+                </div>
+                <div class="emal inputRow">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" placeholder="Enter your email" formControlName="email" >
+                    @if(logInForm.controls['email'].touched && logInForm.controls['email'].errors?.['email']){
+
+                        <div class="requireVal">Email is mandatory</div>
+                    }
+                </div>
+                <div class="password inputRow">
+                    <label for="password">Password</label>
+                    <input [type]="changeType? 'text': 'password'" name="password" id="password" placeholder="Enter your password" formControlName="password">
+                    <span class="iconEye" (click)="showPass()"><img [src]="isIconVIs?'./openEye.png ' :'./eyeoff.png'" alt=""></span>
+                    
+                </div>
+
+                <div class="signBtn">
+                    <button class="signInBtn" (click)=" onSignUp(logInForm.get('email')?.value)">Sign Up</button>
+                </div>
+                <div class="accountSug">
+                    Dont have an account? <span><a (click)="goToSignIn()">Sign In</a></span>
+                    <!-- [routerLink]="['/signIn']"   -->
+                </div>
+            </form>
+        </div>
+        <div class="or">OR</div>
+        <div class="linkContainer inputRow">
+            <div class="signWith iconContainer">
+                <img src="./gIcon.png" alt="" class="icomImg">
+                <span>Sign in with Google</span>
+            </div>
+            <div class="signWith iconContainer">
+                <img src="./fIcon.png" alt="" class="icomImg">
+                <span>Sign in with Facebook</span>
+            </div>
+            <div class="signWith iconContainer">
+                <img src="./apIcon.png" alt="" class="icomImg">
+                <span>Sign in with Apple</span>
+            </div>
+        </div>
+    </div>
+     <!-- SignUp Container End -->
+
+         <!-- Forget Container Start -->
+    <div class="forgetContainer" *ngIf="currentRoute == 'forgetPassword'">
+        <div class="logContainer">
+            <img src="./logoB.png" alt="">
+        </div>
+        <div class="headingContainer">
+            <h2>Forget your Account?</h2>
+            <p>Please enter your registered email</p>
+        </div>
+        <div class="formContainer">
+            <form [formGroup]="logInForm">
+
+                <div class="emal">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" placeholder="Enter your email" formControlName="email">
+                </div>
+
+                <div class="signBtn">
+                    <button class="signInBtn" (click)="getNewOtp(logInForm.get('email')?.value)">Continue</button>
+                </div>
+               
+            </form>
+        </div>
+       
+    </div>
+    <!-- Forget Container End -->
+   
+        <!-- otp Container Start -->
+        <div class="otpContainer" *ngIf="currentRoute=='otp'">
+            <div class="logContainer">
+                <img src="./logoB.png" alt="">
+            </div>
+            <div class="headingContainer">
+                <h2>OTP Verification</h2>
+                <p>Please enter the OTP code we have send to your 
+                    Registered email</p>
+            </div>
+            <div class="formContainer">
+                <form [formGroup]="logInForm">
+                    <div class="otp-container" >
+                         <!-- #ngOtpInput -->
+                        
+                         <!-- [formCtrl]="logInForm.value" -->
+                    <!-- <h2>{{getEmail}}</h2> -->
+                        <ng-otp-input [config]="config"  (onInputChange)="onOtpChange($event)"></ng-otp-input>
+                    </div>
+                 <div class="timer">{{counter | formatTime}}</div>
+                    <div class="signBtn">
+                       
+                        <button class="signInBtn signBtn"  (click)="getOtp()">Continue</button>
+                    </div>
+                   <div class="resendBtn">
+                    <button (click)="resendOtp()">Resend</button>
+                   </div>
+                </form>
+            </div>
+           
+        </div>
+        <!-- otp Container End -->
+        <!-- newOTP Container Start -->
+        <div class="otpContainer" *ngIf="currentRoute=='newOtp'">
+            <div class="logContainer">
+                <img src="./logoB.png" alt="">
+            </div>
+            <div class="headingContainer">
+                <h2>OTP Verification</h2>
+                <p>Please enter the OTP code we have send to your 
+                    Registered email</p>
+            </div>
+            <div class="formContainer">
+                <form [formGroup]="logInForm">
+                    <div class="otp-container" >
+                         <!-- #ngOtpInput -->
+                        
+                         <!-- [formCtrl]="logInForm.value" -->
+                    <!-- <h2>{{getEmail}}</h2> -->
+                        <ng-otp-input [config]="config"  (onInputChange)="onOtpChange($event)"></ng-otp-input>
+                    </div>
+                 <div class="timer">{{counter | formatTime}}</div>
+                    <div class="signBtn">
+                       
+                        <button class="signInBtn signBtn"  (click)="resendNewOtp()">Continue</button>
+                    </div>
+                   <div class="resendBtn">
+                    <button (click)="resendOtp()">Resend</button>
+                   </div>
+                </form>
+            </div>
+           
+        </div>
+        <!-- newOTP Container End -->
+
+
+         <!-- crete new password Container Start -->
+    <div class="newpasswordContainer"  *ngIf="currentRoute == 'newPassword'">
+        <div class="logContainer">
+            <img src="./logoB.png" alt="">
+        </div>
+        <div class="headingContainer">
+            <h2>Create New Password</h2>
+            <p>Please Enter your Password and Confirm Password</p>
+        </div>
+        <!-- <div class="formContainer"> -->
+            <form [formGroup]="logInForm">
+
+   
+                <div class="password">
+                    <label for="password">Password</label>
+                    <input [type]="toggleNewPasword? 'text': 'password'" name="password" id="password" placeholder="Enter your password" formControlName="password">
+                    <span class="iconEye" (click)="showNewPass()"><img [src]="toggleNewPasword?'./openEye.png ' :'./eyeoff.png'" alt="" ></span>
+                    
+                </div>
+                <div class="password">
+                    <label for="conformPassword">Conform Password</label>
+                    <input [type]="changeType? 'text': 'password'" name="password" id="conformPassword" placeholder="Enter your conform password" formControlName="newPassword">
+                    <span class="iconEye"><img [src]="isIconVIs?'./openEye.png ' :'./eyeoff.png'" alt=""  (click)="showPass()"></span>
+                    
+                </div>
+
+                <div class="signBtn">
+                    <button class="signInBtn" (click)="resetPassword()">Continue</button>
+                </div>
+
+            </form>
+        <!-- </div> -->
+       
+        
+    </div>
+    <!--  crete new password Container End -->
+</div>
+    

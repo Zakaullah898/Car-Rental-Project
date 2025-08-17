@@ -1,0 +1,14 @@
+<div class="dropdownContainer row " >
+    <div class="dropdown formSelect" [class]="myClass">{{selectedValue || selectedOpt}}
+        <fa-icon [icon]="isDrop? arrowUp : arrowDown" (click)="dropdownShow()"  class="arrowIcon"></fa-icon>
+    </div>
+    @if(isDrop){
+        <ul class="row">
+            @for (item of list ; track $index) {
+        
+                    <li class="dropdownItem formSelect" (click)=" selectedValue = item " (click)="dropdownShow()">{{item}}</li>
+                }
+            </ul>
+    }
+
+</div>

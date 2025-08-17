@@ -1,0 +1,850 @@
+.carInfoSection {
+    width: 100%;
+    align-items: center;
+    height: auto;
+    margin-bottom: 5rem;
+    gap: 2.5rem;
+
+    margin-top: 16rem;
+
+    /* image style start  */
+    .mainCarInfo {
+        width: 100%;
+        justify-content: center;
+        height: auto;
+        gap: 5rem;
+
+        /* flex-wrap: wrap; */
+        .carImgCont {
+            width: 90rem;
+            height: 60rem;
+            row-gap: 5rem;
+
+            .mainImg {
+                width: 100%;
+                img{
+
+                    height: 38.5rem;
+                }
+            }
+
+            .restImg {
+                width: 100%;
+                column-gap: 5rem;
+
+                img {
+                    width: 14.8rem;
+                    height: auto;
+                }
+            }
+        }
+
+        /* image style End  */
+        /* title description style  start here  */
+        .titleDescrip {
+            width: 55rem;
+            height: 56rem;
+            padding-top: 3.5rem;
+            padding-left: 3rem;
+            padding-right: 3rem;
+            gap: 2rem;
+            background-color: white;
+
+            .carName {
+                gap: 22rem;
+
+                .likeImg {
+                    img {
+                        width: 2.4rem;
+                        height: 2.4rem;
+                    }
+                }
+            }
+
+            .nameReviw {
+                gap: 0rem;
+
+                .reviewthisCar {
+                    gap: 1.5rem;
+
+                    .ratedStar {
+                        gap: .5rem;
+
+                        img {
+                            width: 2rem;
+                            height: 2rem;
+                        }
+                    }
+
+                    .reviewNum {
+                        font-family: Plus Jakarta Sans;
+                        font-size: 1.4rem;
+                        font-weight: 600;
+                        color: #333333;
+                    }
+                }
+            }
+
+            .paraDisc {
+                font-family: Plus Jakarta Sans;
+                font-size: 1.9rem;
+                font-weight: 400;
+                line-height: 4rem;
+                color: #333333;
+            }
+
+            .aboutCar {
+                .col {
+                    gap: 4.5rem;
+                }
+            }
+
+            .bookNow {
+                gap: 20rem;
+
+                .pric {
+                    h2 {
+                        font-family: Plus Jakarta Sans;
+                        font-size: 2.8rem;
+                        font-weight: 700;
+                        color: #333333;
+                        position: relative;
+                    }
+
+                    h2::after {
+                        content: 'day';
+                        position: absolute;
+                        font-family: Plus Jakarta Sans;
+                        font-size: 1.6rem;
+                        top:1rem;
+                        font-weight: 700;
+                        color: #90A3BF;
+                    }
+
+                    del {
+                        font-family: Plus Jakarta Sans;
+                        font-size: 1.6rem;
+                        font-weight: 700;
+                        color: #90A3BF;
+                    }
+                }
+            }
+        }
+
+        /* title description style  End here  */
+    }
+
+    .reviewContainer {
+        width: 95%;
+        height: 40rem;
+        background-color: white;
+        padding: 0 3rem 0 3rem;
+        .headingReview {
+            margin: 3.5rem 0 0 0rem;
+            gap: 2rem;
+
+            h2 {
+                /* font-size: 2rem; */
+                font-family: Plus Jakarta Sans;
+                font-size: 3.2rem;
+                font-weight: 700;
+                color: #1A202C;
+            }
+
+            .reviewCount {
+                width: 4.4rem;
+                height: 2.8rem;
+                border-radius: .4rem;
+                font-family: Plus Jakarta Sans;
+                font-size: 1.4rem;
+                font-weight: 700;
+                background: #3563E9;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .reviewBy {
+            width: 100%;
+            gap: 1rem;
+            position: relative;
+
+            .reviewHeading {
+
+
+                .profil {
+                    gap: 1.5rem;
+                    justify-content: center;
+                    align-items: center;
+
+                    .profilImg {
+                        img {
+                            border-radius: 50%;
+                        }
+                    }
+
+                    .userName {
+                        width: 20rem;
+                        gap: 1.5rem;
+
+                        .name {
+                            font-family: Plus Jakarta Sans;
+                            font-size: 2rem;
+                            font-weight: 700;
+                            color: #1A202C;
+                        }
+
+                        .abouWork {
+                            font-family: Plus Jakarta Sans;
+                            font-size: 1.4rem;
+                            font-weight: 500;
+                            color: #90A3BF;
+                        }
+                    }
+                }
+
+                .starRated {
+                    position: absolute;
+                    right: 0;
+                    gap: 1.5rem;
+
+                    .date {
+                        font-family: Plus Jakarta Sans;
+                        font-size: 1.4rem;
+                        font-weight: 500;
+                        line-height: 2.2rem;
+                        color: #90A3BF;
+                        text-align: end;
+                    }
+                    .star{
+                        img{
+                            width: 2rem;
+                        }
+                    }
+                }
+            }
+
+            .reviewDiscription {
+                font-family: Plus Jakarta Sans;
+                font-size: 1.4rem;
+                font-weight: 400;
+                color: #90A3BF;
+                line-height: 2.8rem;
+                padding-left: 8rem;
+            }
+        }
+
+        .showAll{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            gap: 1.5rem;
+            h2{
+                
+                font-family: Plus Jakarta Sans;
+                font-size: 1.6rem;
+                font-weight: 600;
+                color: #90A3BF;
+            }
+            .icon{
+                align-items: center;
+                gap: 1.5rem;
+                /* width: 20rem; */
+                height: auto;
+                .arrowIcon{
+                    font-size: 1.6rem;
+                    color: #90A3BF;
+                }
+            }
+            
+        }
+    }
+
+    .recentCars{
+        width: 95%;
+        height: auto;
+        align-items: center;
+        gap: 2rem;
+        position: relative;
+        .recenHeading{
+            width: 97%;
+            height: auto;
+            justify-content: space-between;
+            .recentCar{
+                font-family: Plus Jakarta Sans;
+                font-size: 1.6rem;
+                font-weight: 600;
+                color: #90A3BF;
+                /* margin-left: 2rem; */
+            }
+                  .ViewAll {
+                      color: #3563E9;
+                      font-family: Plus Jakarta Sans;
+                      font-size: 1.6rem;
+                      font-weight: 600;
+                      cursor: pointer;
+                  }
+        }
+
+
+    }
+    .topRatedCars{
+        width: 95%;
+        height: auto;
+        gap: 2rem;
+        align-items: center;
+        .recenHeading{
+            width: 97%;
+            height: auto;
+            justify-content: space-between;
+            .recentCar{
+                font-family: Plus Jakarta Sans;
+                font-size: 1.6rem;
+                font-weight: 600;
+                color: #90A3BF;
+                /* margin-left: 2rem; */
+            }
+            .ViewAll {
+                color: #3563E9;
+                font-family: Plus Jakarta Sans;
+                font-size: 1.6rem;
+                font-weight: 600;
+  
+            }
+        }
+    }
+}
+.carsCard{
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8rem;
+ }
+.rentBtn {
+    width: 13rem;
+    height: 5rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+    font-family: Plus Jakarta Sans;
+    border-radius: 1rem;
+    border: none;
+    color: white;
+    background-color: #3563E9;
+}
+
+.titlHeading {
+    font-family: Plus Jakarta Sans;
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #1A202C;
+}
+
+.aboutCarHeading {
+    font-family: Plus Jakarta Sans;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 3rem;
+    color: #90A3BF;
+}
+
+.aboutCarHeading2 {
+    font-family: Plus Jakarta Sans;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 3rem;
+    color: #1A202C;
+}
+/* media query start from here  */
+@media screen and (max-width: 1350px){
+    /* image style Start  */
+    .carInfoSection .mainCarInfo .carImgCont {
+        width: 80rem;
+        height: 55rem;
+        row-gap: 1rem;
+    }
+    /* image style End  */
+            /* title description style  start here  */
+            .carInfoSection .mainCarInfo .titleDescrip {
+                width: 50rem;
+                height: 50rem;
+
+            }
+            .carInfoSection .mainCarInfo .titleDescrip .carName {
+                gap: 26rem;
+            }
+            .titlHeading {
+                font-size: 2rem;
+            }
+            .carInfoSection .mainCarInfo .titleDescrip .paraDisc {
+                font-size: 1.6rem;
+                line-height: 3rem;
+            }
+            .aboutCarHeading {
+                font-size: 1.8rem;
+                font-weight: 400;
+            }
+            .aboutCarHeading2 {
+                font-size: 1.8rem;
+            }
+            .carInfoSection .mainCarInfo .titleDescrip .bookNow .pric h2 {
+                font-size: 2.5rem;
+            }
+            .carInfoSection .mainCarInfo .titleDescrip .bookNow .pric h2::after {
+                font-size: 1.5rem;
+                top: 0.2rem;
+            }
+            /* title description style  End here  */
+            /* reviw container start from here  */
+            .carInfoSection .reviewContainer {
+                width: 93%;
+            }
+            /* reviw container End here  */
+            /* recent cars section started here  */
+            .carInfoSection .recentCars .recenHeading {
+                width: 90%;
+            }
+            /* recent cars section Ended here  */
+            /* Top rated cars section started here */
+            .carInfoSection .topRatedCars .recenHeading {
+                width: 90%;
+            }
+            /* Top rated cars section Ended here */
+ }
+ @media screen and (max-width: 1250px){
+    /* image style Start  */
+    .carInfoSection .mainCarInfo .carImgCont {
+        width: 62rem;
+        height: 54rem;
+        row-gap: 2rem;
+    }
+    .carInfoSection .mainCarInfo .carImgCont .mainImg img {
+        height: 35.5rem;
+    }
+    /* image style End  */
+            /* title description style  start here  */
+            .carInfoSection .mainCarInfo .titleDescrip {
+                width: 45rem;
+                height: 45rem;
+            }
+            .carInfoSection .mainCarInfo .titleDescrip .carName {
+                gap: 26rem;
+            }
+            .titlHeading {
+                font-size: 2rem;
+            }
+            .carInfoSection .mainCarInfo .titleDescrip .nameReviw .reviewthisCar .reviewNum {
+                font-size: 1.2rem;
+            }
+            .carInfoSection .mainCarInfo .titleDescrip .nameReviw .reviewthisCar .ratedStar img {
+                width: 1.8rem;
+                height: 1.8rem;
+            }
+            .carInfoSection .mainCarInfo .titleDescrip .paraDisc {
+                font-size: 1.4rem;
+                line-height: 2rem;
+            }
+            .aboutCarHeading {
+                font-size: 1.5rem;
+            }
+            .aboutCarHeading2 {
+                font-size: 1.5rem;
+            }
+            .carInfoSection .mainCarInfo .titleDescrip .bookNow .pric h2 {
+                font-size: 2.2rem;
+            }
+            .carInfoSection .mainCarInfo .titleDescrip .bookNow .pric h2::after {
+                font-size: 1.3rem;
+                top: 0.2rem;
+            }
+            .rentBtn {
+                width: 11rem;
+                height: 4rem;
+                font-size: 1.5rem;
+                border-radius: .8rem;
+            }
+            .carInfoSection .mainCarInfo .titleDescrip .bookNow .pric del {
+                font-size: 1.4rem;
+            }
+            /* title description style  End here  */
+            /* reviw container start from here  */
+            .carInfoSection .reviewContainer {
+                width: 82%;
+            }
+            /* .carInfoSection .reviewContainer .headingReview h2 {
+                font-size: 1.8rem;
+            } */
+            .carInfoSection .reviewContainer .headingReview .reviewCount {
+                width: 4rem;
+                height: 2.6rem;
+                font-size: 1.2rem;
+            }
+            .carInfoSection .reviewContainer .reviewBy .reviewHeading .profil .userName .name {
+                font-size: 1.8rem;
+            }
+            .carInfoSection .reviewContainer .reviewBy .reviewHeading .profil .userName .abouWork {
+                font-size: 1.2rem;
+            }
+            .carInfoSection .reviewContainer .reviewBy .reviewHeading .starRated .date {
+                
+                font-size: 1.2rem;
+            }
+            .carInfoSection .reviewContainer .reviewBy .reviewDiscription {
+                font-size: 1.2rem;
+            }
+            .carInfoSection .reviewContainer .reviewBy .reviewHeading .starRated .star img {
+                width: 1.8rem;
+            }
+            .carInfoSection .reviewContainer .showAll h2 {
+                font-size: 1.4rem;
+            }
+            /* reviw container End here  */
+            /* recent cars section started here  */
+            .carInfoSection .recentCars .recenHeading {
+                width: 85%;
+            }
+            /* recent cars section Ended here  */
+            /* Top rated cars section started here */
+            .carInfoSection .topRatedCars .recenHeading {
+                width: 85%;
+            }
+            /* Top rated cars section Ended here */
+ }
+ @media screen and (max-width: 1100px){
+    /* image style Start  */
+    .carInfoSection .mainCarInfo .carImgCont {
+        width: 50rem;
+        height: 50rem;
+        row-gap: 7.4rem;
+    }
+    .carInfoSection .mainCarInfo .carImgCont .restImg {
+        column-gap: 2rem;
+    }
+    
+    
+    .carInfoSection .mainCarInfo .carImgCont .mainImg img {
+        height: 35.5rem;
+    }
+    /* image style End  */
+            /* title description style  start here  */
+            .carInfoSection .mainCarInfo .titleDescrip {
+                width: 38rem;
+        height: 50rem;
+            }
+            .carInfoSection .mainCarInfo .titleDescrip .carName {
+                gap: 18rem;
+            }
+            .titlHeading {
+                font-size: 1.6rem;
+            }
+            .carInfoSection .mainCarInfo .titleDescrip .aboutCar .col {
+                gap: 3rem;
+            }
+           
+            .aboutCarHeading {
+                font-size: 1.4rem;
+            }
+            .aboutCarHeading2 {
+                font-size: 1.4rem;
+            }
+            .carInfoSection .mainCarInfo .titleDescrip .bookNow .pric h2 {
+                font-size: 2rem;
+            }
+            .carInfoSection .mainCarInfo .titleDescrip .bookNow {
+                gap: 14rem;
+            }
+            
+            .rentBtn {
+                width: 10rem;
+                height: 3.8rem;
+                font-size: 1.2rem;
+                border-radius: .5rem;
+            }
+            .carInfoSection .mainCarInfo .titleDescrip .bookNow .pric del {
+                font-size: 1.4rem;
+            }
+            /* title description style  End here  */
+            /* reviw container start from here  */
+            .carInfoSection .reviewContainer {
+                width: 80%;
+            }
+            .carInfoSection .reviewContainer .headingReview h2 {
+                font-size: 1.8rem;
+            }
+            .carInfoSection .reviewContainer .headingReview .reviewCount {
+                width: 3.5rem;
+        height: 2.4rem;
+        font-size: 1rem;
+            }
+            .carInfoSection .reviewContainer .reviewBy .reviewHeading .profil .userName .name {
+                font-size: 1.6rem;
+            }
+            .carInfoSection .reviewContainer .reviewBy .reviewHeading .profil .userName .abouWork {
+                font-size: 1rem;
+            }
+            .carInfoSection .reviewContainer .reviewBy .reviewHeading .starRated .date {
+                
+                font-size: 1rem;
+            }
+            .carInfoSection .reviewContainer .reviewBy .reviewDiscription {
+                font-size: 1rem;
+            }
+            
+            .carInfoSection .reviewContainer .showAll h2 {
+                font-size: 1.2rem;
+            }
+            /* reviw container End here  */
+            /* recent cars section started here  */
+            .carInfoSection .recentCars .recenHeading {
+                width: 73%;
+            }
+            /* recent cars section Ended here  */
+            /* Top rated cars section started here */
+            .carInfoSection .topRatedCars .recenHeading {
+                width: 73%;
+            }
+            /* Top rated cars section Ended here */
+ }
+ @media screen and (max-width: 992px){
+     /* image style Start  */
+     .carInfoSection .mainCarInfo .carImgCont {
+    width: 40rem;
+        height: 50rem;
+        row-gap: 2.4rem;
+}
+.carInfoSection .mainCarInfo .carImgCont .restImg {
+    column-gap: 1rem;
+}
+
+.carInfoSection .mainCarInfo .carImgCont .restImg img {
+    width: 7rem;
+    height: auto;
+}
+.carInfoSection .mainCarInfo .carImgCont .mainImg img {
+    height: 30rem;
+}
+/* image style End  */
+        /* title description style  start here  */
+        .carInfoSection .mainCarInfo .titleDescrip {
+            width: 32rem;
+            height: 50rem;
+        }
+        .titlHeading {
+            font-size: 1.3rem;
+        }
+        .carInfoSection .mainCarInfo .titleDescrip .paraDisc {
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+        }
+        .carInfoSection .mainCarInfo .titleDescrip .aboutCar .col {
+            gap: 2rem;
+        }
+       
+        .aboutCarHeading {
+            font-size: 1.2rem;
+        }
+        .aboutCarHeading2 {
+            font-size: 1.2rem;
+        }
+        .carInfoSection .mainCarInfo .titleDescrip .bookNow .pric h2 {
+            font-size: 1.8rem;
+        }
+        .carInfoSection .mainCarInfo .titleDescrip .bookNow {
+            gap: 12rem;
+        }
+        .carInfoSection .mainCarInfo .titleDescrip .bookNow .pric h2::after {
+            font-size: 1.2rem;
+        }
+        
+        .rentBtn {
+            width: 7rem;
+        height: 3.6rem;
+        font-size: 1rem;
+        }
+        .carInfoSection .mainCarInfo .titleDescrip .bookNow .pric del {
+            font-size: 1.4rem;
+        }
+        /* title description style  End here  */
+        /* reviw container start from here  */
+        .carInfoSection .reviewContainer {
+            width: 80%;
+        }
+        .carInfoSection .reviewContainer .headingReview h2 {
+            font-size: 1.6rem;
+        }
+        .carInfoSection .reviewContainer .headingReview .reviewCount {
+            width: 3.5rem;
+    height: 2.4rem;
+    font-size: 1rem;
+        }
+        .carInfoSection .reviewContainer .reviewBy .reviewHeading .profil .profilImg img {
+            width: 5rem;
+            aspect-ratio: 1;
+        }
+        .carInfoSection .reviewContainer .reviewBy .reviewHeading .profil .userName .name {
+            font-size: 1.4rem;
+        }
+        /* .carInfoSection .reviewContainer .reviewBy .reviewHeading .profil .userName .abouWork {
+            font-size: 1.rem;
+        } */
+        .carInfoSection .reviewContainer .reviewBy .reviewHeading .starRated .date {
+            
+            font-size: 1rem;
+        }
+        .carInfoSection .reviewContainer .reviewBy .reviewDiscription {
+            font-size: 1rem;
+        }
+        
+        .carInfoSection .reviewContainer .showAll h2 {
+            font-size: 1.1rem;
+        }
+        .carInfoSection .recentCars .recenHeading .recentCar {
+            font-size: 1.4rem;
+        }
+        .carInfoSection .recentCars .recenHeading .ViewAll {
+            font-size: 1.4rem;
+        }
+        .carInfoSection .topRatedCars .recenHeading .recentCar {
+            font-size: 1.4rem;
+        }
+        .carInfoSection .topRatedCars .recenHeading .ViewAll{
+            font-size: 1.4rem;
+        }
+        /* reviw container End here  */
+        /* recent cars section started here  */
+        .carsCard {
+            gap: 2rem;
+        }
+        /* recent cars section Ended here  */
+        /* Top rated cars section started here */
+        .carInfoSection .topRatedCars .recenHeading {
+            width: 73%;
+        }
+        /* Top rated cars section Ended here */
+ }
+
+ @media screen and (max-width: 800px){
+    .carInfoSection .mainCarInfo {
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
+    }
+         /* image style Start  */
+     .carInfoSection .mainCarInfo .carImgCont {
+        height: 40rem;
+        row-gap: 2.4rem;
+}
+/* .carInfoSection .mainCarInfo .carImgCont .restImg {
+    column-gap: 1rem;
+}
+
+.carInfoSection .mainCarInfo .carImgCont .restImg img {
+    width: 7rem;
+    height: auto;
+}
+.carInfoSection .mainCarInfo .carImgCont .mainImg img {
+    height: 30rem;
+} */
+/* image style End  */
+        /* title description style  start here  */
+        .carInfoSection .mainCarInfo .titleDescrip {
+            width: 45rem;
+            height: 36rem;
+        }
+        .titlHeading {
+            font-size: 1.3rem;
+        }
+        .carInfoSection .mainCarInfo .titleDescrip .paraDisc {
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+        }
+        .carInfoSection .mainCarInfo .titleDescrip .aboutCar .col {
+            gap: 2rem;
+        }
+       
+        .aboutCarHeading {
+            font-size: 1.2rem;
+        }
+        .aboutCarHeading2 {
+            font-size: 1.2rem;
+        }
+        .carInfoSection .mainCarInfo .titleDescrip .bookNow .pric h2 {
+            font-size: 1.8rem;
+        }
+        .carInfoSection .mainCarInfo .titleDescrip .bookNow {
+            gap: 22rem;
+        }
+        .carInfoSection .mainCarInfo .titleDescrip .bookNow .pric h2::after {
+            font-size: 1.2rem;
+        }
+        
+        .rentBtn {
+            width: 7rem;
+        height: 3.6rem;
+        font-size: 1rem;
+        }
+        .carInfoSection .mainCarInfo .titleDescrip .bookNow .pric del {
+            font-size: 1.4rem;
+        }
+        /* title description style  End here  */
+        /* reviw container start from here  */
+        .carInfoSection .reviewContainer {
+            width: 80%;
+        }
+        .carInfoSection .reviewContainer .headingReview h2 {
+            font-size: 1.6rem;
+        }
+        .carInfoSection .reviewContainer .headingReview .reviewCount {
+            width: 3.5rem;
+    height: 2.4rem;
+    font-size: 1rem;
+        }
+        .carInfoSection .reviewContainer .reviewBy .reviewHeading .profil .profilImg img {
+            width: 5rem;
+            aspect-ratio: 1;
+        }
+        .carInfoSection .reviewContainer .reviewBy .reviewHeading .profil .userName .name {
+            font-size: 1.4rem;
+        }
+        /* .carInfoSection .reviewContainer .reviewBy .reviewHeading .profil .userName .abouWork {
+            font-size: 1.rem;
+        } */
+        .carInfoSection .reviewContainer .reviewBy .reviewHeading .starRated .date {
+            
+            font-size: 1rem;
+        }
+        .carInfoSection .reviewContainer .reviewBy .reviewDiscription {
+            font-size: 1rem;
+        }
+        
+        .carInfoSection .reviewContainer .showAll h2 {
+            font-size: 1.1rem;
+        }
+        .carInfoSection .recentCars .recenHeading .recentCar {
+            font-size: 1.4rem;
+        }
+        .carInfoSection .recentCars .recenHeading .ViewAll {
+            font-size: 1.4rem;
+        }
+        .carInfoSection .topRatedCars .recenHeading .recentCar {
+            font-size: 1.4rem;
+        }
+        .carInfoSection .topRatedCars .recenHeading .ViewAll{
+            font-size: 1.4rem;
+        }
+        /* reviw container End here  */
+        /* recent cars section started here  */
+        .carsCard {
+            gap: 2rem;
+        }
+        /* recent cars section Ended here  */
+        /* Top rated cars section started here */
+        .carInfoSection .topRatedCars .recenHeading {
+            width: 73%;
+        }
+        /* Top rated cars section Ended here */
+ }
+/* media query end here  */

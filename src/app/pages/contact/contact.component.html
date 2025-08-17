@@ -1,0 +1,98 @@
+<section class="contactSection">
+    <div class=" contactContainer col">
+        <div class="contactInfo row">
+            <div class="contInfoHeadin row">
+                <h2>Contact Information</h2>
+                <div class="contInfoPara">
+                    Fill up the form and our Team will get back to you within 24 hours.
+                </div>
+            </div>
+            <div class="phoneNum col">
+                <fa-icon [icon]="mibilIcon" class="contactInfoIcon"></fa-icon>
+                <div class="contactInfoItem">+91 98765 43210</div>
+            </div>
+            <div class="mail col">
+                <fa-icon [icon]="envelopIcon" class="contactInfoIcon"></fa-icon>
+                <div class="contactInfoItem">domain<span> &#64;</span>paypal.com</div>
+            </div>
+            <div class="payPalUrl col">
+                <fa-icon [icon]="payPalIcon" class="contactInfoIcon"></fa-icon>
+                <div class="contactInfoItem"> https://paypal.com</div>
+
+            </div>
+            <div class="location col">
+                <fa-icon [icon]="LocatIcon" class="contactInfoIcon"></fa-icon>
+                <div class="contactInfoItem"> Location</div>
+
+
+            </div>
+        </div>
+        <div class="contactFormContainer ">
+            <form class="row" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                <div class="formColumn col">
+                    <div class="row">
+                        <div class="firstName inputRow">
+                            <label for="firstName" class="paymentLabe">
+                                First Name
+                            </label>
+                            <input type="text" id="firstName" class="paymentMethodInput" name="firstName"
+                                formControlName="firstName">
+                                @if (contactForm.get('firstName')?.errors?.['required'] && contactForm.get('firstName')?.touched ) {
+
+                                    <small class="validation">*This is required field</small>
+                                }
+                                @else if (contactForm.get('firstName')?.errors?.['noSpaceAlowed'] ) {
+                                    <small class="validation">*No space is allowed for first name</small>
+                                }
+                        </div>
+                        <div class="userEmail inputRow">
+                            <label for="userEmail" class="paymentLabe">
+                                Email
+                            </label>
+                            <input type="email" name="email" id="userEmail" class="paymentMethodInput"
+                                formControlName="email">
+                                @if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched ) {
+
+                                    <small class="validation">*Please enter valid email</small>
+                                }
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="lastName inputRow">
+                            <label for="lastName" class="paymentLabe">
+                                Last Name
+                            </label>
+                            <input type="text" id="lastName" class="paymentMethodInput" name="lastName"
+                                formControlName="lastName">
+                                @if (contactForm.get('lastName')?.errors?.['required'] && contactForm.get('lastName')?.touched ) {
+
+                                    <small class="validation">*This is required field</small>
+                                }
+                                @else if (contactForm.get('lastName')?.errors?.['noSpaceAlowed'] ) {
+                                    <small class="validation">*No space is allowed for last name</small>
+                                }
+                        </div>
+                        <div class="phoneNum inputRow">
+                            <label for="phoneNum" class="paymentLabe">
+                                Phone
+                            </label>
+                            <input type="tel" name="phone" id="phoneNum" class="paymentMethodInput" formControlName="phoneNumber">
+                        </div>
+                    </div>
+                </div>
+                <div class="textArea inputRow">
+                    <label for="message" class="paymentLabe">
+                        Message
+                    </label>
+                    <textarea id="message" placeholder="Write your message..." name="message" formControlName="message"></textarea>
+                </div>
+                <button class="quoteBtn" type="submit" >
+                    <!-- [disabled]="contactForm.invalid"
+                 [ngClass]="contactForm.invalid && contactForm.touched? 'disableBtn':'quoteBtn'" -->
+                    Get a Quote
+                </button>
+            </form>
+        </div>
+
+    </div>
+</section>

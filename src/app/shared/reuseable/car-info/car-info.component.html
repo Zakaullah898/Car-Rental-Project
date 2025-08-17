@@ -1,0 +1,162 @@
+<div class="carInfoSection row">
+    <div class="mainCarInfo col">
+        <div class="carImgCont row">
+            <div class="mainImg row">
+                <img [src]=" carData.image " alt="">
+            </div>
+            <div class="restImg col">
+                @for (item of restImg; track $index) {
+
+                <img [src]="item" alt="">
+                }
+            </div>
+        </div>
+        <div class="titleDescrip row">
+            <div class="row nameReviw">
+
+                <div class="carName col">
+                    <h2 class="titlHeading">{{carData.name}}</h2>
+                    <div class="likeImg">
+                        <img src="./heart.png" alt="like this">
+                    </div>
+                </div>
+                <div class="reviewthisCar col">
+                    <div class="ratedStar col">
+                        @for (item of ratedStars; track $index) {
+                        <img [src]="item" alt="">
+                        }
+                    </div>
+                    <div class="reviewNum">
+                        440+ Reviewer
+                    </div>
+                </div>
+
+            </div>
+            <p class="paraDisc">NISMO has become the embodiment of Nissan's outstanding performance, inspired by the
+                most unforgiving proving ground, the "race track".</p>
+            <div class="aboutCar row">
+                <div class="col">
+                    <h2 class="aboutCarHeading">Type Car</h2>
+                    <h2 class="aboutCarHeading2">Sport</h2>
+                    <h2 class="aboutCarHeading">Capacity</h2>
+                    <h2 class="aboutCarHeading2">2 Person</h2>
+                </div>
+                <div class="col">
+                    <h2 class="aboutCarHeading">Steering </h2>
+                    <h2 class="aboutCarHeading2">Manual</h2>
+                    <h2 class="aboutCarHeading">Gasoline </h2>
+                    <h2 class="aboutCarHeading2">70L</h2>
+                </div>
+
+            </div>
+            <div class="bookNow col">
+                <div class="pric row">
+                    <h2>{{carData.rentPrice}}/</h2>
+                    <del>30%</del>
+                </div>
+                <div class="rentNowBtn">
+                    <button class="rentBtn" (click)="goToRental()">Rent Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="reviewContainer row" [ngStyle]="{'height':isAngelUp?'auto':'40rem'}">
+        <div class=" headingReview col">
+            <h2 >Reviews</h2>
+            <div class="reviewCount">13</div>
+        </div>
+        @for (item of reviewContainer; track $index) {
+
+        <div class="reviewBy row">
+
+            <div class="reviewHeading col">
+                <div class="profil col">
+                    <div class="profilImg ">
+                        <img [src]="item.profilImg" alt="Profile">
+                    </div>
+                    <div class="userName row">
+                        <div class="name">
+                            {{item.userName}}
+                        </div>
+                        <div class="abouWork">
+                            {{item.aboutWork}}
+                        </div>
+                    </div>
+                </div>
+                <div class="starRated row">
+                    <div class="date">
+                        {{item.date}}
+                    </div>
+                    <div class="star col">
+                        @for (item of ratedStars; track $index) {
+
+                        <img [src]="item" alt="">
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="reviewDiscription">
+                {{item.discription}}
+            </div>
+        </div>}
+        <div class="showAll ">
+            <div class="icon col" (click)="showAll()">
+                <h2>{{isAngelUp? 'Show Less': 'Show All'}}</h2>
+            </div>
+        </div>
+    </div>
+    <div class="recentCars row">
+        <div class="recenHeading col">
+            <h2 class="recentCar">Recent Car</h2>
+            <!-- <h2 class="ViewAll">View All</h2> -->
+            @if (isShowAllCars) {
+
+            <div class="ViewAll" (click)="viewAll()">View All</div>
+            }
+            @else if (!isShowAllCars) {
+
+            <div class="ViewAll" (click)="getAllUserCars()">View less</div>
+            }
+        </div>
+        <div class="carsCard col">
+
+            @for (item of carsName; track $index ; ) {
+            <app-cars-card
+            (carDataload)="receiveData($event)"
+            [carDataGetted]="item"
+            [carName]="item.name" 
+            [isVisible]="item.showLike" 
+            (onBtnClick)="getLikeImg($index)" 
+            [pkr]="item.rentPrice" 
+            [carImg]="item.image" 
+            [tankCapacity]="item.tankCapacity" 
+            [transmission]="item.transmission"
+            [sittingCapacity]="item.sittingCapacity"
+                ></app-cars-card>
+            }
+        </div>
+    </div>
+    <div class="topRatedCars row">
+        <div class="recenHeading col">
+            <h2 class="recentCar">Top rated Car</h2>
+            <h2 class="ViewAll">View All</h2>
+        </div>
+
+        <div class="carsCard col">
+            @for (item of topRate; track $index ; ) {
+                <app-cars-card 
+                (carDataload)="receiveData($event)"
+                [carDataGetted]="item"
+                [carName]="item.name" 
+                [isVisible]="item.showLike" 
+                (onBtnClick)="getLikeImg($index)" 
+                [pkr]="item.rentPrice" 
+                [carImg]="item.image" 
+                [tankCapacity]="item.tankCapacity" 
+                [transmission]="item.transmission"
+                [sittingCapacity]="item.sittingCapacity"
+                    ></app-cars-card>
+                }
+        </div>
+    </div>
+</div>

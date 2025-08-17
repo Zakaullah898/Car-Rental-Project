@@ -1,0 +1,108 @@
+<div class="homeSection">
+
+    <div class="parentDiv" style="  background: #F6F7F9; ">
+
+        <section class="bannerSection">
+            <div class="bannerImag">
+                <img src="./bannerLambo.png" alt="">
+                @if (isBanrRentBtnVisible) {
+
+                <h2>safer ,faster and comfortable</h2>
+                <h3>Get in touch with our
+                    luxury cars</h3>
+
+
+                <button class="rentBtn" (click)="goToRental()">Rent Now</button>
+                }
+            </div>
+            @if (!isBanrRentBtnVisible) {
+            <div class="row banerBtnContainer">
+                <h2>safer ,faster and comfortable</h2>
+                <h3>Get in touch with our
+                    luxury cars</h3>
+
+
+                <button class="rentBtn " (click)="goToRental()">Rent Now</button>
+            </div>
+            }
+        </section>
+    </div>
+    <section class="serviceSection">
+        <div class="serContainer col">
+            <div class="imgContainer">
+
+                <img src="./servCar.png" alt="">
+            </div>
+            <div class="servisDiscription row">
+
+                <div class="servHeading">Rent a Car</div>
+                <div class="servPara">
+                    We pride ourselves in always going the extra mile for our customers.
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="rentCarsCardSection">
+        <div class="recentCarHeading">
+
+            <div class="recentCar">Recent Cars</div>
+            @if (isShowAllCars) {
+
+            <div class="viewAll" (click)="viewAll()">View All</div>
+            }
+            @else if (!isShowAllCars) {
+
+            <div class="viewAll" (click)="getAllUserCars()">View less</div>
+            }
+        </div>
+        <div class="rentCarsCard">
+
+            @for (item of carsName; track $index ; ) {
+            <app-cars-card [carDataGetted]="item" [carName]="item.name" [isVisible]="item.showLike"
+                (onBtnClick)="getLikeImg($index)" [pkr]="item.rentPrice" [carImg]="item.image"
+                [tankCapacity]="item.tankCapacity" [transmission]="item.transmission"
+                [sittingCapacity]="item.sittingCapacity"></app-cars-card>
+            }
+            <!-- <app-cars-card [dataArry]="carsName"></app-cars-card> -->
+        </div>
+    </section>
+    <section class="servExperienceSection ">
+        <div class="servExpContainer row">
+            <div class="serviceExpHeading">
+                Fell the best experience with our luxury car
+            </div>
+            <div class="servExperContainer">
+
+
+                @for (item of servExpCont; track $index) {
+
+                <div class="servExpItem">
+                    <img [src]="item.servImg" alt="">
+                    <h3>{{item.servExpHeadibg}}</h3>
+                    <p>{{item.servExpDescrip}}</p>
+                </div>
+                }
+            </div>
+
+        </div>
+    </section>
+    
+    @if (isDisplay) {
+
+    <calandar class="showCalander" (onContinue)="isContinue()"></calandar>
+    }
+    <section class="driverSubscriptionSection" >
+        <div class="driverSubContainer" >
+
+            <h2>Your time. Your goals. You're the</h2>
+            <form style="margin-top: 21rem;" [formGroup]="subcriptionForm" (ngSubmit)="onSubmit()">
+
+                <label for="subInput">subscription</label>
+                <div class="subscriber-input">
+                    <input type="email" name="email" id="subInput" placeholder="Email" formControlName="email">
+                    <button class="sub-btn" type="submit">Next</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>

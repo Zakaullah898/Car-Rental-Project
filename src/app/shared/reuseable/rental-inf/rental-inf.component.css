@@ -1,0 +1,60 @@
+
+.radioRental{
+    width: 1.6rem;
+    height: auto;
+}
+.pickUp{
+    gap: 1rem;
+}
+.dropdownRental{
+    width: 38.6rem;
+height: 5.6rem;
+border-radius: 1rem;
+background-color: #F6F7F9;
+font-family: Poppins;
+font-size: 1.4rem;
+font-weight: 500;
+color: #94A3B8;
+padding-left: 2rem;
+padding-right: 1rem;
+}
+.userTime{
+    position: relative;
+    .watch{
+        position: absolute;
+        right: 1rem;
+        top: 4.2rem;
+        img{
+            width: 4rem;
+        }
+    }
+}
+.rentalInfoRow{
+    .userPhone , .userTime{
+        .paymentMethodInput{
+            padding-right: 1rem;
+            p{
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+.userName , .userTime, .userPhone {
+    gap: 1.5rem;
+}
+.calanderCont{
+    z-index: 2;
+}
+@media screen and (max-width: 1100px){
+    .rentalInfoRow .userPhone, .userTime .paymentMethodInput {
+        padding-right: 1rem;
+        padding-left: .5rem;
+    }
+}
+@media screen and (max-width: 576px){
+    .rentalSummarySection {
+        width: 40rem;
+        height: 42rem;
+    }
+} 

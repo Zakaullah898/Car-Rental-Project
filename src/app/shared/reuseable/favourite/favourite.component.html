@@ -1,0 +1,13 @@
+<section class="favouriteSection">
+    <div class="favouriteContainer row">
+<div class="favHeading">
+    <h2>Favourite</h2>
+</div>
+<div class="favCarsCard col">
+    @for (item of carsName; track $index ; ) {
+        <app-cars-card [carName]="item.carName" [isVisible]="item.showLike" (onBtnClick)="getLikeImg($index)" [pkr]="item.pkr" [carImg]="item.carImg"></app-cars-card>
+        
+                }
+</div>
+    </div>
+</section>

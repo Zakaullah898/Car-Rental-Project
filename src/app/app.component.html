@@ -1,0 +1,6 @@
+<app-nav-bar  *ngIf="showHeader" [ngClass]="showHeader? 'app-nav-bar' : ''"></app-nav-bar>
+ <router-outlet [ngClass]="" class="back"></router-outlet>
+ <app-footer *ngIf="showHeader" ></app-footer> 
+ 
+ <!-- {'router-outlet':showHeader} -->
+

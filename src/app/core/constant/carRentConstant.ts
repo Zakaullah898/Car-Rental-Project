@@ -1,0 +1,23 @@
+export const carRentApiConst = {
+    // LOGIN_API_URL :'https://aqueous-earth-02633-e729ae53b1b3.herokuapp.com/api/users/',
+    BOOKING_API_URL : ' https://aqueous-earth-02633-e729ae53b1b3.herokuapp.com/api/bookings/',
+    ADMIN_API_URL : 'https://aqueous-earth-02633-e729ae53b1b3.herokuapp.com/api/admin/',
+    // USER_API_URL : ' https://aqueous-earth-02633-e729ae53b1b3.herokuapp.com/api/users/',
+    API_URL : 'https://aqueous-earth-02633-e729ae53b1b3.herokuapp.com/api/',
+    USER_REGIST : 'auth/register',
+    USER_LOGIN : 'auth/login',
+    OTP_VERYFI : 'auth/verify-otp?email',
+    RESEND_VERYFI_OTP : 'auth/verify-acc',
+    FORGET_PASSWORD : 'auth/forgot-password?',
+    RESETPASSWORD: 'auth/reset-password',
+    ADD_CARS : 'add',
+    GET_ALL_USER : 'cars/get-all',
+    GET_USER_ID : 'get/1',
+    AVAILABLE_CARS : 'cars/available',
+    ADD_BOOKING : 'add?carId=3&startDate=2024-10-08 10:00&endDate=2024-10-10 10:00',
+    GET_BOOKING_CARS : 'all',
+    CANCEL_BOOKING : 'cancel/1',
+    LOGGED_USER_BOOKING : 'users/rentals',
+    UPDATE_DETAIL : 'update/6',
+    RESETPASOTP: 'auth/reset-pass-otp-verify'
+}

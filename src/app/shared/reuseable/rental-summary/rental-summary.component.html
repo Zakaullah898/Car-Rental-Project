@@ -1,0 +1,44 @@
+<div class="rentalSummarySection row">
+    <div class="formHeading row">
+        <div class="heading">Rental Summary</div>
+        <div class="para col">
+
+            <p>Prices may change depending on the length of the rental and the price of your rental car.</p>
+        </div>
+    </div>
+    <div class="col rentalSummaryImgContainer" >
+        <div class="insightImg">
+            <img src="./insightBl.png" alt="">
+        </div>
+        <div class="row" >
+            <h2 class="carNam">{{carName}}</h2>
+            <div class="col reviewsImg">
+                <div class="ratedStar">
+
+                    @for (item of ratedStars; track $index) {
+                        <img [src]="item" alt="item">
+                    }
+                </div>
+                <div class="reviewCount">440+ Reviewer</div>
+            </div>
+        </div>
+    </div>
+    <div class="subTotal col">
+        <h2 class="subItem">Subtotal</h2>
+        <h2 class="subHeading">{{rentPrice}}</h2>
+    </div>
+    <div class="tax col">
+        <h2 class="subItem">Tax</h2>
+        <h2 class="subHeading">0%</h2>
+    </div>
+    <div class="totalPrice col">
+        <div class="formHeading row" style="gap: 1rem;">
+            <div class="heading">Total Rental Price</div>
+            <div class="para col">
+    
+                <p>Overall price and includes rental discount</p>
+            </div>
+        </div>
+        <h2>{{rentPrice}}</h2>
+    </div>
+</div>

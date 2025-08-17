@@ -1,0 +1,431 @@
+.footerSection {
+    width: 100%;
+    height: 55rem;
+    background: #081630;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    & .footerContainer {
+        height: 45rem;
+        width: 90%;
+        /* margin-left: 5rem; */
+        padding-top: 8.5rem;
+        border-bottom: .1rem solid white;
+        display: flex;
+        gap: 1rem;
+
+        & .footerDiscripContainer {
+            width: 66.5rem;
+            height: 95%;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            & .footerLogo {
+                width: 16rem;
+                height: 2;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            & .footerDiscrip {
+                font-family: Plus Jakarta Sans;
+                font-size: 1.6rem;
+                font-weight: 500;
+                line-height: 2.4rem;
+                color: white;
+                word-spacing: 1rem;
+                width: 28rem;
+
+            }
+        }
+
+        & .footerLinksContainer {
+            width: 66.5rem;
+            height: 95%;
+            display: flex;
+            justify-content: space-around;
+
+            .aboutContainer {
+                & h2 {
+                    font-family: Plus Jakarta Sans;
+                    font-size: 2rem;
+                    font-weight: 700;
+                    color: white;
+                    margin-bottom: 4rem;
+                }
+
+                & ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.5rem;
+                    /* margin-left: -2rem; */
+                }
+
+                & ul li {
+                    list-style-type: none;
+
+                    & a {
+                        text-decoration: none;
+                        font-family: Plus Jakarta Sans;
+                        font-size: 1.6rem;
+                        font-weight: 500;
+                        color: white;
+                    }
+                }
+
+            }
+
+            & .importLinksContainer {
+                & h2 {
+                    font-family: Plus Jakarta Sans;
+                    font-size: 2rem;
+                    font-weight: 700;
+                    color: white;
+                    margin-bottom: 4rem;
+                }
+
+                & ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.5rem;
+                    /* margin-left: -2rem; */
+                }
+
+                & ul li {
+                    list-style-type: none;
+
+                    & a {
+                        text-decoration: none;
+                        font-family: Plus Jakarta Sans;
+                        font-size: 1.6rem;
+                        font-weight: 500;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        & .socialContainer {
+            & h2 {
+                font-family: Plus Jakarta Sans;
+                font-size: 2rem;
+                font-weight: 700;
+                color: white;
+                margin-bottom: 4rem;
+            }
+
+            & ul {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+                /* margin-left: -2rem; */
+
+            }
+
+            & ul li {
+                list-style-type: none;
+
+                & a {
+                    text-decoration: none;
+                    font-family: Plus Jakarta Sans;
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    & .copyRight {
+        position: absolute;
+        font-family: Plus Jakarta Sans;
+        font-size: 1.4rem;
+        font-weight: 500;
+        margin-top: 4rem;
+        color: white;
+        bottom: 6rem;
+        /* left: 7rem; */
+
+    }
+}
+
+
+/*  Media Query Start here*/
+@media screen and (max-width: 1250px) {
+    .footerSection {
+        width: 100%;
+        height: 55rem;
+        background: #081630;
+
+        & .footerContainer {
+
+            & .footerDiscripContainer {
+
+                & .footerDiscrip {
+                    font-size: 1.4rem;
+                    line-height: 2.2rem;
+
+                }
+            }
+
+            & .footerLinksContainer {
+                width: 56.5rem;
+
+                & .aboutContainer {
+                    & h2 {
+
+                        font-size: 1.8rem;
+                        font-weight: 650;
+                    }
+
+                    & ul li a {
+                        font-size: 1.4rem;
+                    }
+
+
+                }
+
+                & .importLinksContainer {
+                    & h2 {
+                        font-size: 1.8rem;
+                        font-weight: 650;
+                    }
+
+                    & ul li a {
+                        font-size: 1.4rem;
+                    }
+
+                }
+            }
+
+            & .socialContainer {
+                & h2 {
+
+                    font-size: 1.8rem;
+                    font-weight: 650;
+                }
+
+                & ul li a {
+                    font-size: 1.4rem;
+
+                }
+            }
+        }
+
+        & .copyRight {
+            font-size: 1.2rem;
+
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .footerSection {
+        & .footerContainer {
+
+            & .footerDiscripContainer {
+
+                & .footerDiscrip {
+                    font-size: 1.2rem;
+
+                }
+            }
+
+            & .footerLinksContainer {
+                width: 56.5rem;
+
+                & .aboutContainer {
+                    & h2 {
+
+                        font-size: 1.5rem;
+                        font-weight: 650;
+                        margin-bottom: 3rem;
+                    }
+
+                    & ul li a {
+                        font-size: 1.2rem;
+                    }
+
+
+                }
+
+                & .importLinksContainer {
+                    & h2 {
+                        font-size: 1.5rem;
+                        font-weight: 650;
+                        margin-bottom: 3rem;
+                    }
+
+                    & ul li a {
+                        font-size: 1.2rem;
+                    }
+
+                }
+            }
+
+            & .socialContainer {
+                & h2 {
+
+                    font-size: 1.5rem;
+                    font-weight: 650;
+                    margin-bottom: 3rem;
+                }
+
+                & ul li a {
+                    font-size: 1.2rem;
+
+                }
+            }
+        }
+
+        /* & .copyRight {
+            left: 5.8rem;
+        } */
+    }
+}
+    @media screen and (max-width: 992px){
+        .footerSection {
+            & .footerContainer {
+    
+                & .footerDiscripContainer {
+                    & .footerLogo {
+        
+                        img {
+                            width: 90%;
+                        }
+                    }
+                    & .footerDiscrip {
+                        font-size: 1rem;
+    
+                    }
+                }
+    
+                & .footerLinksContainer {
+                    width: 53.5rem;
+    
+                    & .aboutContainer {
+                        & h2 {
+    
+                            font-size: 1.2rem;
+                            font-weight: 650;
+                            margin-bottom: 1rem;
+                        }
+    
+                        & ul li a {
+                            font-size: 1rem;
+                        }
+    
+    
+                    }
+    
+                    & .importLinksContainer {
+                        & h2 {
+                            font-size: 1.2rem;
+                            font-weight: 650;
+                            margin-bottom: 1rem;
+                        }
+    
+                        & ul li a {
+                            font-size: 1rem;
+                        }
+    
+                    }
+                }
+    
+                & .socialContainer {
+                    & h2 {
+    
+                        font-size: 1.2rem;
+                        font-weight: 650;
+                        margin-bottom: 1rem;
+                    }
+    
+                    & ul li a {
+                        font-size: 1rem;
+    
+                    }
+                }
+            }
+    
+            /* & .copyRight {
+                left: 5.8rem;
+            } */
+        }
+    }
+    @media screen and (max-width: 800px){
+        .footerSection {
+            & .footerContainer {
+                width: 27.5rem;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                & .footerDiscripContainer {
+                    width: 30.5rem;
+                    align-items: center;
+                    & .footerLogo {
+        
+                        img {
+                            width: 90%;
+                        }
+                    }
+                    & .footerDiscrip {
+                        font-size: 1rem;
+                        word-spacing: 1.2rem;
+                    }
+                }
+    
+                & .footerLinksContainer {
+                    width: 30.5rem;
+    
+                    & .aboutContainer {
+                        & h2 {
+    
+                            font-size: 1rem;
+                            font-weight: 500;
+                        }
+    
+                        & ul li a {
+                            font-size: .8rem;
+                        }
+    
+    
+                    }
+    
+                    & .importLinksContainer {
+                        & h2 {
+                            font-size: 1rem;
+                            font-weight: 500;
+                        }
+    
+                        & ul li a {
+                            font-size: .8rem;
+                        }
+    
+                    }
+                }
+    
+                & .socialContainer {
+                    & h2 {
+    
+                        font-size: 1rem;
+                        font-weight: 500;
+                    }
+    
+                    & ul li a {
+                        font-size: .8rem;
+    
+                    }
+                }
+            }
+    
+            /* & .copyRight {
+                left: 29.8rem;
+            } */
+        }
+    }
+/* media quey end here  */

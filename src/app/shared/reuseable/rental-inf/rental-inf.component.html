@@ -1,0 +1,73 @@
+<div class="paymentFormSection row">
+    <div class="row methodFormContainer">
+
+        <div class="formHeading row">
+            <div class="heading">Rental Info</div>
+            <div class="para col">
+
+                <p>Please select your rental date</p>
+                <div class="steps">Step 2 of 4</div>
+            </div>
+        </div>
+        <div class="pickUp col">
+            <input type="radio" name="pickUpButton" id="pickUpButton" class="radioRental">
+            <label for="pickUpButton" class="paymentLabe">Pick-Up</label>
+        </div>
+        <form class="col" style="height: auto;">
+            <div class="row rentalInfoRow">
+
+                <div class="userName inputRow">
+                    <label for="userName" class="paymentLabe">Location</label>
+                    <app-dropdown-option [myClass]="'dropdownRental'"
+                        [selectedValue]="'Select Your City'"></app-dropdown-option>
+                </div>
+                <div class="userTime inputRow">
+                    <label for="time" class="paymentLabe">Time</label>
+                    <div class="paymentMethodInput col">
+                        <input type="time" name="date" id="date" class="paymentMethodInput">
+                    </div>
+                </div>
+            </div>
+            <div class="row rentalInfoRow">
+                <div class="userPhone inputRow">
+                    <label for="phoneNum" class="paymentLabe">Date</label>
+                        <div class="paymentMethodInput col">
+                            <input type="date" class="paymentMethodInput">
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="pickUp col">
+                <input type="radio" name="pickUpButton" id="pickUpButton" class="radioRental">
+                <label for="pickUpButton" class="paymentLabe">Pick-Off</label>
+            </div>
+            <form class="col" style="height: auto;">
+                <div class="row rentalInfoRow">
+
+                <div class="userName inputRow">
+                    <label for="userName" class="paymentLabe">Location</label>
+                    <app-dropdown-option [myClass]="'dropdownRental'"
+                    [selectedValue]="'Select Your City'"></app-dropdown-option>
+                </div>
+                <div class="userTime inputRow">
+                    <label for="time" class="paymentLabe">Time</label>
+                    <div class="paymentMethodInput col">
+                        <input type="time" name="date" id="date" class="paymentMethodInput">
+                    </div>
+                    </div>
+                </div>
+            <div class="row rentalInfoRow">
+                <div class="userPhone inputRow">
+                    <label for="date" class="paymentLabe">Date</label>
+                    <div class="paymentMethodInput col">
+                        <!-- <p>Select Date </p>
+                        <i class="fa-regular fa-calendar"></i> -->
+                        <input type="date" name="date" id="date" class="paymentMethodInput">
+                    </div>
+                    </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+                    <!-- <app-calaendar></app-calaendar> -->

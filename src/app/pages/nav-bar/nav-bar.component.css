@@ -1,0 +1,203 @@
+.headerContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+
+    .logoContainer {
+        /* margin-top: 3rem; */
+
+        & img {
+            width: 15.8rem;
+            height: 3.768rem;
+
+        }
+    }
+
+    .signInContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .6rem;
+
+        .signIcon {
+            /* width: 4rem; */
+            height: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .signIn {
+            
+            font-family: Roboto;
+            font-size: 1.8rem;
+            font-weight: 400;
+
+
+        }
+    }
+}
+.profile-container {
+    position: relative;
+    display: inline-block;
+  }
+.navBar {
+    margin-top: 3rem;
+    margin-right: 2rem;
+    width: 72.7rem;
+    height: 7.192rem;
+    
+   & ul {
+        display: flex;
+        justify-content: space-evenly;
+        
+        & li {
+            list-style-type: none;
+            
+           & a {
+                /* text-decoration: none; */
+                font-family: Poppins;
+                font-size: 1.8rem;
+                font-weight: 400;
+                line-height: 2.7rem;
+                text-align: left;
+                color: black;
+                position: relative;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: -.3rem;
+                    width: 0;
+                    border-bottom: .3rem solid #5EABFF;
+                    transition: all .2s linear;
+                }
+                &:hover:after{
+                    width: 100%;
+                }
+            }
+            }
+            
+            
+        }
+    }
+.toggler-menu{
+    font-size: 5rem;
+}
+ .menue-container{
+    /* width: 100%; */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    .menu-item{
+        width: 100%;
+        text-align: center;
+        a {
+            /* text-decoration: none; */
+            width: 100%;
+            height: 3rem;
+            font-family: Poppins;
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 2.7rem;
+            text-align: left;
+            color:  #222222;
+            position: relative;
+            transition: all .5s linear;
+            
+        }
+        &:hover{
+            background-color: hsla(220, 20%, 97%, 1);
+            color:  hsla(216, 27%, 66%, 1);
+            
+
+        }
+    }
+ }
+
+/* Media Query Start from here  */
+
+@media screen and (max-width:992px) {
+    .headerContainer {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: white;
+    
+        .logoContainer {
+           padding-left: 2rem;
+    
+            & img {
+                width: 13.5rem;
+                height: 2.7rem;
+    
+            }
+        }
+    
+        .signInContainer {
+            padding-right: 2rem;
+            gap: .3rem;
+    
+            .signIcon {
+                height: 3.5rem;
+                width: 10rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+            }
+    
+            .signIn {
+                font-size: 1.5rem;
+    
+    
+            }
+        }
+    }
+    
+    .navBar ul li a{ 
+        font-size: 1.5rem;
+        }
+   
+}
+@media screen and (max-width:800px) {
+    .headerContainer {
+        
+        height: 10rem;
+        display: flex;
+
+        position: relative;
+        /* gap: 5rem; */
+    
+        .logoContainer {
+            position: absolute;
+            left: 4rem;
+            padding-left: 0rem;
+            
+        }
+    
+        .signInContainer {
+            position: absolute;
+            right: 0rem;
+            width: 10rem;
+            .signIcon .signIcon{
+                /* margin-left: ; */
+            }
+        }
+        .toggler-menu{
+            position: absolute;
+            right: 10rem;
+            font-size: 3.5rem;
+        }
+    }
+    .menue-container .menu-item a{
+        font-size: 1.5rem;
+    }
+}
+/* Media Query End  here  */

@@ -1,0 +1,503 @@
+.card {
+    width: 30rem;
+    height: 40rem;
+    border-radius: 1.5rem;
+    background-color: white;
+    
+    & .headingContainer {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 2rem;
+        margin-right: 4rem;
+        padding-top: 2rem;
+        
+        & .carNam {
+            font-family: Plus Jakarta Sans;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #1A202C;
+            
+            
+        }
+
+        & .likeImg {
+            width: 2rem;
+            height: 2rem;
+            color: black;
+            
+        }
+    }
+
+    & h2 {
+        margin-left: 2rem;
+        color: #90A3BF;
+        font-family: Plus Jakarta Sans;
+        font-size: 1.5rem;
+        font-weight: 700;
+
+        
+    }
+    
+    & .imgContainer {
+        width: 26rem;
+        height: 14rem;
+        margin-left: 1.5rem;
+        margin-top: 4rem;
+
+        & img {
+            width: 100%;
+            height: 100%;
+                }
+    }
+
+    & .menueSpecific {
+        width: 100%;
+        height: 7rem;
+        display: flex;
+        justify-content: center;
+        gap: 6rem;
+
+        & .gasolin {
+            width: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+
+            & span {
+                font-family: Plus Jakarta Sans;
+                font-size: 1.4rem;
+                font-weight: 500;
+                color: #90A3BF;
+            }
+        }
+
+        & .manual {
+            width: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            
+            & span {
+                font-family: Plus Jakarta Sans;
+                font-size: 1.4rem;
+                font-weight: 500;
+                color: #90A3BF;
+            }
+        }
+        
+        & .profile {
+            width: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            /* margin-right: 1.5rem; */
+
+            & span {
+                font-family: Plus Jakarta Sans;
+                font-size: 1.4rem;
+                font-weight: 500;
+                color: #90A3BF;
+            }
+        }
+    }
+    & .rentApplyContainer{
+        width: 95%;
+        height: 8rem;
+        margin-left: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+
+        & .price{
+
+            & .pkr {
+                font-family: Plus Jakarta Sans;
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: #1A202C;
+            
+                }
+
+                                    & .pkrNum {
+                                        font-family: Plus Jakarta Sans;
+                                        font-size: 2.5rem;
+                                        font-weight: 700;
+                                        color: #1A202C;
+                                    }
+                                    & .day{
+                                        font-family: Plus Jakarta Sans;
+                                        font-size: 1.2rem;
+                                        font-weight: 400;
+                                        color:#90A3BF;
+                                    }
+        }
+
+        & .rentBtn{
+            width: 13rem;
+            height: 5rem;
+            font-size: 1.7rem;
+            font-weight: 500;
+            font-family:Plus Jakarta Sans;
+            border-radius: 1rem;
+            border: none;
+            color: white;
+            background-color: #3563E9;
+        }
+
+    }
+}
+           /* media query Start   */
+           @media  screen and (max-width:1350px) {
+            .card {
+                width: 25rem;
+                height: 34rem;
+                
+                & .headingContainer {
+                    margin-right: 2.1rem;
+                    
+                    & .carNam {
+                        font-size: 1.3rem;
+                    }
+            
+                    /* & .likeImg {
+                        width: 2rem;
+                        height: 2rem;
+                        color: black;
+                        
+                    } */
+                }
+            
+                & h2 {
+                    font-size: 1.3rem;
+            
+                    
+                }
+                
+                & .imgContainer {
+                    width: 22rem;
+                    height: 14rem;
+                    margin-left: 1.5rem;
+                    margin-top: 4rem;
+            
+                    & img {
+                        width: 100%;
+                        aspect-ratio: 1;
+                            }
+                }
+            
+                & .menueSpecific {
+                    width: 100%;
+                    height: 3.5em;
+                    display: flex;
+                    justify-content: center;
+                    gap: 5rem;
+            
+              
+                    
+                    & .profile {
+            
+                        & span {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+                & .rentApplyContainer{
+                     width: 93%;
+                    height: 4rem;
+            
+                    & .price{
+            
+                        & .pkr {
+                            font-size: 1rem;
+                        
+                            }
+            
+                                                & .pkrNum {
+                                                    font-size: 2rem;
+                                                }
+                                                & .day{
+                                                    font-size: 1rem;
+                                                }
+                    }
+            
+                    & .rentBtn{
+                        width: 11rem;
+                        height: 4rem;
+                        font-size: 1.5rem;
+                        border-radius: .6rem;
+                    }
+            
+                }
+            }
+        }
+        @media  screen and (max-width:1250px) {
+            .card {
+                width: 22rem;
+                height: 30rem;
+                & .headingContainer {
+                    margin-right: 2.1rem;
+                    
+                    & .carNam {
+                        font-size: 1.2rem;
+                    }
+            
+                    & .likeImg {
+                        width: 2rem;
+                        height: 2rem;
+                        color: black;
+                        
+                    }
+                }
+            
+                & h2 {
+                    font-size: 1.3rem;
+            
+                    
+                }
+                
+                & .imgContainer {
+                    position: relative;
+                    width: 19rem;
+                    & img {
+                        width: 100%;
+                        aspect-ratio: 1;
+                        position: absolute;
+                        top: -3rem;
+                            }
+                }
+            
+                & .menueSpecific {
+                    width: 100%;
+        height: 2.5em;
+        gap: 3.5rem;
+            margin-top:-2rem;
+                    & .gasolin {
+                      
+            
+                        & span {
+                            font-size: 1.2rem;
+                        }
+                    }
+            
+                    & .manual {
+                        /* width: 4rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 0.5rem; */
+                        
+                        & span {
+                            font-size: 1.2rem;
+                        }
+                    }
+                    
+                    & .profile {
+            
+                        & span {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+                & .rentApplyContainer{
+                     width: 93%;
+                    height: 4rem;
+            
+                    & .price{
+            
+                        & .pkr {
+                            font-size: 1rem;
+                        
+                            }
+            
+                                                & .pkrNum {
+                                                    font-size: 1.5rem;
+                                                }
+                                                & .day{
+                                                    /* font-family: Plus Jakarta Sans;
+                                                    font-size: 1.2rem;
+                                                    font-weight: 400;
+                                                    color:#90A3BF; */
+                                                }
+                    }
+            
+                    & .rentBtn{
+                        width: 8rem;
+        height: 3rem;
+        font-size: 1.2rem;
+                    }
+            
+                }
+            }
+        }
+        @media screen and (max-width: 800px){
+            .card {
+                width: 19rem;
+height: 27rem;
+                & .headingContainer {
+                    margin-right: 2.1rem;
+                    
+                    & .carNam {
+                        font-size: 1rem;
+                    }
+            
+                    & .likeImg {
+                     img{
+                        width: 1.6rem;
+                     }
+                        
+                    }
+                }
+            
+                & h2 {
+                    font-size: 1rem;
+                    height: 3rem;
+                    margin-top: -0.5rem;
+                    
+                }
+                
+                & .imgContainer {
+                    position: relative;
+                    width: 16rem;
+                    & img {
+                        width: 100%;
+    aspect-ratio: 1;
+    position: absolute;
+    top: -4rem;
+                            }
+                }
+            
+                & .menueSpecific {
+                    width: 100%;
+                    height: 2.5em;
+                    gap: 3rem;
+                    margin-top: -3.5rem;
+                    & .gasolin {
+                        img{
+                         width: 1.6rem;
+                        }
+             
+                         & span {
+                             font-size: 1rem;
+                         }
+                     }
+            
+                     & .manual {
+                        img{
+                            width: 1.6rem;
+                        }
+                        
+                        & span {
+                            font-size: 1rem;
+                        }
+                    }
+                    
+                    & .profile {
+                        img{
+                            width: 1.6rem;
+                        }
+                        & span {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+                & .rentApplyContainer{
+                    width: 90%;
+                height: 3rem;
+                    & .price{
+                        & .pkr {
+                            font-size: .8rem;
+                            
+                        }
+                        
+                        & .pkrNum {
+                            font-size: 1.2rem;
+                        }
+                    }
+            
+                    & .rentBtn{
+                        width: 6rem;
+    height: 2rem;
+    font-size: .8rem;
+    border-radius: .4rem;
+                    }
+            
+                }
+            }
+            }
+            @media screen and (max-width: 576px){
+                .card {
+                    width: 15rem;
+                    height: 21rem;
+                }
+                .card h2 {
+                    font-size: 1rem;
+                    height: 3rem;
+                    margin-top: -1.5rem;
+                }
+                .card .headingContainer {
+                    margin-right: 0.5rem;
+                    padding-top: 1rem;
+                }
+                .card .headingContainer .carNam {
+                    font-size: .99rem;
+                }
+                .card .headingContainer .likeImg img {
+                    width: 1.3rem;
+                }
+                .card .imgContainer {
+                    position: relative;
+                    width: 12rem;
+                    height: 10rem;
+                    /* aspect-ratio: 1; */
+                }
+                .card .imgContainer img {
+                    width: 100%;
+                    aspect-ratio: 1;
+                    position: absolute;
+                    top: -4rem;
+                }
+                .card .menueSpecific {
+                    width: 100%;
+                    height: 2.5em;
+                    gap: 1rem;
+                    margin-top: -3.9rem;
+                }
+                .card .menueSpecific .gasolin img {
+                    width: 1.2rem;
+                }
+                .menueSpecific .manual {
+                    width: 5rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0.2rem;
+                }
+                .card .menueSpecific .manual img {
+                    width: 1.2rem;
+                }
+                .card .menueSpecific .profile {
+                    gap: 0.3rem;
+                }
+                .card .menueSpecific .profile img {
+                    width: 1.2rem;
+                }
+                .card .rentApplyContainer {
+                    width: 90%;
+                    height: 2rem;
+                    margin-top: 0rem;
+                }
+                .card .rentApplyContainer .rentBtn {
+                    width: 6rem;
+                    height: 2rem;
+                    font-size: .7rem;
+                    border-radius: .4rem;
+                }
+             
+            }
+        /* media query end   */
+
+       

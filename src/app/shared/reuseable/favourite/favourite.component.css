@@ -1,0 +1,33 @@
+.favouriteSection{
+    width: 100%;
+    margin-top: 15rem;
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .favouriteContainer{
+        width: 90%;
+        height: 100vh;
+        gap: 3.5rem;
+        .favHeading{
+            width: 100%;
+            height: 8.9rem;
+            border-radius: 1rem;
+            background-color: #FFFFFF;
+            position: relative;
+            h2 {
+                    position: absolute;
+                    margin-top: 2.5rem;
+                    left: 3.5rem;
+                    font-family: Plus Jakarta Sans;
+                    font-size: 3.2rem;
+                    font-weight: 600;
+                    color: #1A202C;
+                }
+        }
+
+        .favCarsCard{
+            gap: 3.5rem;
+        }
+    }
+}

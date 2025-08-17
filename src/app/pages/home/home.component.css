@@ -1,0 +1,1210 @@
+
+
+
+/*                  Banner Section Start                                 */
+.bannerImag {
+    width: 100%;
+    background-color:white;
+    position: relative;
+   
+    & img{ 
+        width: 105.67rem;
+        margin-left: 18rem;
+        margin-top: 17rem;
+    }
+
+    & h2 {
+        position: absolute;
+        width: 25rem;
+        height: auto;
+        top: 37.5rem;
+        left: 108.7rem;
+        font-family: Poppins;
+        font-size: 2.7rem;
+        font-weight: 700;
+        line-height: 4rem;
+        color: black;
+    }
+
+    & h3 {
+        position: absolute;
+        width: 26.5rem;
+        height: 6rem;
+        top: 45.6rem;
+        left: 108.7rem;
+        font-family: Roboto;
+        font-size: 2.2rem;
+        font-weight: 400;
+        color: black;
+
+    }
+& .rentBtn {
+    position: absolute;
+    width: 17.8rem;
+    height: 4.9rem;
+    top: 52.5rem;
+    left: 108.3rem;
+    font-family: Roboto;
+    font-size: 2rem;
+    font-weight: 400;
+    border: none;
+    border-radius: 1.4rem;
+    color: white;
+    background: #3563E9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+}
+/*                  Banner Section End                                */
+
+/*                  Service Section Start                                 */
+
+.serviceSection{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    & .serContainer{
+    width: 90%;
+    height: 60.6rem;
+    gap: 2rem;
+    position: absolute;
+    top: 16rem;
+    /* left: 2.5rem; */
+& img {
+        width: 65rem;
+        height: 52.7rem;
+    }
+.servisDiscription{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    .servHeading {
+        width: 33.5rem;
+        height: 6rem;
+        font-family: Poppins;
+        font-size: 5rem;
+        font-weight: 600;
+        color: hsla(0, 0%, 0%, 1);
+
+
+    }
+    .servPara {
+        width: 34.5rem;
+        height: 6rem;
+        color:  hsla(0, 0%, 0%, 1);
+        line-height: 3rem;
+        font-family: Poppins;
+        font-size: 1.7rem;
+        font-weight: 400;
+    }
+         
+}
+  
+            }
+}
+
+
+/*                   Service Section End                                */
+
+
+/*                   Rent Cars Section Start                               */
+.rentCarsCardSection{
+    width: 100%;
+    height: auto;
+    margin-top: 95rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:2rem;
+
+    & .recentCarHeading {
+              width: 88%;
+             display: flex;
+             justify-content: space-between;
+            .recentCar{
+                width: 31rem;
+                font-family: Plus Jakarta Sans;
+                font-size: 1.6rem;
+                font-weight: 600;
+                color:#90A3BF;
+                margin-bottom: 2rem;
+            }
+        }
+        & .viewAll { 
+                       width: 20rem;
+                       display: inline;
+                       font-family: Plus Jakarta Sans;
+                       font-size: 1.6rem;
+                       font-weight: 600;
+                       color: #3563E9;
+                       text-align: right;
+                       cursor: pointer;
+                   }
+}
+.rentCarsCard {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 7rem;  
+}
+/*                   Rent Cars Section End                                 */
+
+
+/*                   Service Exper Section Start                               */ 
+.servExperienceSection{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.servExpContainer{
+    height: 50rem;
+    width: 90%;
+    border-radius: 1rem;
+    background-color: white;
+    /* margin-left: 10rem; */
+    justify-content: center;
+    /* margin-left: 7rem; */
+    .serviceExpHeading {
+        font-family: Poppins;
+        font-size: 4rem;
+        font-weight: 600;
+        text-align: center;
+        }
+        & .servExperContainer{
+            height: 38rem;
+            display: flex;
+            justify-content: center;
+            gap: 5rem;
+            /* margin-left: 8rem; */
+            margin-top: 2rem;
+            margin-bottom: -6rem;
+
+            & .servExpItem{
+                width:36rem ;
+                height: 100%;
+                /* background-color: azure; */
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+              
+
+                & img {
+                    width: 16rem;
+                    aspect-ratio: 1;
+                }
+                & h3 {
+                    font-family: Poppins;
+                    font-size: 3rem;
+                    font-weight: 600;
+                    color: #3563E9;
+            
+                }
+                                & p {
+                                    width: 29rem;
+                                    text-align: center;
+                                    font-family: Roboto;
+                                    font-size: 2rem;
+                                    font-weight: 400;
+                                    color: #00000099;
+                                    margin-top: -2rem;
+                                    line-height: 2.5rem;
+                                }
+            }
+        }
+}
+
+
+
+/*                   Service Exper Section End                                */
+
+
+/*                   Driver Subscrip Section Start                                */
+.driverSubscriptionSection{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.driverSubContainer{
+    width:90%;
+    height: 50rem;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    /* margin-left: 10rem; */
+    background-image: url('/driver.png');
+    background-size: cover;
+
+    & h2 {  
+            padding-top: 8rem;
+            margin-left: 3.5rem;
+            font-family: Poppins;
+            font-size: 3.7rem;
+            font-weight: 600;
+            color: white;
+            position: relative;
+            &::before{
+                content: 'become a driver  ';
+                position: absolute;
+                top: 3.4rem;
+            font-family: Poppins;
+            font-size: 3.7rem;
+            font-weight: 600;
+            color: white;
+            }
+            &::after{
+                content:'boss.';
+                position: absolute;
+                top: 12.5rem;
+                left: 0.5rem;
+            }
+        }   
+        & form {
+               /* display: flex;
+               flex-direction: column;
+               gap: 1rem; */
+
+            & label {
+                    font-family: Roboto;
+                    font-size: 3rem;
+                    font-weight: 400;
+                    color: white;
+                    margin-top: 18rem;
+                    margin-left: 3.5rem;
+                }
+            & .subscriber-input {
+                margin-left: 3.5rem;
+                margin-top: 1rem;
+                position: relative;
+    
+                
+                & input {
+                    width: 95rem;
+                    height: 9.3rem;
+                    border-radius: 1.7rem;
+                    font-family: Poppins;
+                    font-size: 3rem;
+                    font-weight: 500;
+                    color: #00000059;
+                    margin-bottom: 1rem;
+                    padding-left: 3rem;
+                }
+                                & .sub-btn {
+                                    position: absolute;
+                                    left: 76rem;
+                                    top: 1.1rem;
+                                    height: 7.2rem;
+                                    width: 17rem;
+                                    border: none;
+                                    border-radius: 1.3rem;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    background-color: #3563E9;
+                                    color: white;
+                                    font-family: Poppins;
+                                    font-size: 30px;
+                                    font-weight: 400;
+                                    z-index: 1;
+                                    transition: all 0.15s linear;
+                                    &:hover{
+                                        background-color: #0732b3;
+                                    }
+                                }
+            }
+        }
+}
+/*                   Driver Subscrip Section End                                */
+
+/* media query start  */
+@media screen and (max-width: 1350px){
+    /*                   Rent Cars Section Start                               */
+    .rentCarsCardSection{
+    
+        & .recentCarHeading {
+            width: 80.5%;
+            font-size: 1.5rem;
+            /* gap:115rem; */
+            }
+            & .viewAll {
+                display: inline;
+                           font-family: Plus Jakarta Sans;
+                           font-size: 1.6rem;
+                           font-weight: 600;
+                           color: #3563E9;
+                           /* margin-right: 2rem; */
+                           cursor: pointer;
+                       }
+    }
+    .rentCarsCard {
+        width: 90%;
+        gap: 6.75rem;  
+    }
+    /*                   Rent Cars Section End                                 */
+
+}
+/* @media screen and (max-width: 1346px){
+    .rentCarsCardSection .recentCarHeading{
+        gap:81rem;
+    }
+} */
+
+@media screen and (max-width: 1250px){
+    
+
+/*                  Banner Section Start                                 */
+.bannerImag {
+    width: 100%;
+    background-color:white;
+    position: relative;
+    
+    & img{ 
+        width: 106.67rem;
+        height: 45.4rem;
+        margin-top: 11.5rem;
+        margin-left: 13rem;
+        margin-bottom: 4.4rem;
+    }
+
+    & h2 {
+        width: 21rem;
+        position: absolute;
+        top: 34.5rem;
+        font-size: 2rem;
+        font-weight: 650;
+        line-height: 2.8rem;
+        left: 99rem;
+
+    }
+
+    & h3 {
+        position: absolute;
+        top: 40rem;
+        left: 99rem;
+        width: 15.5rem;
+        font-weight: 350;
+        font-size: 1.8rem;
+    }
+& .rentBtn {
+    position: absolute;
+    top: 46.5rem;
+    left: 99rem;
+    width: 15.8rem;
+    height: 4. .2rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.8rem;
+    border-radius: 1rem;
+}
+}
+/*                  Banner Section End                                */
+/*                  Service Section Start                                 */
+
+.serviceSection{
+    /* width: 100%; */
+    position: relative;
+    & .serContainer{
+   
+    /* width: 1390px; */
+    height: 60.6rem;
+    position: absolute;
+    top: 16rem;
+    left: 2.5rem;
+    .imgContainer{
+        width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+        img {
+            width: 54rem;
+        height: 46.7rem;
+        }
+    }
+    .servisDiscription{
+        line-height: 6rem;
+        .servHeading {
+            width: 33.5rem;
+            height: 6rem;
+            font-family: Poppins;
+            font-size: 3.5rem;
+            font-weight: 500;
+            margin-left: 3rem;
+        }
+        .servPara {
+            width: 30.5rem;
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 2rem;
+        }
+             
+    }
+
+      
+            }
+}
+
+
+/*                   Service Section End       */
+    /*                   Rent Cars Section Start                               */
+    .rentCarsCardSection{
+    
+        & .recentCarHeading {
+            width: 64.5%;
+            }
+            
+    }
+    .rentCarsCard {
+        gap: 7.75rem;  
+    }
+    /*                   Rent Cars Section End     
+/*                   Service Exper Section Start                               */ 
+.servExpContainer{
+    height: 45rem;
+    width: 86%;
+    & .serviceExpHeading {
+        font-family: Poppins;
+        font-size: 3rem;
+        font-weight: 500;
+        text-align: center;
+        }
+        & .servExperContainer{
+
+            & .servExpItem{
+                width: 28rem;
+                height: 90%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+              
+
+                & img {
+                    width: 13rem;
+                    aspect-ratio: 1;
+                }
+                & h3 {
+                    font-size: 2.2rem;
+                    font-weight: 550;
+            
+                }
+                                & p {
+                                    width: 22rem;
+                                    font-size: 1.5rem;
+                                    font-weight: 400;
+                                }
+            }
+        }
+}
+/*                   Service Exper Section End                                */
+
+/*                   Driver Subscrip Section Start                                */
+.driverSubscriptionSection{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.driverSubContainer{
+    width:90%;
+    height: 50rem;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    /* margin-left: 10rem; */
+    background-image: url('/driver.png');
+    background-size: cover;
+
+    & h2 {  
+        font-size: 3.3rem;
+            &::before{
+                font-size: 3.3rem;
+            }
+            &::after{
+                font-size: 3.3rem;
+            }
+        }   
+        & form {
+position: relative;
+            & label {
+                position: absolute;
+                left: 0rem;
+                top:-16rem;
+                font-size: 2.6rem;
+                }
+            & .subscriber-input {
+                top:7rem;
+                & input {
+                    width: 94rem;
+                    height: 8.3rem;
+                    border-radius: 1.5rem;
+                    font-size: 2.6rem;
+                }
+                                & .sub-btn {
+                                    top:.8rem;
+                                    height: 6.8rem;
+                                    font-size: 2.6rem;
+                                }
+            }
+        }
+}
+/*                   Driver Subscrip Section End                                */
+
+}
+
+@media screen and (max-width: 1100px){
+
+/*                  Banner Section Start                                 */
+.bannerImag {
+    width: 100%;
+    background-color:white;
+    position: relative;
+    
+    & img{ 
+        width: 90.67rem;
+        height: 38.4rem;
+        margin-top: 11.5rem;
+        margin-left: 13rem;
+        margin-bottom: 4.4rem;
+    }
+
+    & h2 {
+        position: absolute;
+        top: 31.5rem;
+        font-size: 1.8rem;
+        font-weight: 650;
+        line-height: 2.8rem;
+        left: 85rem;
+
+    }
+
+    & h3 {
+        position: absolute;
+        top: 37rem;
+        left: 85rem;
+        width: 17.5rem;
+        font-weight: 300;
+        font-size: 1.5rem;
+    }
+& .rentBtn {
+    position: absolute;
+    top: 43.5rem;
+    left: 85rem;
+    width: 13.8rem;
+    height: 3.9rem;
+    font-size: 1.5rem;
+    font-weight: 350;
+    line-height: 2.8rem;
+    border-radius: 1rem;
+}
+}
+/*                  Banner Section End                                */
+/*                  Service Section Start                                 */
+
+.serviceSection{
+    /* width: 100%; */
+    position: relative;
+    & .serContainer{
+   
+    /* width: 1390px; */
+    height: 60.6rem;
+    position: absolute;
+    top: 16rem;
+    left: 2.5rem;
+    .imgContainer{
+        width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+        img {
+            width: 47rem;
+            height: 41.7rem;
+        }
+    }
+    .servisDiscription{
+        line-height: 6rem;
+        .servHeading {
+            width: 33.5rem;
+            height: 5rem;
+            /* font-family: Poppins; */
+            font-size: 2.5rem;
+            font-weight: 500;
+        }
+        .servPara {
+            width: 30.5rem;
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+             
+    }
+
+      
+            }
+}
+
+
+/*                   Service Section End       */
+
+  /*                   Rent Cars Section Start                               */
+  .rentCarsCardSection{
+    
+    & .recentCarHeading {
+        width: 73.5%;
+        }
+}
+.rentCarsCard {
+    width: 90%;
+    gap: 17.75rem;  
+}
+/*                   Rent Cars Section End                                 */
+
+
+/*                   Service Exper Section Start                               */ 
+.servExpContainer{
+    height: 40rem;
+    width: 85%;
+    & .serviceExpHeading {
+        font-size: 2rem;
+        font-weight: 500;
+        height: auto;
+        margin-top: 2rem;
+        }
+        & .servExperContainer{
+
+            & .servExpItem{
+                width: 25rem;
+                height: 85%;
+
+                & img {
+                    width: 10rem;
+                    aspect-ratio: 1;
+                }
+                & h3 {
+                    font-size: 1.8rem;
+                    font-weight: 550;
+            
+                }
+                                & p {
+                                        width: 21rem;
+                                        font-size: 1.4rem;
+                                        font-weight: 400;
+                                    }
+            }
+        }
+}
+/*                   Service Exper Section End                                */
+
+/*                   Driver Subscrip Section Start                                */
+.driverSubscriptionSection{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.driverSubContainer{
+    width:86%;
+
+    & h2 {  
+        font-size: 2.8rem;
+            &::before{
+                font-size: 2.8rem;
+            }
+            &::after{
+                font-size: 2.8rem;
+            }
+        }   
+        & form {
+position: relative;
+            & label {
+                position: absolute;
+                left: 0rem;
+                top: -14.5rem;
+                font-size: 2.2rem;
+                }
+            & .subscriber-input {
+                top:7rem;
+                & input {
+                    width: 80rem;
+                    height: 7.3rem;
+                    border-radius: 1rem;
+                    font-size: 2.2rem;
+                }
+            & .sub-btn {
+                left: 64rem;
+                top: .8rem;
+                height: 5.8rem;
+                width: 15rem;
+                font-size: 2.2rem;
+            }
+            }
+        }
+}
+/*                   Driver Subscrip Section End                                */
+
+}
+@media screen and (max-width: 992px){
+/*                  Banner Section Start                                 */
+.bannerImag {
+    width: 100%;
+    background-color:white;
+    position: relative;
+    
+    & img{ 
+        width: 74.67rem;
+        height: 30.4rem;
+        margin-top: 11.5rem;
+        margin-left: 11rem;
+        margin-bottom: 4.4rem;
+    }
+
+    & h2 {
+        position: absolute;
+        top: 27.5rem;
+        width: 11rem;
+        font-size: 1.3rem;
+        font-weight: 550;
+        line-height: 2.2rem;
+        left: 73rem;
+    }
+
+    & h3 {
+        position: absolute;
+        top: 31.4rem;
+        left: 73rem;
+        width: 10.5rem;
+        font-weight: 300;
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+& .rentBtn {
+    position: absolute;
+    top: 36.5rem;
+    left: 73rem;
+    width: 8.8rem;
+    height: 2.9rem;
+    font-size: 1.3rem;
+    border-radius: .6rem;
+}
+}
+/*                  Banner Section End                                */
+/*                  Service Section Start                                 */
+
+.serviceSection{
+    /* width: 100%; */
+    position: relative;
+    & .serContainer{
+   
+    /* width: 1390px; */
+    height: 60.6rem;
+    position: absolute;
+    top: 16rem;
+    left: 2.5rem;
+    .imgContainer{
+        width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+        img {
+            width: 42rem;
+            height: 38.7rem;
+        }
+    }
+    .servisDiscription{
+        line-height: 6rem;
+        .servHeading {
+            width: 33.5rem;
+            height: 5rem;
+            font-size: 1.8rem;
+            font-weight: 500;
+        }
+        .servPara {
+            width: 25.5rem;
+        font-size: 1rem;
+        font-weight: 400;
+        margin-left: -5rem;
+        }
+             
+    }
+
+      
+            }
+}
+
+
+/*                   Service Section End       */
+/*                   Service Exper Section Start                               */ 
+.servExpContainer{
+    height: 34rem;
+    width: 85%;
+    & .serviceExpHeading {
+        font-size: 1.7rem;
+        }
+        & .servExperContainer{
+            height: 30rem;
+            gap: 5rem;
+            & .servExpItem{
+                width: 23rem;
+                height: 80%;
+                gap:1.5rem;
+                & img {
+                    width: 7.5rem;
+                    aspect-ratio: 1;
+                }
+                & h3 {
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                }
+                                & p {
+                                    width: 17rem;
+                                    font-size: 1rem;
+                                    font-weight: 400;
+                                    line-height: 2rem;
+                                    }
+            }
+        }
+}
+/*                   Service Exper Section End                                */
+/*                   Driver Subscrip Section Start                                */
+.driverSubscriptionSection{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.driverSubContainer{
+    width:86%;
+
+    & h2 {  
+        padding-top: 7rem;
+        font-size: 2.2rem;
+            &::before{
+                font-size: 2.2rem;
+            }
+            &::after{
+                font-size: 2.2rem;
+                top: 10.5rem;
+            }
+        }   
+        & form {
+            top: 2rem;
+position: relative;
+            & label {
+                font-size: 2rem;
+                }
+            & .subscriber-input {
+                top:7rem;
+                & input {
+                    width: 67rem;
+                    height: 6.5rem;
+                    border-radius: 1rem;
+                    font-size: 2rem;
+                }
+                
+            & .sub-btn {
+                left: 53rem;
+                top: .8rem;
+                height: 5rem;
+                width: 13rem;
+                font-size: 2rem;
+            }
+            }
+        }
+}
+/*                   Driver Subscrip Section End                                */
+
+}
+
+@media screen and (max-width:800px) {
+       /*                  Banner Section Start                                */
+    .bannerImag {
+        width: 100%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        & img{ 
+            width: 41.67rem;
+            height: 22.4rem;
+             }
+    }
+    .banerBtnContainer{
+       margin-top: 2rem;
+        & h2 {
+            font-family: Poppins;
+            font-size: 1.3rem;
+            font-weight: 550;
+            line-height: 3rem;
+            color: black;
+        }
+    
+        & h3 {
+            
+            font-family: Roboto;
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: black;
+    
+        }
+        & .rentBtn {
+            width: 9.4rem;
+            height: 2.9rem;
+            font-size: 1.2rem;
+            font-weight: 400;
+            border-radius: .6rem;
+        }
+    }
+    /*                  Banner Section End                                */
+    /*                  Service Section Start                                 */
+
+.serviceSection{
+    /* width: 100%; */
+    position: relative;
+    /* width: 80%; */
+    & .serContainer{
+        height: 60.6rem;
+        position: absolute;
+        top: 16rem;
+        left: 2.5rem;
+        display: flex;
+        flex-direction: column-reverse;
+    
+ 
+
+      
+            }
+}
+/*                   Service Section End       */
+ /*                   Rent Cars Section Start                               */
+ 
+.rentCarsCard {
+    width: 90%;
+    gap: 5.75rem;
+}
+/*                   Rent Cars Section End                                 */
+/*                   Service Exper Section Start                               */ 
+.servExpContainer{
+    height: 65rem;
+    width: 70%;
+    justify-content: space-evenly;
+    & .serviceExpHeading {
+        font-size: 1.5rem;
+        margin-top: -18rem;
+        }
+        & .servExperContainer{
+            margin-top: -5rem;
+            flex-direction: column;
+            align-items: center;
+            & .servExpItem{
+                width: 23rem;
+                height: 80%;
+                gap:1.5rem;
+                & img {
+                    width: 5.5rem;
+                    aspect-ratio: 1;
+                }
+                & h3 {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+}
+/*                   Service Exper Section End                                */
+/*                   Driver Subscrip Section Start                                */
+.driverSubscriptionSection{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.driverSubContainer{
+    width:71%;
+
+    & h2 {  
+        padding-top: 5rem;
+        font-size: 1.8rem;
+            &::before{
+                font-size: 1.8rem;
+                top:1.7rem;
+            }
+            &::after{
+                font-size: 1.8rem;
+                top: 8rem;
+            }
+        }   
+        & form {
+            top: 5rem;
+position: relative;
+            & label {
+                font-size: 1.8rem;
+                }
+            & .subscriber-input {
+                top:7rem;
+                & input {
+                    width: 36rem;
+        height: 5.5rem;
+        border-radius: .8rem;
+        font-size: 1.8rem;
+                }
+                
+            & .sub-btn {
+                left: 24rem;
+        top: 0.5rem;
+        height: 4.5rem;
+        width: 11rem;
+        font-size: 1.7rem;
+        border-radius: .6rem;
+            }
+            }
+        }
+}
+/*                   Driver Subscrip Section End                                */
+}
+@media screen and (max-width:576px) {
+
+    .bannerImag {
+        & img{ 
+            width: 29.67rem;
+            height: 17.4rem;
+             }
+    }
+ /*                  Service Section Start                                 */
+
+ .serviceSection .serContainer .imgContainer img{
+    margin-left: -5rem;
+}
+/*                   Service Section End       */
+/*                   Rent Cars Section Start                               */
+ 
+.rentCarsCard {
+    width: 90%;
+    gap: 6.75rem;
+}
+/*                   Rent Cars Section End                                 */
+/*                   Service Exper Section Start                               */ 
+.servExpContainer{
+    height: 65rem;
+    width: 70%;
+    justify-content: space-evenly;
+    & .serviceExpHeading {
+        font-size: 1rem;
+        }
+        & .servExperContainer{
+            margin-top: -5rem;
+            flex-direction: column;
+            align-items: center;
+            & .servExpItem{
+                width: 23rem;
+                height: 80%;
+                gap:1.5rem;
+                & img {
+                    width: 4.5rem;
+                    aspect-ratio: 1;
+                }
+                & h3 {
+                    font-size: 1rem;
+                }
+                & p {
+                    font-size: 1rem;
+                }
+            }
+        }
+}
+/*                   Service Exper Section End                                */
+/*                   Driver Subscrip Section Start                                */
+.driverSubscriptionSection{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.driverSubContainer{
+    width:71%;
+
+    & h2 {  
+        padding-top: 5rem;
+        font-size: 1.4rem;
+            &::before{
+                font-size: 1.4rem;
+                top:1.7rem;
+            }
+            &::after{
+                font-size: 1.4rem;
+                top: 8rem;
+            }
+        }   
+        & form {
+            top: 7rem;
+position: relative;
+            & label {
+                font-size: 1.4rem;
+                }
+            & .subscriber-input {
+                top:7rem;
+                & input {
+                    width: 22rem;
+        height: 4rem;
+        border-radius: .6rem;
+        font-size: 1.4rem;
+        padding-left: 1rem;
+                }
+                
+            & .sub-btn {
+                left: 14.5rem;
+                top: 0.55rem;
+                height: 3rem;
+                width: 7rem;
+                font-size: 1.4rem;
+                border-radius: .6rem;
+            }
+            }
+        }
+}
+/*                   Driver Subscrip Section End                                */
+}
+/* media query End */
+.banerBtnContainer{
+    align-items: center;
+    & h2 {
+        font-family: Poppins;
+        font-size: 1.7rem;
+        font-weight: 550;
+        line-height: 3rem;
+        color: black;
+    }
+
+    & h3 {
+        
+        font-family: Roboto;
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: black;
+
+    }
+    & .rentBtn {
+        width: 11.8rem;
+        height: 3.9rem;
+        font-family: Roboto;
+        font-size: 1.4rem;
+        font-weight: 400;
+        border: none;
+        border-radius: 1rem;
+        color: white;
+        background: #3563E9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.showCalander{
+    opacity: 1;
+    height: 40rem;
+    width: 26rem;
+    background-color: rgba(163, 230, 250, 0.5); 
+    z-index: 3;
+    position: relative;
+    
+    top:-43rem;
+}
+.showCalander::backdrop{
+    background-color: black;
+    opacity: 2;
+}

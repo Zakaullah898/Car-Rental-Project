@@ -1,0 +1,57 @@
+<header class="headerContainer">
+    <div class="logoContainer">
+        <img src="./logoB.png" alt="">
+    </div>
+    @if (isMenuShow) {
+
+    <div class="navBar">
+        <ul>
+            <li><a routerLink="home" routerLinkActive="highLIghtedRoute">Home</a></li>
+            <li><a routerLink="vehicleListing" routerLinkActive="highLIghtedRoute">Vehicle Listing</a></li>
+            <li><a routerLink="contact" routerLinkActive="highLIghtedRoute">Contact Us</a></li>
+        </ul>
+    </div>
+    }
+    @if (!isMenuShow) {
+    <div class="toggler-menu" (click)="toggleMenu()">
+
+        @if (isMenueActive) {
+
+        <fa-icon [icon]="menueBar"></fa-icon>
+        }@else {
+        <fa-icon [icon]="crossBar"></fa-icon>
+        }
+    </div>
+    }
+    <div class="signInContainer">
+        <div class="signIcon col">
+            <img src="./signInNav.png" alt="" (click)="showProfileDropdown()">
+            @if (isMenuShow){
+
+            <div class="signIn">Sign In</div>
+            }
+        </div>
+    </div>
+
+</header>
+@if (displayMenue) {
+    <div class="menue-container">
+        <div class="menu-item">
+            <a routerLink="home" (click)="toggleMenu()">Home</a>
+        </div>
+        <div class="menu-item">
+            <a routerLink="vehicleListing" (click)="toggleMenu()">Vehicle Listing</a>
+        </div>
+        <div class="menu-item">
+            <a routerLink="contact" (click)="toggleMenu()">Contact Us</a>
+        </div>
+    </div>
+}
+@if (isProfileDisplay) {
+
+    <profile-menue (logout)="logOut()" 
+    (goToUserProfile)="goToUserProfile()" 
+    appClickOutside (clickOutSide)="onHandleChange()"
+    (goToFavourite)="goToFavourite()"
+    (goToHistory)="goToHistory()"></profile-menue>
+}

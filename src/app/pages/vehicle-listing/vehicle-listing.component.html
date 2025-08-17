@@ -1,0 +1,134 @@
+<div class="vehicleSection">
+
+    @if (currentRoute =='vehicleListing') {
+
+
+        @if (isMenuVisi) {
+    
+            @if (isSideVehicleSecVisi) {
+                <div class="manuBarLeft">
+
+                <fa-icon [icon]="crossBar" (click)="hideSideBar()"></fa-icon>
+                </div>
+            }
+            @else {
+                <div class="menuBarRight">
+                <fa-icon [icon]="angelRight" (click)="hideSideBar()" ></fa-icon>
+
+            </div>
+            }
+        }
+<div class="vehicleSectionContainer">
+    <!-- @else { -->
+
+        <div  [ngClass]="isSideVehicleSecVisi ? 'sideVehicleSection':'sideBarWidth'">
+            <div class="row" [ngClass]="isSideVehicleSecVisi ? 'sideBarContainer':'hideSidebar'">
+                <div class="makerContainer row">
+                    <h2 class="heading">Make</h2>
+    
+                    <app-dropdown-option [list]="carsCompany" style="z-index: 2;"></app-dropdown-option>
+                </div>
+                <div class="modelContaier row">
+                    <h2 class="heading">Model</h2>
+                    <app-dropdown-option [list]="modelOfCars" style="z-index: 1;"></app-dropdown-option>
+                </div>
+                <div class="priceRange row">
+                    <h2 class="heading">Price Range per Day (pkr)
+                    </h2>
+                    <div class="rupees col">
+                        <h2 class="heading" for="pricr" style="width: 12rem;"> {{minValue}}</h2>
+                        <h2 class="heading" for="pricr" style="width: 12rem;">{{maxValue}}</h2>
+                    </div>
+    
+                    <mat-slider min="2500" max="50000" step="500" color='primary'>
+                        <input matSliderStartThumb [(ngModel)]="minValue" >
+                        <input matSliderEndThumb [(ngModel)]="maxValue" >
+                    </mat-slider>
+    
+                    <p>Minimum range 50,000 Rs</p>
+                    <p>Maximium range 500M Rs</p>
+                </div>
+                <div class="regCityContainer row">
+                    <h2 class="heading">Registration City</h2>
+                    <app-dropdown-option></app-dropdown-option>
+                </div>
+                <div class="carDocContainer row">
+                    <h2 class="heading">Car Document</h2>
+                    <app-dropdown-option></app-dropdown-option>
+                </div>
+                <div class="transContainer">
+                    <h2 class="heading">Transmission</h2>
+                    <app-dropdown-option></app-dropdown-option>
+                </div>
+                <div class="conditionContainer">
+                    <h2 class="heading">Condition</h2>
+                    <div class="condBtn col">
+                        <button class="sidCondFulBtn">New</button><button class="sidCondFulBtn">Used</button>
+                    </div>
+                </div>
+                <div class="fuelContainer row">
+                    <h2 class="heading">Fuel</h2>
+                    <div class="fuelBtn col">
+                        
+                        <button class="sidCondFulBtn">Petrol</button>
+                        <button class="sidCondFulBtn">Diesel</button>
+                        <button class="sidCondFulBtn">LPG</button>
+                        <button class="sidCondFulBtn">CNG</button>
+                        <button class="sidCondFulBtn">Electric</button>
+                        <button class="sidCondFulBtn">Hybrid</button>
+                    </div>
+                </div>
+                <div class="applyContainer">
+                    <button class="signInBtn applyBtn">Apply</button>
+                </div>
+            </div>
+        </div>
+    <!-- } -->
+    <div  [ngClass]="isSideVehicleSecVisi ? 'vehicleCardSection':'cardContainerWidth'">
+        
+        @for (item of carsName; track $index ; ) {
+            <app-cars-card
+            (carDataload)="receiveData($event)"
+                [carDataGetted]="item"
+                [carName]="item.name" 
+                [isVisible]="item.showLike" 
+                (onBtnClick)="getLikeImg($index)" 
+                [pkr]="item.rentPrice" 
+                [carImg]="item.image" 
+                [tankCapacity]="item.tankCapacity" 
+                [transmission]="item.transmission"
+                [sittingCapacity]="item.sittingCapacity"
+            ></app-cars-card>
+        }
+    </div>
+    </div>
+    <div class="numberSelection">
+        <div class="numCount">
+            
+            1-8 of 1240
+        </div>
+        <div class="angelIcon">
+            <fa-icon [icon]=" angelLeft"></fa-icon>
+            <fa-icon [icon]="angelRight"></fa-icon>
+        </div>
+        
+        
+    </div>
+}
+
+@if (currentRoute == 'rentNow') {
+    <div class="paymentMethodSection col">
+        <div class="billingSection row">
+            <app-billing-inf></app-billing-inf>
+            <app-rental-inf></app-rental-inf>
+            <app-payment-method></app-payment-method>
+            <app-conformation-messag></app-conformation-messag>
+        </div>
+        <div class="rentalSummarySection">
+            <app-rental-summary [carName]="carData.name" [rentPrice]="carData.rentPrice"></app-rental-summary>
+        </div>
+    </div>
+    
+    
+}
+</div>

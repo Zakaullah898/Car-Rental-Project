@@ -1,0 +1,125 @@
+.formContainer {
+    width: 100%;
+    height: auto;
+    background-color: #F6F7F9;
+    padding: 3rem;
+    border-radius: 1.5rem;
+    gap: 3.5rem;
+}
+
+.userName,
+.userTime,
+.userPhone,
+.userCity,
+.userAddress {
+    gap: 1.5rem;
+
+    input {
+        background-color: #FFFFFF;
+    }
+}
+
+.agreeCheck {
+    width: 2.4rem;
+    height: auto;
+}
+
+.pickUp {
+    gap: 1rem;
+    position: relative;
+
+    img {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+
+.payPal {
+    width: 100%;
+    height: 5.8rem;
+    /* align-items: center; */
+    border-radius: 1rem;
+    gap: 1rem;
+    padding: 0rem 0rem 0 2rem;
+    background-color: #F6F7F9;
+    position: relative;
+
+    p {
+        font-family: Plus Jakarta Sans;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #1F2544;
+        position: absolute;
+        top: 2rem;
+        left: 6.5rem;
+    }
+}
+.rentBtn{
+    width: 13rem;
+    height: 5rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+    font-family:Plus Jakarta Sans;
+    border-radius: 1rem;
+    border: none;
+    color: white;
+    background-color: #3563E9;
+}
+/* media start from here  */
+@media screen and (max-width: 1350px){
+    .payPal p {
+        font-size: 1.4rem;
+        left: 6rem;
+    }
+    .agreeCheck {
+        width: 2.2rem;
+        height: auto;
+    }
+    .payPal {
+        width: 85%;
+        height: 5rem;
+    }
+}
+@media screen and (max-width: 1250px){
+    .userName,
+    .userTime,
+    .userPhone,
+    .userCity,
+    .userAddress {
+        
+        input {
+            width: 26rem;
+        }
+    }
+    .payPal {
+        width: 96%;
+        height: 5rem;
+    }
+    .payPal p {
+        font-size: 1.2rem;
+        left: 6rem;
+    }
+}
+@media screen and (max-width: 1100px){
+    .rentBtn {
+        width: 11rem;
+        height: 4rem;
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 992px){
+    .payPal {
+        height: 7rem;
+    }
+    .payPal p {
+        font-size: 1rem;
+        left: 6rem;
+        top: 2.5rem;
+    }
+    .agreeCheck {
+        width: 2.5rem;
+        height: auto;
+    }
+}
+/* media End here  */

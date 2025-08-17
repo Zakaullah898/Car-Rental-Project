@@ -1,0 +1,15 @@
+
+.app-nav-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the navbar is above other content */
+  }
+  
+  /* Ensure the content below the navbar has enough space */
+  .router-outlet {
+    display: block;
+  background-color: rgba(0, 0, 0, 0.007);
+  position: relative;
+  z-index: 1001;
+  }

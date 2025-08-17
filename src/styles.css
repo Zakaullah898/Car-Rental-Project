@@ -1,0 +1,444 @@
+@import '../node_modules/@syncfusion/ej2-material-theme/styles/material.css';
+/* You can add global styles to this file, and also import other style */
+/* @import '@angular-slider/ngx-slider/ngx-slider.css'; */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,  body{
+    background: #F6F7F9;
+    /* width: 100%; */
+    font-size:62.5% ;
+}
+
+
+button ,a {
+    cursor: pointer;
+}
+ul li {
+    list-style-type: none;
+    }
+    a { 
+        text-decoration: none;
+        color: #94A3B8;
+        cursor: pointer;
+    }
+        label {
+            font-family: Poppins;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333333;
+    
+        }
+input {
+    width: 37rem;
+    height: 4.6rem;
+    font-size: 1.4rem;
+    padding: .8rem 1.6rem .8rem 1.6rem;
+    gap: 1.2rem;
+    border-radius: 0.7rem;
+    border: 0.1rem solid black;
+    outline: none;
+}
+.signInBtn{
+    width: 37rem;
+    height: 4.6rem;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    font-family: Poppins,serif;
+    font-weight: 700;
+    border-radius: .7rem;
+    background: #3563E9;
+    color: white;
+
+
+}
+.iconContainer{
+    width: 37rem;
+    height: 4.6rem;
+    background-color: #F9F9F9;
+}
+.icomImg{
+    /* width: 2.356rem; */
+height: 2.2rem;
+
+}
+.inputRow{
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+.inputCol{
+display: flex;
+}
+.row{
+    display: flex;
+    flex-direction: column;
+}
+.col{
+    display: flex;
+}
+.formSelect{
+width: 35rem;
+height: 5rem;
+border-radius: .5rem;
+background-color: white;
+font-family: Poppins;
+font-size: 1.4rem;
+font-weight: 500;
+color: #94A3B8;
+padding-left: 2rem;
+padding-right: 1rem;
+}
+.formOption{
+    width: 35rem;
+    height: 5rem;
+    border-radius: .2rem;
+    background-color: white;
+    font-family: Poppins;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #94A3B8;
+    /* padding-left: 2rem;  */
+}
+
+/* for Payment Method Form Start  */
+.paymentLabe{
+    font-family: Plus Jakarta Sans;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color:#1A202C;
+}
+.paymentMethodInput{
+    width: 38.6rem;
+height: 5.6rem;
+border-radius: 1rem;
+border: none;
+background-color: #F6F7F9;
+color: #90A3BF;
+font-family: Plus Jakarta Sans;
+font-size: 1.3rem;
+font-weight: 500;
+padding: 0rem 0 0 3rem;
+outline: none;
+}
+.paymentFormSection {
+    width: 85rem;
+    height: auto;
+    border-radius: 1.5rem;
+    background-color: white;
+    align-items: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    margin-bottom: 5rem;
+    /* row-gap: 2rem; */
+
+    .methodFormContainer {
+        gap: 3rem;
+        /* width: 85rem; */
+        /* align-items: center; */
+        /* heading Section start */
+        .formHeading {
+         gap:1rem;
+         width: 80rem;
+        }
+
+        /* heading Section End */
+        /* form Start here  */
+        form{
+            gap: 3.5rem;
+            .row{
+                gap:3rem;
+            }
+        }
+        /* form End here  */
+    }
+}
+
+.heading {
+    font-family: Plus Jakarta Sans;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1A202C;
+}
+.para {
+    justify-content: space-between;
+    font-family: Plus Jakarta Sans;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #90A3BF;
+}
+.dropdownRental{
+    width: 38.6rem;
+height: 5.6rem;
+border-radius: 1rem;
+background-color: #F6F7F9;
+font-family: Plus Jakarta Sans;
+font-size: 14px;
+font-weight: 500;
+color: #90A3BF;
+padding-left:  2rem;
+}
+/* for Payment Method Form End  */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+        .custom-otp-input {
+            width: 6.8rem !important;
+            height: 6rem !important;
+            border-radius: .4rem !important;
+            border: solid .1rem #c5c5c5 !important;
+            text-align: center !important;
+            font-size: 3.2rem !important;
+    
+        }
+        .otp-container{
+         width: 40rem !important;
+         padding-left: 0% !important;
+         margin-left: 0% !important;
+        }
+  .otpInput{
+    
+    gap: 3.5rem !important;
+    margin-left: .2rem !important;
+  }
+  .ng-otp-input-wrapper{
+    display: flex !important;
+    gap: .5rem !important;
+  }
+  .highLIghtedRoute{
+    border-bottom: .3rem solid #5EABFF;
+ }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* media query start from here  */
+@media  screen and (max-width:1350px) {
+    html{
+        font-size:56.25% ;
+    }
+    .heading {
+        font-size: 1.5rem;
+    }
+    .paymentMethodInput{
+        width: 32.6rem;
+    }
+    .paymentFormSection .methodFormContainer .formHeading {
+        gap: 1rem;
+        width: 67.5rem;
+    }
+}
+@media screen and (max-width: 1250px){
+    .formSelect{
+        width: 30rem;
+        font-size: 1.2rem;
+    font-weight: 500;
+        }
+        .paymentLabe{
+            font-size: 1.4rem;
+            font-weight: 550;
+        }
+        label {
+            font-size: 1.1rem;
+            font-weight: 550;
+        }
+        input {
+            width: 35rem;
+            height: 4.3rem;
+            font-size: 1.2rem;
+        }
+        .signInBtn{
+            width: 35rem;
+    height: 4.3rem;
+    font-size: 1.2rem;
+        }
+        .iconContainer {
+            width: 35rem;
+            height: 4.3rem;
+        }
+        .icomImg {
+            height: 2rem;
+        }
+        .otp-container{
+            width: 35rem !important;
+           }
+           .custom-otp-input {
+            width: 5.8rem !important;
+            height: 5rem !important;
+    
+        }
+        /* payment method start */
+        .paymentFormSection {
+            width: 70rem;
+        }
+        .paymentFormSection .methodFormContainer form{
+            width: 62.5rem;
+            gap: 3rem;
+        }
+        .paymentFormSection .methodFormContainer{
+            width: 62.5rem;
+            gap: 3rem;
+        }
+        .paymentFormSection .methodFormContainer .formHeading {
+            width: 62.5rem;
+        }
+        .paymentMethodInput {
+            width: 28rem;
+            height: 5rem;
+            font-size: 1.2rem;
+
+        }
+        .paymentFormSection .methodFormContainer form .row {
+            gap: 2rem;
+            width: 28rem;
+        }
+        /* payment method end */
+        .heading {
+            font-size: 1.3rem;
+        }
+}
+@media screen and (max-width: 1100px){
+    .formSelect{
+        width: 30rem;
+        font-size: 1rem;
+    font-weight: 500;
+        }
+        .paymentLabe{
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        label {
+            font-size: 1rem;
+            font-weight: 550;
+        }
+        input {
+            width: 35rem;
+            height: 4.3rem;
+            font-size: 1.2rem;
+        }
+        .signInBtn{
+            width: 30rem;
+            height: 4rem;
+        }
+        .iconContainer {
+            width: 30rem;
+            height: 4rem;
+        }
+        .otp-container{
+            width: 30rem !important;
+           }
+    .custom-otp-input {
+            width: 5.4rem !important;
+            height: 4.6rem !important;
+    
+        }
+        .paymentFormSection {
+            width: 62rem;
+        }
+        .paymentFormSection .methodFormContainer .formHeading {
+            width: 53rem;
+        }
+        .paymentMethodInput {
+            width: 24rem;
+            height: 4.5rem;
+            font-size: 1rem;
+        }
+        .paymentFormSection .methodFormContainer {
+            width: 53.5rem;
+            gap: 2rem;
+        }
+        .para {
+            font-size: 1.2rem;
+        }
+        .paymentFormSection .methodFormContainer form {
+            width: 46.5rem;
+        }
+}
+@media screen and (max-width: 992px){
+    .formSelect{
+        width: 24rem;
+        height: 4rem;
+        }
+        .paymentLabe {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        .iconContainer {
+            width: 28rem;
+            height: 4rem;
+        }
+        .icomImg {
+            height: 2rem;
+    }
+    .signInBtn{
+        width: 28rem;
+        height: 4rem;
+        font-size: 1rem;
+    }
+    input {
+        width: 30rem;
+        height: 4.3rem;
+        font-size: 1.2rem;
+    }
+    .custom-otp-input {
+        width: 4.4rem !important;
+        height: 4rem !important;
+        font-size: 2rem !important;
+    }
+    .paymentFormSection .methodFormContainer .formHeading {
+        width: 35rem;
+    }
+    .heading {
+        font-size: 1.1rem;
+    }
+    .para {
+        font-size: 1rem;
+    }
+    .paymentFormSection {
+        width: 40rem;
+    }
+    .paymentFormSection .methodFormContainer form {
+        width: 30rem;
+        flex-direction: column;
+    }
+    .paymentFormSection .methodFormContainer {
+        width: 30.5rem;
+        gap: 1rem;
+    }
+    .para {
+        font-size: 1rem;
+    }
+    .paymentFormSection .methodFormContainer .formHeading .para .steps {
+       width: 8rem;
+    }
+    }
+ 
+@media screen and (max-width: 800px){
+    .formSelect{
+        width: 17rem;
+        height: 3rem;
+        }
+        .paymentFormSection .methodFormContainer .formHeading {
+            width: 30rem;
+        }
+}
+@media  screen and (max-width:576px) {
+    .formSelect {
+        width: 14rem;
+        height: 3rem;
+        font-size: .8rem;
+    }
+}
+/* media query End from here  */

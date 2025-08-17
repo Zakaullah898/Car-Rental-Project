@@ -1,0 +1,86 @@
+.formContainer{
+    width: 85rem;
+    height: auto;
+    background-color:#F6F7F9;
+    padding: 3rem;
+    border-radius: 1.5rem;
+    gap: 3.5rem;
+}
+.userName , .userTime, .userPhone , .userCity , .userAddress {
+    gap: 1.5rem;
+    input{
+        background-color: #FFFFFF;
+    }
+}
+.radioRental{
+    width: 1.6rem;
+    height: auto;
+}
+.pickUp{
+    gap: 1rem;
+    position: relative;
+    img{
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+.payPal{
+    width: 100%;
+    height: 5.8rem;
+    align-items: center;
+    border-radius: 1rem;
+    gap: 1rem;
+    padding: 0rem 0rem 0 2rem;
+    background-color: #F6F7F9;
+    position: relative;
+    img{
+        position: absolute;
+        right: 3rem;
+        top: 1.5rem;
+    }
+}
+/* media query start from here  */
+@media screen and (max-width: 1350px){
+    .formContainer {
+        width: 68rem;
+        gap: 3rem;
+    }
+}
+@media screen and (max-width: 1250px){
+    .formContainer {
+        width: 62.5rem;
+        gap: 3rem;
+    }
+    .userName , .userTime, .userPhone , .userCity , .userAddress {
+        input{
+            width: 25.6rem;
+            height: 4rem;
+        }
+    }
+}
+@media screen and (max-width: 1100px){
+    .userName , .userTime, .userPhone , .userCity , .userAddress {
+        input{
+            width: 21rem;
+            height: 3.5rem;
+            border-radius: .8rem;
+        }
+    }
+    .formContainer {
+        width: 53.5rem;
+    }
+}
+@media screen and (max-width: 1100px){
+    .formContainer {
+        width: 30.5rem;
+    }
+    .payPal {
+        width: 100%;
+        height: 5rem;
+    }
+    .payPal img {
+        width: 8rem;
+    }
+}
+/* media query end here  */

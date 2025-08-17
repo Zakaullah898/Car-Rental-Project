@@ -1,0 +1,360 @@
+.contactSection {
+    margin-top: 15rem;
+    margin-bottom: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .contactContainer {
+        width: 95%;
+        height: auto;
+        border-radius: 1rem;
+        background-color: #FFFFFF;
+        padding: 3.5rem;
+        gap: 8rem;
+        .contactInfo {
+            width: 45rem;
+            height: 70.2rem;
+            background-color: #3563E9;
+            border-radius: 2rem;
+            padding-top: 5rem;
+            padding-left: 5rem;
+            box-sizing: border-box;
+            box-sizing: content-box;
+            gap: 3rem;
+            .contInfoHeadin {
+                /* gap: 1rem; */
+                width: 35rem;
+                h2{
+                    font-family: Plus Jakarta Sans;
+                    font-size: 2.5rem;
+                    font-weight: 700;
+                    color:#FFFFFF;
+                    width: 25rem;
+                }
+                                .contInfoPara {
+                                    
+                                    font-family:Plus Jakarta Sans ;
+                                    font-size: 1.6rem;
+                                    font-weight: 400;
+                                    line-height: 2.5rem;
+                                    color: #FFFFFF;
+                                }
+            }
+            .phoneNum , .mail , .payPalUrl , .location{
+                align-items: center;
+                gap: 3rem;
+                width: 28rem;
+                .contactInfoIcon{
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    font-size: 2rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    color: #3563E9;
+                    background-color: #FFFFFF;
+                }
+                .contactInfoItem{
+                    font-family:Plus Jakarta Sans ;
+                    font-size: 1.8rem;
+                    font-weight: 400;
+                    color: #FFFFFF;
+                }
+            }
+        }
+
+        .contactFormContainer {
+            /* width: 60%; */
+            height: auto;
+
+            form {
+                width: 72.3rem;
+                gap: 3rem;
+
+                input {
+                    width: 30.6rem;
+                }
+
+                .formColumn {
+                    justify-content: center;
+                    gap: 10rem;
+                }
+
+                .row {
+                    gap: 2rem;
+
+                }
+
+                .textArea {
+                    textarea {
+                        height: 28.9rem;
+                        border-radius: 1rem;
+                        background-color: #F6F7F9;
+                        font-family: Plus Jakarta Sans;
+                        border: none;
+                        font-size: 18px;
+                        font-weight: 400;
+                        color: #00000066;
+                        padding: 2rem 0 0 2.5rem;
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.quoteBtn {
+    align-self: flex-end;
+    width: 18rem;
+    height: 4.6rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+    font-family: Plus Jakarta Sans;
+    border-radius: 3rem;
+    border: none;
+    color: white;
+    background-color: #3563E9;
+
+}
+.disableBtn{
+    align-self: flex-end;
+    width: 18rem;
+    height: 4.6rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+    font-family: Plus Jakarta Sans;
+    border-radius: 3rem;
+    border: none;
+    color: white;
+    background-color: #b1b8c4;
+
+}
+.validation{
+    color: rgb(255, 0, 0);
+}
+/* media query start  */
+@media screen and (max-width: 1250px){
+    .contactSection .contactContainer {
+        width: 95%;
+        gap: 6rem;
+    }
+    .contactSection .contactContainer .contactInfo {
+        width: 30rem;
+        border-radius: 1.7rem;
+    }
+    .contactSection .contactContainer .contactInfo .contInfoHeadin h2 {
+        font-size: 2.2rem;
+    }
+    .contactSection .contactContainer .contactInfo .contInfoHeadin .contInfoPara {
+        font-size: 1.5rem;
+        width: 30rem;
+}
+.contactSection .contactContainer .contactInfo{
+    .phoneNum , .mail , .payPalUrl , .location{
+        .contactInfoIcon{
+            width: 3rem;
+            height: 3rem;
+            font-size: 2rem;
+        }
+        .contactInfoItem{
+            font-size: 1.5rem;
+           
+        }
+    }
+}
+.contactSection .contactContainer .contactFormContainer form {
+    width: 68.3rem;
+}
+.contactSection .contactContainer .contactFormContainer form input {
+    width: 28.6rem;
+    height: 4.6rem;
+    border-radius: .8rem;
+    font-size: 1.2rem;
+    padding: 0rem 0 0 2rem;
+}
+.contactSection .contactContainer .contactFormContainer form .textArea textarea {
+    height: 26.9rem;
+    font-size: 1.5rem;
+}
+.quoteBtn {
+    width: 15rem;
+    height: 4.2rem;
+    font-size: 1.5rem;
+    border-radius: 2.8rem;
+}
+}
+@media screen and (max-width: 1100px){
+    .contactSection .contactContainer .contactInfo .contInfoHeadin h2 {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    .contactSection .contactContainer .contactInfo .contInfoHeadin .contInfoPara {
+        font-size: 1.3rem;
+        width: 26rem;
+}
+.contactSection .contactContainer .contactInfo {
+    width: 25rem;
+    border-radius: 1.5rem;
+}
+.contactSection .contactContainer .contactInfo{
+    .phoneNum , .mail , .payPalUrl , .location{
+        .contactInfoIcon{
+            width: 2rem;
+            height: 2rem;
+            font-size: 1.5rem;
+        }
+        .contactInfoItem{
+            font-size: 1.3rem;
+           
+        }
+    }
+}
+.contactSection .contactContainer .contactFormContainer form {
+    width: 60rem;
+}
+.contactSection .contactContainer .contactFormContainer form input {
+    width: 25rem;
+    height: 4rem;
+    border-radius: .8rem;
+    font-size: 1.1rem;
+    padding: 0rem 0 0 1.5rem;
+}
+.contactSection .contactContainer .contactFormContainer form .textArea textarea {
+    height: 25rem;
+    font-size: 1.2rem;
+}
+.quoteBtn {
+    width: 13rem;
+    height: 4rem;
+    font-size: 1.2rem;
+    border-radius: 2.5rem;
+}
+}
+@media screen and (max-width: 992px){
+    .contactSection .contactContainer .contactInfo {
+        width: 19rem;
+        border-radius: 1.5rem;
+        height: 50.2rem;
+        padding-left: 3rem;
+    }
+    .contactSection .contactContainer .contactInfo .contInfoHeadin h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        width: 21rem;
+        
+    }
+    .contactSection .contactContainer .contactInfo .contInfoHeadin .contInfoPara {
+        font-size: 1rem;
+        width: 20rem;
+}
+.contactSection .contactContainer .contactInfo{
+    .phoneNum , .mail , .payPalUrl , .location{
+        .contactInfoIcon{
+            width: 1.5rem;
+            height: 1.5rem;
+            font-size: 1.1rem;
+        }
+        .contactInfoItem{
+            font-size: 1.1rem;
+           
+        }
+    }
+}
+.contactSection .contactContainer .contactFormContainer {
+    height: auto;
+}
+.contactSection .contactContainer .contactFormContainer form {
+    width: 50rem;
+}
+.contactSection .contactContainer .contactFormContainer form input {
+    width: 20rem;
+    height: 3.8rem;
+    border-radius: .8rem;
+    font-size: 1rem;
+    padding: 0rem 0 0 1.5rem;
+}
+.contactSection .contactContainer .contactFormContainer form .textArea textarea {
+    height: 25rem;
+    font-size: 1.2rem;
+}
+.quoteBtn {
+    width: 13rem;
+    height: 4rem;
+    font-size: 1.2rem;
+    border-radius: 2.5rem;
+}
+}
+@media screen and (max-width: 800px){
+    .contactSection .contactContainer {
+        width: 79%;
+        gap: 6rem;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    
+    .contactSection .contactContainer .contactInfo {
+        width: 28rem;
+        border-radius: 1.5rem;
+        height: 30.2rem;
+        border-radius: 1rem;
+    }
+    .contactSection .contactContainer .contactInfo .contInfoHeadin h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        width: 21rem;
+        
+    }
+    .contactSection .contactContainer .contactInfo .contInfoHeadin .contInfoPara {
+        font-size: 1rem;
+        width: 20rem;
+}
+.contactSection .contactContainer .contactInfo{
+    .phoneNum , .mail , .payPalUrl , .location{
+        .contactInfoIcon{
+            width: 1.5rem;
+            height: 1.5rem;
+            font-size: 1.1rem;
+        }
+        .contactInfoItem{
+            font-size: 1.1rem;
+           
+        }
+    }
+}
+.contactSection .contactContainer .contactFormContainer {
+    height: auto;
+}
+.contactSection .contactContainer .contactFormContainer form {
+    width: 39rem;
+    align-items: center;
+}
+.contactSection .contactContainer .contactFormContainer form input {
+    width: 30rem;
+    height: 3.8rem;
+    border-radius: .8rem;
+    font-size: 1rem;
+    padding: 0rem 0 0 1.5rem;
+}
+.contactSection .contactContainer .contactFormContainer form .textArea textarea {
+    height: 21rem;
+    font-size: 1.2rem;
+    width: 30rem;
+}
+.quoteBtn {
+    width: 13rem;
+    height: 4rem;
+    font-size: 1.2rem;
+    border-radius: 2.5rem;
+    align-self: center;
+}
+.contactSection .contactContainer .contactFormContainer form .formColumn {
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+}
+    /* media query end */

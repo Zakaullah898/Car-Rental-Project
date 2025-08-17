@@ -1,0 +1,161 @@
+/* .calandarSection{
+    width: 40%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    height: 0rem;
+    .calandarContainer{
+        width: 26rem;
+        height: 32rem;
+        background-color: #73b8fd;
+        border-radius: 1.5rem;
+        border: .1rem solid #F5F6F7;
+        .monthNamesContainer{
+            width: 100%;
+            height: 5rem;
+            justify-content: center;
+            align-items: center;
+            gap: 7rem;
+            border-radius: 1.5rem 1.5rem 0 0;
+            background-color: #FFFFFF;
+            .angelIcon{
+             font-size: 2rem;
+             color: #C3CAD9;
+            }
+                        .monthName {
+                            gap: .5rem;
+                            span {
+                                font-family: Roboto;
+                                font-size: 1.2rem;
+                                font-weight: 700;
+                                color: #7D8FB3;
+                            }
+                        }
+        }
+        .weekContainer{
+                        width: 100%;
+                        height: 4rem;
+            .daysName {
+                width: 4rem;
+                aspect-ratio: 1;
+                background-color: #FFFFFF;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: Roboto;
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: #7D8FB3;
+                border: .1rem solid #F5F6F7;
+            }
+                }
+                .numberContainer{
+                    width: 28rem;
+                    height: auto;
+                    flex-wrap: wrap;
+                    .number{
+                        width: 4rem;
+                        aspect-ratio: 1;
+                        background-color: #FFFFFF;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-family: Roboto;
+                        font-size: 1.2rem;
+                        font-weight: 700;
+                        color: #7D8FB3;
+                        border: .1rem solid #F5F6F7;
+                    }
+
+                }
+    }
+}
+.calandarContainer::backdrop{
+    background-color: black;
+    opacity: 2;
+} */
+ .overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+ }
+ .popup{
+    margin: 3rem auto;
+    background: #fff;
+    border-radius: 5px;
+    width: 27rem;
+    position: relative;
+    bottom: -17rem;
+    height: 31rem;
+ }
+ 
+ .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #f4faff, #ffffff);
+    border-radius: 1.6rem;
+    box-shadow: 0 0.4rem .8rem rgba(0, 0, 0, 0.1);
+    padding: 1.6rem;
+    text-align: center;
+  }
+  
+  .icon {
+    width: 5.6rem;
+    height: 5.6rem;
+    border: .2rem solid #007bff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.6rem;
+    background-color: #eaf4ff;
+  }
+  
+  .icon img {
+    width: 5.6rem;
+    height: 5.6rm;
+    fill: #007bff;
+  }
+  
+  .message {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: .8rem;
+    line-height: 2.5rem;
+  }
+  
+  .description {
+    font-size: 1.4rem;
+    color: #666666;
+    margin-bottom: 1.6rem;
+    line-height: 2rem;
+  }
+  
+  .button {
+    width: 100%;
+    padding: 1.2rem;
+    background-color: #007bff;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: .8rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  

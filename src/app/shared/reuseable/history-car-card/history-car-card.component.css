@@ -1,0 +1,225 @@
+.historyCarCard {
+    margin-top: 15rem;
+    margin-bottom: 10rem;
+    padding-left: 5rem;
+
+    .carCardContainer {
+        width: 58rem;
+        height: 20rem;
+        background-color: #FFFFFF;
+        border-radius: 1rem;
+        box-sizing: border-box;
+        box-sizing: content-box;
+        gap: 2.5rem;
+
+        .carHis {
+            width: 50%;
+            padding-top: 1.5rem;
+            padding-left: 2rem;
+
+            .hisHeading {
+                align-items: center;
+                gap: 2.5rem;
+
+                h2 {
+                    font-family: Plus Jakarta Sans;
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    color: #1A202C;
+                }
+
+                h3 {
+                    font-family: Plus Jakarta Sans;
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    color: #90A3BF;
+                }
+            }
+
+            .carImg {
+                width: 16.9rem;
+                height: 7.9rem;
+                margin-left: 3.2rem;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .menueSpecific {
+                width: 100%;
+                height: 7rem;
+                display: flex;
+                justify-content: center;
+                gap: 3rem;
+
+                & .gasolin {
+                    width: 4rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0.5rem;
+
+                    & span {
+                        font-family: Plus Jakarta Sans;
+                        font-size: 1.4rem;
+                        font-weight: 500;
+                        color: #90A3BF;
+                    }
+                }
+
+                & .manual {
+                    width: 7rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0.5rem;
+
+                    & span {
+                        font-family: Plus Jakarta Sans;
+                        font-size: 1.4rem;
+                        font-weight: 500;
+                        color: #90A3BF;
+                    }
+                }
+
+                & .profile {
+                    width: 7rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0.5rem;
+                    margin-right: 1.5rem;
+
+                    & span {
+                        font-family: Plus Jakarta Sans;
+                        font-size: 1.4rem;
+                        font-weight: 500;
+                        color: #90A3BF;
+                    }
+                }
+            }
+        }
+
+        .locationHis {
+            width: 50%;
+            padding-top: 1.5rem;
+            padding-right: 2.5rem;
+            gap: 1rem;
+
+            .loc-re-rent-bnt {
+                justify-content: end;
+                align-items: center;
+                gap: 1.5rem;
+
+                .cancel {
+                    width: 4rem;
+                    height: 1.5rem;
+
+                    span {
+                        font-family: Inter;
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        color: #FF1C00;
+                    }
+                }
+
+                .returnBtn {
+                    button {
+                        width: 8.4rem;
+                        height: 2.9rem;
+                        padding: 0 .3rem 0 .3rem;
+                        border-radius: .4rem;
+                        border: none;
+                        background: #2CB67D;
+                        font-family: Plus Jakarta Sans;
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                        color: #FFFFFF;
+
+                    }
+                }
+            }
+
+            /* .pickUp {
+                width: 20.8rem;
+                
+            } */
+
+            .pickUpOffCont {
+                justify-content: space-between;
+                gap: 1rem;
+                margin-top: 2rem;
+                position: relative;
+
+                .pickUpHead {
+                    width: 17.8rem;
+                    border-bottom: .1rem #90A3BF dotted;
+                    padding-bottom: 1rem;
+                }
+
+                .headingLoc {
+                    gap: .5rem;
+
+                    .heading1 {
+                        font-family: Inter;
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                        color: #252525;
+
+                    }
+
+                    .heading2 {
+                        font-family: Inter;
+                        font-size: 1.4rem;
+                        font-weight: 500;
+                        color: #90A3BF;
+                    }
+                }
+
+                .day {
+                    display: flex;
+                    gap: .4rem;
+                    font-family: Inter;
+                    font-size: 1.4rem;
+                    color: #333333;
+                    position: absolute;
+                    top: 3.7rem;
+                    right: 0;
+                }
+
+                .price {
+                    font-family: Plus Jakarta Sans;
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                    color: #1A202C;
+                    position: absolute;
+                    right: 2.3rem;
+                    top: 2rem;
+                    position: relative;
+
+                    &::before {
+                        content: 'Price';
+                        font-family: Plus Jakarta Sans;
+                        font-size: 1.4rem;
+                        font-weight: 500;
+                        color: #90A3BF;
+                        position: absolute;
+                        right: 6.4rem;
+
+                        
+                    }
+                }
+                .price::after {
+                    content: '/day';
+                    font-family: Plus Jakarta Sans;
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    color: #90A3BF;
+                    position: absolute;
+                    left: 6rem;
+                }
+            }
+        }
+    }
+}

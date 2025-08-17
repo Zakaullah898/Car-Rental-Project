@@ -1,0 +1,485 @@
+.vehicleSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 10rem;
+
+    .vehicleSectionContainer {
+        display: flex;
+        height: auto;
+        gap: 2rem;
+
+        .sideVehicleSection {
+
+            width: 25%;
+            margin-bottom: 5rem;
+
+            .sideBarContainer {
+                width: 90%;
+                height: 100%;
+                margin-left: 3rem;
+                padding-top: 5rem;
+                gap: 2rem;
+
+                .conditionContainer {
+                    width: 100%;
+
+                    & .condBtn {
+                        width: 100%;
+                        gap: 2rem;
+
+                    }
+                }
+
+                .fuelContainer {
+                    width: 100%;
+
+                    .fuelBtn {
+                        gap: 1rem;
+                        flex-wrap: wrap;
+                    }
+                }
+
+                .applyContainer {
+                    width: 100%;
+
+                    .applyBtn {
+                        width: 33rem;
+                        height: 5.9rem;
+                    }
+                }
+            }
+
+            .priceRange {
+                width: 35rem;
+                gap: 1rem;
+
+                .rupees {
+                    gap: 13.5rem;
+                    width: 33rem;
+                }
+
+                p {
+                    font-family: Poppins;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    color: #A3AAAE;
+                }
+
+
+            }
+        }
+
+        .vehicleCardSection {
+            width: 65%;
+            margin-right: 1rem;
+            margin-left: 7rem;
+            margin-top: 7rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            gap: 3rem;
+        }
+    }
+
+    .paymentMethodSection {
+        width: 97%;
+        padding: 5rem 2.5rem 0 3rem;
+        margin-bottom: 3rem;
+        gap: 3rem;
+
+        .billingSection {
+            width: 98rem;
+            height: auto;
+            gap: 0rem;
+        }
+    }
+}
+
+.heading{
+    font-family: Poppins;
+font-size: 2.4rem;
+font-weight: 500;
+margin-bottom: .8rem;
+
+}
+.sliderMat{
+    background-color: #3563E9;
+    width: 40rem !important;
+}    
+ .sidCondFulBtn{
+    width: 5.6rem;
+    height: 3.6rem;
+    background-color: white;
+    color: black;
+    font-family: Poppins;
+    font-size: 1.2;
+    font-weight: 500;
+    border: none;
+
+}
+.carsCard{
+    height: 40rem;
+    width:30rem;
+}
+
+.numberSelection{
+    width: 100%;
+display: flex;
+gap: 3rem;
+margin-bottom: 5rem;
+position: relative;
+.numCount{
+    position: absolute;
+    right: 15rem;
+    font-family: Poppins;
+    font-size: 1.8rem;
+font-weight: 400;
+color: #90A3BF;
+}
+.angelIcon{
+    position: absolute;
+    right: 11rem;
+    font-family: Poppins;
+    font-size: 1.8rem;
+font-weight: 400;
+color: #90A3BF;
+display: flex;
+gap: 1.5rem;
+}
+}
+ .hideSidebar{
+    width: 90%;
+    height: 100%;
+    margin-left: -40rem;
+    padding-top: 5rem;
+    gap: 2rem;
+ }
+ .sideBarWidth{
+    width: 0%;
+    margin-bottom: 5rem;
+    height: 68rem;
+ }
+ .cardContainerWidth{
+    width: 100%;
+    height: auto;
+    margin-right: 1rem;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    gap: 3rem;
+ }
+/* media query start from here  */
+@media screen and (max-width: 1350px){
+    .numberSelection{
+       
+    .numCount{
+        right: 17rem;
+    }
+    .angelIcon{
+        right: 12rem;
+    }
+    }
+    .vehicleCardSection{
+        gap: 5rem !important;
+    }
+}
+@media screen and (max-width: 1250px){
+    .vehicleSection {
+        
+    
+        .vehicleSectionContainer {
+            .sideVehicleSection {
+    
+                .sideBarContainer {
+                    
+    
+                    .applyContainer {
+    
+                        .applyBtn {
+                            width: 30rem;
+                            height: 4.9rem;
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+    
+            .vehicleCardSection {
+                margin-left: 4rem;
+            }
+        }
+    }
+    .heading{
+    font-size: 2rem;
+    
+    }
+    .numberSelection{
+       
+        .numCount{
+            right: 19rem;
+        }
+        .angelIcon{
+            right: 14rem;
+        }
+        }
+        .vehicleCardSection{
+            gap: 5rem !important;
+        }
+        .mat-mdc-slider{
+            width: 28rem !important;
+        }
+        app-cars-card{
+            height: 30rem;
+        }
+}
+@media screen and (max-width: 1100px){
+    .vehicleSection {
+        
+    
+        .vehicleSectionContainer {
+            .sideVehicleSection {
+                .priceRange {
+    
+                    .rupees {
+                        width: 28rem;
+                    }
+                }    
+                .sideBarContainer {
+                    
+    
+                    .applyContainer {
+    
+                        .applyBtn {
+                            width: 29rem;
+        height: 4rem;
+        font-size: 1rem;
+                        }
+                    }
+                }
+            }
+    
+            .vehicleCardSection {
+                margin-left: 4rem;
+            }
+        }
+    }
+    .heading{
+        font-size: 1.2rem;
+    
+    }
+    .numberSelection{
+       
+        .numCount{
+            right: 19rem;
+        }
+        .angelIcon{
+            right: 14rem;
+        }
+        }
+        .vehicleCardSection{
+            gap: 5rem !important;
+        }
+        .mat-mdc-slider{
+            width: 27rem !important;
+        }
+        app-cars-card{
+            height: 30rem;
+        }
+}
+@media screen and (max-width: 992px){
+    .vehicleSection {
+        
+    
+        .vehicleSectionContainer {
+            .sideVehicleSection {
+                .priceRange {
+    
+                    .rupees {
+                        width: 25.8rem;
+                    }
+                }    
+                .sideBarContainer {
+                    
+    
+                    .applyContainer {
+    
+                        .applyBtn {
+                            width: 24rem;
+        height: 4rem;
+        font-size: 1rem;
+                        }
+                    }
+                }
+            }
+    
+            .vehicleCardSection {
+                /* margin-left: 4rem; */
+            }
+        }
+    }
+    .heading{
+        font-size: 1.2rem;
+    
+    }
+    .numberSelection{
+       
+        .numCount{
+            right: 19rem;
+        }
+        .angelIcon{
+            right: 14rem;
+        }
+        }
+        .vehicleCardSection{
+            gap: 5rem !important;
+        }
+        .mat-mdc-slider{
+            width: 27rem !important;
+        }
+        app-cars-card{
+            height: 30rem;
+        }
+    .mat-mdc-slider{
+        width: 22rem !important;
+    }
+    .vehicleSection .paymentMethodSection .billingSection {
+        width: 55rem;
+    }
+}
+@media screen and (max-width: 800px){
+    .vehicleSection .manuBarLeft{
+        width: 9rem;
+        height: 100%;
+        margin-left: 3rem;
+        font-size: 2.5rem;
+        position: relative;
+        top: 7rem;
+        color: #94A3B8;
+        left: 15rem;
+    }
+    .vehicleSection .menuBarRight{
+        width: 9rem;
+        height: 100%;
+        margin-left: 3rem;
+        font-size: 2.5rem;
+        position: relative;
+        top: 7rem;
+        color: #94A3B8;
+    }
+
+.vehicleSection .vehicleSectionContainer .sideVehicleSection .sideBarContainer {
+    width: 90%;
+        height: 100%;
+        margin-left: 3rem;
+        gap: 2rem;
+        padding-top: 0;
+        position: relative;
+        top: 6rem;
+}
+.vehicleSection .vehicleSectionContainer .vehicleCardSection {
+    
+    margin-top: 1rem;
+}
+.heading{
+    font-size: 1rem;
+
+}
+.vehicleSection .vehicleSectionContainer .sideVehicleSection .priceRange .rupees {
+    width: 10.8rem;
+    gap: 10.5rem;
+}
+.mat-mdc-slider {
+    width: 15rem !important;
+}
+.sidCondFulBtn {
+    width: 4.6rem;
+    height: 2.6rem;;
+    font-size: 1rem;
+}
+.vehicleSection .vehicleSectionContainer .sideVehicleSection .sideBarContainer .applyContainer .applyBtn {
+    width: 16rem;
+    height: 4rem;
+    font-size: 1rem;
+}
+.vehicleCardSection{
+    gap: 1rem !important;
+}
+.numberSelection .numCount {
+    right: 13rem;
+}
+.numberSelection .angelIcon {
+    right: 8rem;
+}
+.vehicleSection .paymentMethodSection {
+    flex-direction: column-reverse;
+    align-items: center;
+}
+/* app-billing-inf app-rental-inf app-payment-method app-conformation-messag{
+    width: 35rem;
+} */
+.vehicleSection .paymentMethodSection .billingSection {
+    width: 40rem;
+}
+}
+@media screen and (max-width:576px) {
+    .vehicleSection .menuBarRight {
+        left: -2rem;
+     }
+     .vehicleSection .manuBarLeft {
+         left: 12rem;
+     }
+    .heading {
+        font-size: .8rem;
+    }
+    .vehicleSection .vehicleSectionContainer .sideVehicleSection .priceRange .rupees {
+        width: 16rem;
+        gap: 5.5rem;
+    }
+    .mat-mdc-slider {
+        width: 8rem !important;
+    }
+    .vehicleSection .vehicleSectionContainer .sideVehicleSection .sideBarContainer .fuelContainer .fuelBtn {
+        gap: .4rem;
+        flex-wrap: wrap;
+        width: 16rem;
+    }
+    .sidCondFulBtn {
+        width: 4rem;
+        height: 2.4rem;
+        font-size: .8rem;
+    }
+    .vehicleSection .vehicleSectionContainer .sideVehicleSection .sideBarContainer .applyContainer .applyBtn {
+        width: 13rem;
+        height: 3rem;
+        font-size: .8rem;
+    }
+    .vehicleSection .vehicleSectionContainer .sideVehicleSection .priceRange {
+        width: 16rem;
+        gap: 1rem;
+    }
+    app-cars-card {
+        height: 21rem;
+    }
+    .numberSelection .numCount {
+        right: 29rem;
+    }
+    .numberSelection .angelIcon {
+        right: 23rem;
+    }
+}
+@media screen and (max-width:375px) {
+    .numberSelection .numCount {
+        right: 20rem;
+        font-size: 1rem;
+    }
+    .numberSelection .angelIcon {
+        right: 15rem;
+        font-size: 1rem;
+    }
+}
+/* media query start from here  */
