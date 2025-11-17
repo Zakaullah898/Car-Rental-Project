@@ -224,6 +224,31 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
  }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Sanck bar styling here */
+::ng-deep .custom-snackbar {
+  background-color: #1976d2 !important;   /* Snackbar background color */
+  color: white !important;                 /* Text color */
+  font-size: 24px !important;              /* Increase font size */
+  font-weight: 500 !important;             /* Make text bold */
+  padding: 20px 36px !important;           /* Increase box padding */
+  border-radius: 14px !important;          /* Rounded corners */
+  min-width: 350px !important;             /* Increase width */
+  text-align: center;                      /* Center text */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);  /* Add shadow */
+}
+.mat-mdc-snack-bar-container .mdc-snackbar__label
+{
+    font-size: 20px !important;              /* Increase font size */
+    font-weight: 500 !important;
+}
+.mat-mdc-snackbar-surface{
+    padding:9px !important;
+}
+.mat-mdc-button .mdc-button__label{
+    font-size: 18px !important;
+}
+/* Sanck bar styling end here */
 /* media query start from here  */
 @media  screen and (max-width:1350px) {
     html{

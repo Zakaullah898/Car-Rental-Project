@@ -86,15 +86,14 @@
     <!-- } -->
     <div  [ngClass]="isSideVehicleSecVisi ? 'vehicleCardSection':'cardContainerWidth'">
         
-        @for (item of carsName; track $index ; ) {
+        @for (item of allCarsData; track $index ; ) {
             <app-cars-card
             (carDataload)="receiveData($event)"
                 [carDataGetted]="item"
-                [carName]="item.name" 
-                [isVisible]="item.showLike" 
-                (onBtnClick)="getLikeImg($index)" 
-                [pkr]="item.rentPrice" 
-                [carImg]="item.image" 
+                [carId] = "item.carId"
+                [carName]="item.title" 
+                [pkr]="item.pricePerDay" 
+                [carImg]="item.imageUrl" 
                 [tankCapacity]="item.tankCapacity" 
                 [transmission]="item.transmission"
                 [sittingCapacity]="item.sittingCapacity"

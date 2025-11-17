@@ -25,11 +25,7 @@
     }
     <div class="signInContainer">
         <div class="signIcon col">
-            <img src="./signInNav.png" alt="" (click)="showProfileDropdown()">
-            @if (isMenuShow){
-
-            <div class="signIn">Sign In</div>
-            }
+            <img [src]="profileImage? profileImage:'./signInNav.png'" alt="" (click)="showProfileDropdown()" class="profile-img">
         </div>
     </div>
 

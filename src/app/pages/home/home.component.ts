@@ -7,6 +7,7 @@ import { carData } from '../../core/models/class/carData';
 import { CarsDataServService } from '../../core/services/cars-data-serv.service';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { CalaendarComponent } from '../../shared/reuseable/calaendar/calaendar.component';
+import { Car } from '../../core/Interface/car';
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -15,19 +16,20 @@ import { CalaendarComponent } from '../../shared/reuseable/calaendar/calaendar.c
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit {
-isShowAllCars!:boolean;
-isBanrRentBtnVisible!:boolean;
-isDisplay : boolean =false;
-//  updateLikeImages =this.showLike? './heart.png' : './Like.png'
-router = inject(Router)
-  carsName : carData[] =[]
+  userId !: string;
+  isShowAllCars!:boolean;
+  isBanrRentBtnVisible!:boolean;
+  isDisplay : boolean =false;
+  router = inject(Router)
+  carsData : Car[] =[]
   servExpCont : any [] =[]
   carsDeleted : any;
   subcriptionForm : FormGroup = new FormGroup({
     email : new FormControl('')
   })
-  carDataServ = inject (CarsDataServService)
-  constructor(private carRentServ:CarRentServService,private breakpointObserver: BreakpointObserver){
+  carDataServ = inject (CarsDataServService);
+  carRentService : CarRentServService = inject(CarRentServService);
+  constructor(private breakpointObserver: BreakpointObserver){
     // this.getAllUserCars()
   }
  
@@ -43,9 +45,17 @@ router = inject(Router)
         this.isBanrRentBtnVisible = false
       }
     })
-    this.carsName =this.carDataServ.carsName
+    // this.carsData =this.carDataServ.
     this.servExpCont = this.carDataServ.servExpCont
+    this.getAllCarsData()
+    // getting user id that I'll user for adding car to favourite 
+        this.carRentService.userData$.subscribe(user => {
+      if (user) {
+        this.userId = user.userId;
+      }
+    }); 
   }
+
   // method for subscription submit 
   onSubmit(){
     console.log(this.subcriptionForm.value
@@ -65,25 +75,25 @@ router = inject(Router)
   }
   // method for like 
       getLikeImg(index : number ){
-        this.carsName[index].showLike = !this.carsName[index].showLike
+        this.carsData[index].isFavorite = !this.carsData[index].isFavorite
     }
     goToRental(){
       this.router.navigateByUrl('rentNow')
     }
-    getAllUserCars(){
-      this.carRentServ.getAllCars().subscribe((res:any)=>{
+    getAllCarsData(){
+      this.carDataServ.getAllCarsData().subscribe((res:any)=>{
         
-            this.carsName = res.data.slice(0,4)
+            this.carsData = res.data.slice(0,4)
             this.isShowAllCars=!this.isShowAllCars
-            console.log(this.carsName)
+            console.log("Cars Data",this.carsData)
       })
         }
         viewAll(){
-          this.carRentServ.getAllCars().subscribe((res:any)=>{
+          this.carDataServ.getAllCarsData().subscribe((res:any)=>{
         
-            this.carsName = res.data
+            this.carsData = res.data
             this.isShowAllCars=!this.isShowAllCars
-            console.log(this.carsName)
+            console.log(this.carsData)
           })
         }
 }

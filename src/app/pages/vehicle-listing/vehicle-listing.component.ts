@@ -19,6 +19,7 @@ import { CommonModule } from '@angular/common';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { carData } from '../../core/models/class/carData';
 import { CarsDataServService } from '../../core/services/cars-data-serv.service';
+import { Car } from '../../core/Interface/car';
 @Component({
   selector: 'app-vehicle-listing',
   standalone: true,
@@ -34,7 +35,7 @@ export class VehicleListingComponent implements OnInit,AfterViewChecked{
   modelOfCars : any [] =[2000, 2001,2003,2004,2005,2006,2007,2008,2008, 2009, 2010,2011, 2012,]
 minValue: number = 2500;
 maxValue: number = 50000;
-carsName : carData[] =[]
+allCarsData : Car[] =[]
 crossBar = faXmark;
 angelRight= faAngleRight;
 angelLeft = faAngleLeft;
@@ -64,7 +65,9 @@ ngOnInit(): void {
       this.isMenuVisi = false
     }
   })
-  this.carsName = this.carDataSer.vehicalcarData
+   this.carDataSer.getAllCarsData().subscribe((res : any)=>{
+    this.allCarsData = res.data;
+  })
 }
 ngAfterViewChecked(): void {
   this.carData = history.state
@@ -80,16 +83,16 @@ receiveData(data: any) {
   history.pushState({ data: data }, '', window.location.href);
   this.carData = data;
 }
-getLikeImg(index : number ){
-debugger
-this.carsName[index].showLike = !this.carsName[index].showLike
-}
+// getLikeImg(index : number ){
+// debugger
+// this.carsName[index].showLike = !this.carsName[index].showLike
+// }
 getAllUserCars(){
-  this.carRentServ.getAllCars().subscribe((res:any)=>{
+  // this.carRentServ.getAllCars().subscribe((res:any)=>{
     
-        this.carsName = res.data
-        console.log(this.carsName)
-  })
+  //       this.carsName = res.data
+  //       console.log(this.carsName)
+  // })
 }
 hideSideBar(){
   this.isSideVehicleSecVisi = !this.isSideVehicleSecVisi 

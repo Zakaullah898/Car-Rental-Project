@@ -1,11 +1,13 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { carData } from '../models/class/carData';
+import { HttpClient } from '@angular/common/http';
+import { carRentApiConst } from '../constant/carRentConstant';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CarsDataServService {
-
+http : HttpClient = inject(HttpClient);
   carsName : carData[] =[
     {name:'Swift', rentPrice :'4000', image:'./swift.png', showLike : false, tankCapacity: 54, transmission : 4, sittingCapacity : 2},
     {name:'Wagon-R', rentPrice :'5000', image:'./wagonR.png', showLike : false , tankCapacity: 54, transmission : 4, sittingCapacity : 2},
@@ -50,5 +52,24 @@ export class CarsDataServService {
       {name:'APV', rentPrice :'3500', image:'./apv.jpg', showLike : false, tankCapacity: 54, transmission : 4, sittingCapacity : 2},
   ]
   constructor() { }
+
+
+  getAllCarsData(){
+    return this.http.get(`${carRentApiConst.API_URL}${carRentApiConst.GET_ALL_CARS}`)
+  }
+  // Getting Favourite cars data
+  gettingFavouriteCars(userId : string){
+    return this.http.get(`${carRentApiConst.API_URL}${carRentApiConst.FAVOURITE_CARS}/${userId}`)
+  }
+
+  addingToFavourite(carId: number, userId: string) {
+  const payload = {
+    favoriteId: 0,
+    userId: userId,
+    carId: carId,
+    addedAt: new Date().toISOString()
+  };
+  return this.http.post(`${carRentApiConst.API_URL}${carRentApiConst.ADD_TO_FAVOURITE}`, payload);
+}
 
 }

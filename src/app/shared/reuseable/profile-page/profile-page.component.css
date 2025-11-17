@@ -1,148 +1,245 @@
-.profileSection{
-    margin-top: 13rem;
+/* ------------------------------
+   Global & Base Styles
+------------------------------ */
+body {
+  background-color: #f8f9fb;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ------------------------------
+   Container & Card
+------------------------------ */
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.profile-card {
+  margin-top: 100px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  width: 90%;
+  max-width: 1000px;
+  padding: 30px;
+  transition: 0.3s ease;
+}
+
+/* ------------------------------
+   Header Section
+------------------------------ */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #007bff;
+}
+
+.profile-info {
+  flex: 1;
+  min-width: 200px;
+}
+
+.profile-info h2 {
+  font-size: 24px;
+  margin: 0;
+  color: #333;
+}
+
+.profile-info p {
+  margin: 5px 0;
+  color: #666;
+}
+
+/* ------------------------------
+   Section Styles
+------------------------------ */
+.profile-section {
+  margin-top: 25px;
+}
+
+.profile-section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* ------------------------------
+   Grid Layouts
+------------------------------ */
+.profile-details-grid,
+.license-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 15px;
+}
+
+.detail-item,
+.license-item {
+  background: #f9fafc;
+  border-radius: 10px;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #777;
+}
+
+.value {
+  font-size: 15px;
+  color: #333;
+  margin-top: 4px;
+  word-break: break-word;
+}
+
+.license-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 8px;
+}
+
+/* ------------------------------
+   Buttons
+------------------------------ */
+.action-btn {
+  text-align: right;
+  margin-top: 25px;
+}
+
+.action-btn button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.action-btn button:hover {
+  background-color: #0056b3;
+}
+
+/* ------------------------------
+   Responsive Design
+------------------------------ */
+
+/* For tablets (≤ 1024px) */
+@media (max-width: 1024px) {
+  .profile-card {
+    padding: 25px;
+  }
+
+  .profile-header {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .profile-info h2 {
+    font-size: 22px;
+  }
+}
+
+/* For small tablets & large phones (≤ 768px) */
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 20px;
+  }
+
+  .profile-card {
     width: 100%;
-    display: flex;
+    padding: 20px;
+  }
+
+  .profile-header {
     flex-direction: column;
     align-items: center;
-    margin-bottom: 5rem;
-    .profileContainer{
-        width: 90%;
-        height: auto;
-        border-radius: 2rem;
-        background-color: #FFFFFF;
-        padding: 4rem;
-        gap: 5rem;
-        margin-bottom: 5rem;
-        .profileHeading{
-            position: relative;
-            .profileImgContainer{
-              gap: 4rem;
-              position: relative;
-               .proImg{
-                   width: 11rem;
-                   height: 11rem;
-                img{
-                    width: 100%;
-                    border-radius: 50%;
-                }
-               }
-               .uploadBtn{
-                position: absolute;
-                top: 6.5rem;
-                left: 14rem;
-                button {
-                        background-color: #3563E9;
-                    }
-               }
+    text-align: center;
+  }
 
-            }
-            .saveProfileBtn{
-               position: absolute;
-               right: 0%;
-               top:0%;
-               button{
-                background-color: #34A853;
-               
-               }
-            }
-        }
-        .formContainer{
-            width: 95%;
-            height: auto;
-          .form{
-            gap: 3.5rem;
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
 
-            .col{
-                gap: 3.5rem;
-                .genderSelectionContainer{
-                      .genderSelection{
-                        
-                        gap: 1.6rem;
-                        .genderMale , .genderFemale{
-                            width: 16.5rem;
-                            align-items: center;
-                            justify-content: space-between;
-                            padding-right: 2rem;
-                            input{
-                                width: 1.8rem;
+  .profile-info h2 {
+    font-size: 20px;
+  }
 
-                            }
-                            label{
-                                font-size: 1.4rem;
-                            }
-                        }
-                      }
-                }
-            }
-          }
-        }
-        
-    }
-    .licenceContainer{
-        width: 90%;
-        height: 40rem;
-        background-color: #FFFFFF;
-        border-radius: 2rem;
-        padding: 5rem;
-        gap: 3rem;
-        .drivingLicence{
+  .profile-info p {
+    font-size: 14px;
+  }
 
-        }
-        .licenceImgFront{
-            gap: 1.5rem;
-            position: relative;
-            .upLoadLicenceImgBtn{
-                position: absolute;
-                right: 0%;
-                top: 21.5rem;
-            }
-        }
-        .licenceImgBack{
-            gap: 1.5rem;
-            position: relative;
-            .upLoadLicenceImgBtn{
-                position: absolute;
-                right: 0%;
-                top: 21.5rem;
-            }
-        }
-    }
-}
-.licenceHeading{
-    font-family: Inter;
-font-size: 1.4rem;
-font-weight: 500;
-color: #252525;
-}
-.licenceImgCont{
-    width: 35.5rem;
-    height: 16.4rem;
-    margin-bottom: 1rem;
-    box-sizing:border-box;
-    position: relative;
-    img{
-        width: 35.5rem;
-        height: 16.4rem;
-        border-radius: 1.5rem;
-        position: absolute;
-        left: 0;
-}
-}
-.proBtn{
-    width:13rem ;
-    height: 4.2rem ;
-    border-radius: .6rem;
-    border: none;
-    font-family: Inter;
-    font-size: 1.4rem;
-    font-weight: 400;
-    color: #FFFFFF;
-    background-color: #3563E9;
-    cursor: pointer;
+  .profile-details-grid,
+  .license-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .license-img {
+    height: 120px;
+  }
+
+  .action-btn {
+    text-align: center;
+  }
+
+  .action-btn button {
+    width: 100%;
+    padding: 12px;
+  }
 }
 
-input{
-    width: 30.6rem;
-    font-size: 1.4rem;
-    color: #252525;
+/* For mobile phones (≤ 480px) */
+@media (max-width: 480px) {
+  .profile-card {
+    border-radius: 10px;
+    padding: 15px;
+  }
+
+  .profile-info h2 {
+    font-size: 18px;
+  }
+
+  .profile-info p {
+    font-size: 13px;
+  }
+
+  .profile-section h3 {
+    font-size: 16px;
+  }
+
+  .label {
+    font-size: 12px;
+  }
+
+  .value {
+    font-size: 13px;
+  }
+
+  .license-img {
+    height: 100px;
+  }
 }

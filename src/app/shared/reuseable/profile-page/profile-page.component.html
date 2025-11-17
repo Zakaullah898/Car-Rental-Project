@@ -1,93 +1,64 @@
-<section class="profileSection">
-    <div class="profileContainer row">
-        <div class="profileHeading col">
-
-            <div class="profileImgContainer col">
-                <div class="proImg">
-                    <img src="./alina.png" alt="">
-                </div>
-                <div class="uploadBtn">
-                    <button class="proBtn" >Upload Picture</button>
-                    <!-- <input type="file" class="proBtn" placeholder="Upload Picture"> -->
-                </div>
-            </div>
-            <div class="saveProfileBtn">
-                <button class="proBtn">Save Profile</button>
-            </div>
-        </div>
-        <div class="formContainer">
-            <form class="form row">
-                <div class="col">
-                    <div class="fullName inputRow">
-                        <label for="fullName" class="paymentLabe">Full Name</label>
-                        <input type="text" id="fullName" class="paymentMethodInput" placeholder="Enter your full name">
-                    </div>
-                    <div class="email inputRow">
-                        <label for="email" class="paymentLabe">Email</label>
-                        <input type="text" id="email" class="paymentMethodInput" placeholder="Enter your email">
-                    </div>
-                    <div class="phone inputRow">
-                        <label for="phoneNum" class="paymentLabe">Phone</label>
-                        <input type="tel" id="phoneNum" class="paymentMethodInput" placeholder="Enter your phone number">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="post inputRow">
-                        <label for="postCod" class="paymentLabe">Post</label>
-                        <input type="text" id="postCod" class="paymentMethodInput" placeholder="Enter your post code">
-                    </div>
-                    <div class="address inputRow">
-                        <label for="address" class="paymentLabe">Address</label>
-                        <input type="text" id="address" class="paymentMethodInput" placeholder="Enter your email">
-                    </div>
-                    <div class="genderSelectionContainer inputRow">
-                        <label for="gender" class="paymentLabe">Gender</label>
-                        <div class="col genderSelection">
-                            <div class="genderMale col paymentMethodInput">
-                                <label for="male" class="paymentLabe">Male</label>
-                               <input type="radio" name="male" id="male" >
-                            </div>
-                            <div class="genderFemale col paymentMethodInput">
-
-                                <label for="female" class="paymentLabe">Female</label>
-                            <input type="radio" name="female" id="female"  >
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </form>
-        </div>
+<div class="profile-container">
+  <div class="profile-card">
+    <div class="profile-header">
+      <img [src]="user?.profileImageUrl" alt="Profile Picture" class="profile-image">
+      <div class="profile-info">
+        <h2>{{ user?.fullName}}</h2>
+        <p>{{ user?.email }}</p>
+        <p>{{ user?.phone }}</p>
+      </div>
     </div>
-    <div class="licenceContainer col">
-        <div class="drivingLicence">
-            <div class="drivingLicenceInput inputRow">
-                <label for="address" class="paymentLabe">Driving Licence</label>
-                <input type="text" id="address" class="paymentMethodInput">
-            </div>
+
+    <div class="profile-section">
+      <h3>Personal Information</h3>
+      <div class="profile-details-grid">
+        <div class="detail-item">
+          <span class="label">Full Name</span>
+          <span class="value">{{ user?.fullName }}</span>
         </div>
-        <div class="licenceImgFront  row">
-            <div class="licenceHeading">Car Licence Front Image</div>
-
-            <div class="licenceImgCont paymentMethodInput">
-                <img src="./licence.png" alt="licence front side Image">
-            </div>
-
-            <div class="upLoadLicenceImgBtn">
-                <button class="proBtn">Upload Picture</button>
-            </div>
+        <div class="detail-item">
+          <span class="label">Email</span>
+          <span class="value">{{ user?.email }}</span>
         </div>
-        <div class="licenceImgBack  row">
-
-            <div class="licenceHeading">Car Licence Front Image</div>
-
-            <div class="licenceImgCont paymentMethodInput">
-                <img src="./alina.png" alt="licence back side Image" width="100%">
-            </div>
-
-            <div class="upLoadLicenceImgBtn">
-                <button class="proBtn">Upload Picture</button>
-            </div>
+        <div class="detail-item">
+          <span class="label">Phone</span>
+          <span class="value">{{ user?.phone }}</span>
         </div>
+        <div class="detail-item">
+          <span class="label">Post</span>
+          <span class="value">{{ user?.postCode }}</span>
+        </div>
+        <div class="detail-item">
+          <span class="label">Address</span>
+          <span class="value">{{ user?.address }}</span>
+        </div>
+        <div class="detail-item">
+          <span class="label">Gender</span>
+          <span class="value">{{ user?.gender }}</span>
+        </div>
+      </div>
     </div>
-</section>
+
+    <div class="profile-section">
+      <h3>Driving & License Information</h3>
+      <div class="license-grid">
+        <div class="license-item">
+          <span class="label">Driving Licence Number</span>
+          <span class="value">{{ user?.drivingLicenseNo }}</span>
+        </div>
+        <div class="license-item">
+          <span class="label">Car Licence Front Image</span>
+          <img [src]="user?.licenseFrontImage" alt="Car Licence Front" class="license-img">
+        </div>
+        <div class="license-item">
+          <span class="label">Car Licence Back Image</span>
+          <img [src]="user?.licenseBackImage" alt="Car Licence Back" class="license-img">
+        </div>
+      </div>
+    </div>
+
+    <div class="action-btn">
+      <button routerLink="/edit-profile" (click)="goToUpdateProfile()">Edit Profile</button>
+    </div>
+  </div>
+</div>

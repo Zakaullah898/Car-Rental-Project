@@ -2,7 +2,14 @@
     <div class="headingContainer">
         <div class="carNam">{{carName}}</div>
 
-        <div class="likeImg"><img [src]="isVisible? 'heart.png': 'Like.png' " alt="" (click)="getImg()"></div>
+        <div class="likeImg">
+            <img 
+            [src]="isVisible ? 'heart.png' : 'Like.png'" 
+            alt="" 
+            (click)="addToFavouritCar()"
+            [class.disabled]="isFavouritePage && isVisible"
+            [style.pointer-events]="isFavouritePage && isVisible ? 'none' : 'auto'">
+        </div>
     </div>
     <h2>Sport</h2>
     <div class="imgContainer" (click)="carsDetailPage()">

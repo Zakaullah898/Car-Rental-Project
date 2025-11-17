@@ -153,7 +153,7 @@
                 </div>
 
                 <div class="signBtn">
-                    <button class="signInBtn" (click)="getNewOtp(logInForm.get('email')?.value)">Continue</button>
+                    <button class="signInBtn" (click)="forgetPassword()">Continue</button>
                 </div>
                
             </form>
@@ -184,7 +184,7 @@
                  <div class="timer">{{counter | formatTime}}</div>
                     <div class="signBtn">
                        
-                        <button class="signInBtn signBtn"  (click)="getOtp()">Continue</button>
+                        <button class="signInBtn signBtn"  (click)="VerifyOtp()">Continue</button>
                     </div>
                    <div class="resendBtn">
                     <button (click)="resendOtp()">Resend</button>
@@ -216,7 +216,7 @@
                  <div class="timer">{{counter | formatTime}}</div>
                     <div class="signBtn">
                        
-                        <button class="signInBtn signBtn"  (click)="resendNewOtp()">Continue</button>
+                        <button class="signInBtn signBtn"  (click)="VerifyOtp()">Continue</button>
                     </div>
                    <div class="resendBtn">
                     <button (click)="resendOtp()">Resend</button>

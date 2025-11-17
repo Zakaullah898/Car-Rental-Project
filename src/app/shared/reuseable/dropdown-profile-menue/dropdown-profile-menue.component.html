@@ -1,8 +1,8 @@
 <div class="dropdown-menu" >
     <div class="profile-header">
-      <img src="./rohan.png" alt="Profile Image" class="profile-img" />
+      <img [src]="profileImage?profileImage: './signInNav.png'" alt="Profile Image" class="profile-img" />
       <div class="profile-info">
-        <p class="profile-name">Taimoor A</p>
+        <p class="profile-name">{{userName}}</p>
         <p class="profile-subtext">View and Edit your Profile</p>
       </div>
       <!-- <div class="profile-icon">

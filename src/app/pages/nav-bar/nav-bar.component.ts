@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, DoCheck, HostListener, inject, OnInit } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { BreakpointObserver, BreakpointState, Breakpoints } from '@angular/cdk/layout';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -7,6 +7,9 @@ import { faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'; // Import the Xmark icon
 import { DropdownProfileMenueComponent } from '../../shared/reuseable/dropdown-profile-menue/dropdown-profile-menue.component';
 import { ClickOutsideDirective } from '../../core/customDirective/click-outside.directive';
+import { state } from '@angular/animations';
+import { CarRentServService } from '../../core/services/car-rent-serv.service';
+import { UserRegistraionService } from '../../core/services/user-registraion.service';
 @Component({
   selector: 'app-nav-bar',
   standalone: true,
@@ -21,6 +24,10 @@ export class NavBarComponent implements OnInit {
   isProfileDisplay! : boolean;
   menueBar=faBars;
   crossBar = faXmark;
+  profileImage! : string;
+  carRentService : CarRentServService = inject(CarRentServService);
+  userRegisterService :UserRegistraionService = inject(UserRegistraionService)
+  
 constructor(private breakpointObserver: BreakpointObserver, private router: Router){
 
 }
@@ -38,7 +45,14 @@ ngOnInit(): void {
       this.isMenuShow = false
     }
   })
+      this.carRentService.userData$.subscribe(user => {
+      if (user) {
+        this.profileImage = user.profileImageUrl;
+      }
+    });
+
 }
+
 toggleMenu(){
   this.isMenueActive = !this.isMenueActive;
   this.displayMenue  =  !this.displayMenue
@@ -48,12 +62,15 @@ showProfileDropdown(){
   console.log('this profile')
 }
 logOut(){
-  let localStore = localStorage.removeItem('userEmail');
-  this.router.navigate(['/signIn'])
+  this.userRegisterService.logOut();
 }
 goToUserProfile(){
-  this.router.navigate(['/profile'])
-  this.isProfileDisplay = false
+  const hasProfile = localStorage.getItem('hasProfile');
+if(hasProfile){
+
+  this.router.navigate(['/profile-detail'])
+      this.isProfileDisplay = false
+}
 }
 goToFavourite(){
   this.router.navigate(['/favourite'])

@@ -1,0 +1,151 @@
+.profileSection{
+    margin-top: 13rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5rem;
+    .profileContainer{
+        width: 90%;
+        height: auto;
+        border-radius: 2rem;
+        background-color: #FFFFFF;
+        padding: 4rem;
+        gap: 5rem;
+        margin-bottom: 5rem;
+        .profileHeading{
+            position: relative;
+            .profileImgContainer{
+              gap: 4rem;
+              position: relative;
+               .proImg{
+                   width: 11rem;
+                   height: 11rem;
+                img{
+                    width: 100%;
+                    border-radius: 50%;
+                }
+               }
+               .uploadBtn{
+                position: absolute;
+                top: 6.5rem;
+                left: 14rem;
+                button {
+                        background-color: #3563E9;
+                    }
+               }
+
+            }
+            .saveProfileBtn{
+               position: absolute;
+               right: 0%;
+               top:0%;
+               button{
+                background-color: #34A853;
+               
+               }
+            }
+        }
+        .formContainer{
+            width: 95%;
+            height: auto;
+          .form{
+            gap: 3.5rem;
+
+            .col{
+                gap: 3.5rem;
+                .genderSelectionContainer{
+                      .genderSelection{
+                        
+                        gap: 1.6rem;
+                        .genderMale , .genderFemale{
+                            width: 16.5rem;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding-right: 2rem;
+                            input{
+                                width: 1.8rem;
+
+                            }
+                            label{
+                                font-size: 1.4rem;
+                            }
+                        }
+                      }
+                }
+            }
+          }
+        }
+        
+    }
+    .licenceContainer{
+        width: 90%;
+        height: 40rem;
+        background-color: #FFFFFF;
+        border-radius: 2rem;
+        padding: 5rem;
+        gap: 3rem;
+        .drivingLicence{
+
+        }
+        .licenceImgFront{
+            gap: 1.5rem;
+            position: relative;
+            .upLoadLicenceImgBtn{
+                position: absolute;
+                right: 0%;
+                top: 21.5rem;
+            }
+        }
+        .licenceImgBack{
+            gap: 1.5rem;
+            position: relative;
+            .upLoadLicenceImgBtn{
+                position: absolute;
+                right: 0%;
+                top: 21.5rem;
+            }
+        }
+    }
+}
+.licenceHeading{
+    font-family: Inter;
+font-size: 1.4rem;
+font-weight: 500;
+color: #252525;
+}
+.licenceImgCont{
+    width: 35.5rem;
+    height: 16.4rem;
+    margin-bottom: 1rem;
+    box-sizing:border-box;
+    position: relative;
+    img{
+        width: 35.5rem;
+        height: 16.4rem;
+        border-radius: 1.5rem;
+        position: absolute;
+        left: 0;
+}
+}
+.proBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:13rem ;
+    height: 4.2rem ;
+    border-radius: .6rem;
+    border: none;
+    font-family: Inter;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #FFFFFF;
+    background-color: #3563E9;
+    cursor: pointer;
+}
+
+input{
+    width: 30.6rem;
+    font-size: 1.4rem;
+    color: #252525;
+}

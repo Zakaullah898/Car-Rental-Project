@@ -1,4 +1,4 @@
-import { Component ,OnInit } from '@angular/core';
+import { Component ,inject,OnInit } from '@angular/core';
 import { CalendarModule, DatePickerModule, TimePickerModule, DateRangePickerModule, DateTimePickerModule } from '@syncfusion/ej2-angular-calendars';
 
 import {ActivatedRoute,RouterOutlet } from '@angular/router';
@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 import { SignInComponent } from './pages/login/sign-in/sign-in.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { NavBarComponent } from './pages/nav-bar/nav-bar.component';
+import { UserRegistraionService } from './core/services/user-registraion.service';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -16,9 +17,9 @@ import { NavBarComponent } from './pages/nav-bar/nav-bar.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit{
-  title = 'Car Rental';
-
+export class AppComponent {
+  title = 'Car Rental'
+  userRegisterService : UserRegistraionService = inject(UserRegistraionService)
   showHeader: boolean = false;
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {
@@ -31,14 +32,12 @@ export class AppComponent implements OnInit{
       currentRoute = currentRoute.firstChild
     }
     this.showHeader = currentRoute.snapshot.data.header
-    console.log(this.showHeader);
-
+    console.log("IN The app component",this.showHeader);
+    this.userRegisterService.setAutoLogin();
     });
 
     
   }
 
-  ngOnInit(): void {
-   
-  }
+ 
 }

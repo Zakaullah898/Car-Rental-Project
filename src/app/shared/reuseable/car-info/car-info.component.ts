@@ -103,19 +103,19 @@ showAll(){
   }
 }
 getAllUserCars(){
-  this.carRentSrv.getAllCars().subscribe((res:any)=>{
+  // this.carRentSrv.getAllCars().subscribe((res:any)=>{
     
-        this.carsName = res.data.slice(0,4)
-        this.isShowAllCars=!this.isShowAllCars
-        // console.log(this.carsName)
-  })
+  //       this.carsName = res.data.slice(0,4)
+  //       this.isShowAllCars=!this.isShowAllCars
+  //       // console.log(this.carsName)
+  // })
 }
 viewAll(){
-  this.carRentSrv.getAllCars().subscribe((res:any)=>{
+  // this.carRentSrv.getAllCars().subscribe((res:any)=>{
 
-    this.carsName = res.data
-    console.log(this.carsName)
-    this.isShowAllCars=!this.isShowAllCars
-  })
+  //   this.carsName = res.data
+  //   console.log(this.carsName)
+  //   this.isShowAllCars=!this.isShowAllCars
+  // })
 }
 }

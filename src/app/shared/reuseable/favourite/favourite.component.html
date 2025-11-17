@@ -4,10 +4,18 @@
     <h2>Favourite</h2>
 </div>
 <div class="favCarsCard col">
-    @for (item of carsName; track $index ; ) {
-        <app-cars-card [carName]="item.carName" [isVisible]="item.showLike" (onBtnClick)="getLikeImg($index)" [pkr]="item.pkr" [carImg]="item.carImg"></app-cars-card>
-        
-                }
+     @for (item of FavouriteCars; track $index ; ) {
+            <app-cars-card 
+            [carDataGetted]="item"
+            [carName]="item.title"
+            [isVisible]="item.isFavorite"
+            [pkr]="item.pricePerDay" [carImg]="item.imageUrl"
+            [tankCapacity]="item.tankCapacity"
+            [transmission]="item.transmission"
+            [sittingCapacity]="item.sittingCapacity"
+            [isFavouritePage] = "true"
+            ></app-cars-card>
+            }
 </div>
     </div>
 </section>

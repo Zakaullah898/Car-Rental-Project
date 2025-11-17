@@ -1,5 +1,5 @@
 import { CommonModule,  } from '@angular/common';
-import {  Component, inject, OnInit,  } from '@angular/core';
+import {  Component, inject, OnInit, resolveForwardRef,  } from '@angular/core';
 import {  FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute, Router, RouterLink, RouterModule } from '@angular/router';
 import { CarRentServService } from '../../../core/services/car-rent-serv.service';
@@ -9,6 +9,7 @@ import {  catchError, Subscription, throwError, timer } from 'rxjs';
 import { FormatTimePipe } from '../../../format-time.pipe';
 import { state } from '@angular/animations';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
+import { UserRegistraionService } from '../../../core/services/user-registraion.service';
 
 @Component({
   selector: 'app-sign-in',
@@ -25,12 +26,14 @@ export class SignInComponent implements OnInit{
   currentRoute : string = 'signIn'
   toggleNewPasword?: boolean;
   showSignIn?:boolean = true;
+  isSignUp : boolean =false;
   loginFormValue : any;
 countDown!: Subscription;
 counter = 60;
 pgValue = 100;
  http = inject(HttpClient)
- carRentServ = inject(CarRentServService)
+ userRegistrationService : UserRegistraionService = inject(UserRegistraionService)
+ carRentService : CarRentServService = inject(CarRentServService)
  logInForm: FormGroup;
 
   config = {
@@ -50,7 +53,7 @@ pgValue = 100;
     name : new FormControl('',[Validators.required]),
     phoneNumber : new FormControl('',[Validators.required]),
     newPassword : new FormControl(''),
-    otpField : new FormControl(''),
+    otpCode : new FormControl(''),
   })
   // this.carRentServ.gettingEmail.subscribe((res: any)=>{
     // // console.log('this Email is Gettng:',res)
@@ -74,8 +77,11 @@ ngOnInit() {
   });
 
   
+  this.logInForm.get('otpCode')?.setValue(history.state.otpCode)
     this.logInForm.get('email')?.setValue(history.state.email)
-    this.logInForm.get('otpFiel')?.setValue(history.state.otp)
+    this.isSignUp = history.state.isSignUp; 
+    console.log("oninte : ",history.state)
+
     this.breakpoints.observe([
       '(max-width:800px)'
     ]).subscribe((res:BreakpointState)=>{
@@ -109,15 +115,15 @@ ngOnInit() {
 
      onSignUp(val :any){
       const ob={
-        name:this.logInForm.get('name')?.value,
-        email: this.logInForm.get('email')?.value,
+        userName:this.logInForm.get('name')?.value,
         password:this.logInForm.get('password')?.value,
-        phoneNumber:this.logInForm.get('phoneNumber')?.value,
+        email: this.logInForm.get('email')?.value,
+        phone:this.logInForm.get('phoneNumber')?.value,
       }
-                this.carRentServ.submitSignUp(ob).subscribe((res: any)=>{
+                this.userRegistrationService.submitSignUp(ob).subscribe((res: any)=>{
                   if(res){
                     
-                    this.router.navigate(['/otp'], { state : { email:ob.email } })
+                    this.router.navigate(['/otp'], { state : { email:ob.email, isSignUp : true } })
                     // this.router.navigateByUrl('otp')
                   }
                   else{
@@ -136,95 +142,114 @@ ngOnInit() {
       email: this.logInForm.get('email')?.value,
       password:this.logInForm.get('password')?.value
     }
-    
-    // this.carRentServ.submitSignIn(ob).pipe(catchError((error)=>{
-    //   if(error.status=== 401){
-    //     alert('Wrong Credntial')
-    //   }
-    //   else if(error.status === 500){
-    //     alert('Internal Server error')
-    //   }
-    //   else{
-    //     alert('An unexpected error occurred');
-    //   }
-    //   return throwError(error)
-    // })).subscribe((res : any)=>{
-    //   if(res){
-    //     localStorage.setItem('userToken',res.data.jwtToken)
-    //     this.router.navigateByUrl('home')
-    //   }
-    //   else if(res.status ===401) {
-    //     alert('Wrong Credential')
-    //   }
-    // })
-    
-  if(ob.email =='zakaullahlaar9@gmail.com' && ob.password==12345){
-     localStorage.setItem('userEmail','zakaullahlaar9@gmail.com')
-     this.router.navigateByUrl('home')
-  }
-  else{
-    alert('Wrong Credential')
-  }
+      if (!ob.email || !ob.password)
+    {
+      alert('Email OR Password field is empty');
+      return;
+    }
+    else
+    {
+      this.userRegistrationService.submitSignIn(ob).subscribe((res : any)=>{
+      if(res.status){
+        console.log("Login user data ",res)
+        localStorage.setItem('userToken', res.data.tokenData.token);
+        const expireDate = Date.now() + res.data.tokenData.expiresIn * 60 * 1000; // 4 minutes from now
+        localStorage.setItem('expiresIn', expireDate.toString());
+        // localStorage.setItem('superUser', JSON.stringify(res.data.userData));
+        localStorage.setItem("userId",res.data.userId)
+        this.carRentService.setUserData(res.data.userData)
+        localStorage.setItem('hasProfile', JSON.stringify(res.data.hasProfile));
+        if(res.data.hasProfile){
+          this.router.navigateByUrl('home')
+        }
+        else
+        {
+          this.router.navigate(['profile-form'])
+        }
+      }
+      else if(res.statusCode === 400){
+        alert('Wrong Credntial')
+      }
+       else if(res.statusCode === 404){
+        alert(`User not found wiht this ${ob.email}`)
+        console.log(res.errors[0])
+      }
+      else if(res.statusCode === 500){
+        alert('Internal Server error')
+      }
+     
+      else{
+        alert('An unexpected error occurred');
+      }
+    })
+     }
   }
   onOtpChange(value: string): void {
     // console.log(value);
-    this.logInForm.get('otpField')?.setValue(value)
+    this.logInForm.get('otpCode')?.setValue(value)
         // console.log(otpVal)
        
 
   }
 
-  getOtp(){
+  VerifyOtp(){
     // const getEmail = localStorage.getItem('gettingEmail')
     // this.logInForm.get('email')?.setValue(getEmail)
 
-    const ob = new URLSearchParams();
+    // const ob = new URLSearchParams();
     
-    ob.set('email',this.logInForm.get('email')?.value);
-    ob.set('otp',this.logInForm.get('otpField')?.value);
+    // ob.set('email',this.logInForm.get('email')?.value);
+    // ob.set('',this.logInForm.get('otpField')?.value);
+    const ob={
+      email: this.logInForm.get('email')?.value,
+      otpCode:this.logInForm.get('otpCode')?.value
+    }
     
-    this.carRentServ.onOtpSubmit(ob.toString()).subscribe((res : any)=>{
-      if(res){
-        localStorage.setItem('userToken',res.data.jwtToken)
+    console.log("Otp result: ", ob, "And ",this.isSignUp)
+    this.userRegistrationService.verifyOtp(ob).subscribe((res : any)=>{
+      console.log("Otp result: ", res)
+      if(res.status && this.isSignUp){
 
-      //  this.router.navigateByUrl('home').then(()=>{
-      //   this.carRentServ.gettingEmail.subscribe((res: any)=>{
-         
-      //     this.logInForm.get('email')?.setValue(res)
-      //     console.log(res)
-      //     })
-      // })
-      this.router.navigate(['/home'])
+        this.router.navigate(['/signIn'])
+        this.isSignUp = false
+      }
+      else if(res.status == true && this.isSignUp == undefined){
+        this.router.navigate(['/newPassword'],
+        { state: { email:this.logInForm.get('email')?.value ,otpCode:this.logInForm.get('otpCode')?.value  } })
       }
       else{
         alert('Invalid OTP')
       }
     })
     
-    
-    
- 
-    
     }
  resendOtp(){
 
-  const ob = new URLSearchParams();
+  const obj = 
+  {
+    email: this.logInForm.get('email')?.value
+  }
   
-  ob.set('email',this.logInForm.get('email')?.value);
-  this.carRentServ.onResendOtp(ob.toString()).subscribe((res:any)=>{
-    alert(res)
+  // ob.set('email',this.logInForm.get('email')?.value);
+  this.userRegistrationService.onResendOtp(obj).subscribe((res:any)=>{
+    if(res.status){
+      console.log(res)
+      alert(res.data.message)
+    }
   })
  }
- getNewOtp(val: any){
+ forgetPassword(){
    
   
 
-    const ob = new URLSearchParams();
+    const ob={
+      email: this.logInForm.get('email')?.value
+    }
     
  
-    ob.set('email',this.logInForm.get('email')?.value);
-    this.carRentServ.forgetPassword(ob.toString()).subscribe((res : any)=>{
-      console.log(res.status);if(res.status){
+    this.userRegistrationService.forgetPassword(ob).subscribe((res : any)=>{
+      console.log(res);
+      if(res.status){
         this.router.navigate(['/newOtp'], { state: { email:this.logInForm.get('email')?.value  } });
 
       }
@@ -244,27 +269,41 @@ resendNewOtp(){
   const ob = new URLSearchParams();
     
     ob.set('email',this.logInForm.get('email')?.value);
-    ob.set('otp',this.logInForm.get('otpField')?.value);
-  this.carRentServ.resetPasswordOTP(ob.toString()).subscribe((res : any)=>{
-    if(res){
-      localStorage.setItem('userToken',res.data.jwtToken)
-    this.router.navigate(['/newPassword'], { state: { email:this.logInForm.get('email')?.value , otp: this.logInForm.get('otpField')?.value } })
-    }
-    else{
-      alert('Invalid OTP')
-    }
-  })
+    ob.set('otp',this.logInForm.get('otpCode')?.value);
+  // this.carRentServ.resetPasswordOTP(ob.toString()).subscribe((res : any)=>{
+  //   if(res){
+  //     localStorage.setItem('userToken',res.data.jwtToken)
+  //   this.router.navigate(['/newPassword'], { state: { email:this.logInForm.get('email')?.value , otp: this.logInForm.get('otpField')?.value } })
+  //   }
+  //   else{
+  //     alert('Invalid OTP')
+  //   }
+  // })
 }
 resetPassword(){
-  const ob = new URLSearchParams();
-   const  password2 = this.logInForm.get('password')?.value
-    const newPassword = this.logInForm.get('newPassword')?.value
-    ob.set('email',this.logInForm.get('email')?.value);
-    ob.set('newPassword',newPassword);
-    this.carRentServ.resetNewPass(ob.toString()).subscribe((res:any)=>{
-      if(res && password2 === newPassword){
-        this.router.navigate(['/home'])
-      }
+  // const ob = new URLSearchParams();
+   const  password = this.logInForm.get('password')?.value
+    const conformPassword = this.logInForm.get('newPassword')?.value
+    // ob.set('email',this.logInForm.get('email')?.value);
+    // ob.set('newPassword',newPassword);
+    const ob={
+      email: this.logInForm.get('email')?.value,
+      newPassword: conformPassword,
+      otpCode:this.logInForm.get('otpCode')?.value
+    }
+    console.log("The new password set : ",ob)
+    if(conformPassword === password){
+        this.userRegistrationService.resetNewPass(ob).subscribe((res:any)=>{
+          console.log("The new password set : ",res,"Is : ",conformPassword === password)
+          if(res.status){
+            this.router.navigate(['/signIn'])
+          }
     })
+    }
+    else
+      {
+        alert("password and conform password are not equal")
+      }
+  
 }
 }

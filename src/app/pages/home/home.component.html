@@ -52,16 +52,22 @@
             }
             @else if (!isShowAllCars) {
 
-            <div class="viewAll" (click)="getAllUserCars()">View less</div>
+            <div class="viewAll" (click)="getAllCarsData()">View less</div>
             }
         </div>
         <div class="rentCarsCard">
 
-            @for (item of carsName; track $index ; ) {
-            <app-cars-card [carDataGetted]="item" [carName]="item.name" [isVisible]="item.showLike"
-                (onBtnClick)="getLikeImg($index)" [pkr]="item.rentPrice" [carImg]="item.image"
-                [tankCapacity]="item.tankCapacity" [transmission]="item.transmission"
-                [sittingCapacity]="item.sittingCapacity"></app-cars-card>
+            @for (item of carsData; track $index ; ) {
+            <app-cars-card
+             [carDataGetted]="item" 
+             [carId]="item.carId"
+             [carName]="item.title" 
+             [pkr]="item.pricePerDay"
+             [carImg]="item.imageUrl"
+             [tankCapacity]="item.tankCapacity"
+             [transmission]="item.transmission"
+             [sittingCapacity]="item.sittingCapacity"
+             ></app-cars-card>
             }
             <!-- <app-cars-card [dataArry]="carsName"></app-cars-card> -->
         </div>
