@@ -7,6 +7,7 @@ import { state } from '@angular/animations';
 import { CarsDataServService } from '../../../core/services/cars-data-serv.service';
 import Swal from 'sweetalert2';
 import { timer } from 'rxjs';
+import { Car } from '../../../core/Interface/car';
 
 @Component({
   selector: 'app-cars-card',
@@ -99,10 +100,16 @@ goToRental(){
   
   this.router.navigate(['/rentNow'], {state:{name: this.carName, rentPrice :this.pkr}})
 }
-carsDetailPage(){
-  this.router.navigate(['/carInfo'], {state: this.carDataGetted})
-  this.carDataload.emit(this.carDataGetted)
-  console.log(this.carDataGetted)
+carsDetailPage(carId : number){
+  
+  // this.carDataService.gettingCarData(this.carDataGetted)
+  // this.carDataService.gettingCarById(carId).subscribe((res :any)=>{
+  //   const car : Car = res.data;
+  //   console.log(res.data)
+  // })
+    this.carDataService.setCarData(this.carDataGetted)
+  this.router.navigate(['/carInfo',carId])
+  // this.carDataload.emit(this.carDataGetted)
   
 }
 // api endpoint for deleting car from favourite 

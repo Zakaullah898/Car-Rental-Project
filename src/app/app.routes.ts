@@ -112,7 +112,7 @@ export const routes: Routes = [
     canActivate : [authGuardGuard,profileGuard]
   },
   {
-    path: 'carInfo',
+    path: 'carInfo/:id',
     component: CarInfoComponent,data:{header:true},
     canActivate : [authGuardGuard,profileGuard]
   },

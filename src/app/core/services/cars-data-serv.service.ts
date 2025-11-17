@@ -3,6 +3,7 @@ import { carData } from '../models/class/carData';
 import { HttpClient } from '@angular/common/http';
 import { carRentApiConst } from '../constant/carRentConstant';
 import { BehaviorSubject } from 'rxjs';
+import { Car } from '../Interface/car';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +11,8 @@ import { BehaviorSubject } from 'rxjs';
 export class CarsDataServService {
 http : HttpClient = inject(HttpClient);
 private sourceData = new BehaviorSubject<boolean>(false);
+private carSourceData = new BehaviorSubject<Car | any>(null)
+carData$ = this.carSourceData.asObservable();
 isRemoved$ = this.sourceData.asObservable();
 
 
@@ -83,5 +86,15 @@ isRemoved$ = this.sourceData.asObservable();
 // api endpoint calling for deleting car from the favourite 
 deleteCarFromFavourite(userId : string, carId : number){
   return this.http.delete(`${carRentApiConst.API_URL}${carRentApiConst.REMOVE_FROM_FAVOURITE}/${userId}/${carId}`)
+}
+// method for getting car data then this data will send in the component where it is needed
+setCarData(data : Car){
+  this.carSourceData.next(data)
+}
+getCarData() : Car | null{
+  return this.carSourceData.value;
+}
+gettingCarById(carId : number){
+  return this.http.get(`${carRentApiConst.API_URL}${carRentApiConst.GETTING_CAR_BY_Id}/${carId}`)
 }
 }

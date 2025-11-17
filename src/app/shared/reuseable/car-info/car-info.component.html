@@ -2,7 +2,7 @@
     <div class="mainCarInfo col">
         <div class="carImgCont row">
             <div class="mainImg row">
-                <img [src]=" carData.image " alt="">
+                <img [src]="carData?.imageUrl" alt="">
             </div>
             <div class="restImg col">
                 @for (item of restImg; track $index) {
@@ -15,7 +15,7 @@
             <div class="row nameReviw">
 
                 <div class="carName col">
-                    <h2 class="titlHeading">{{carData.name}}</h2>
+                    <h2 class="titlHeading">{{carData?.title}}</h2>
                     <div class="likeImg">
                         <img src="./heart.png" alt="like this">
                     </div>
@@ -51,7 +51,7 @@
             </div>
             <div class="bookNow col">
                 <div class="pric row">
-                    <h2>{{carData.rentPrice}}/</h2>
+                    <h2>{{carData?.pricePerDay}}/</h2>
                     <del>30%</del>
                 </div>
                 <div class="rentNowBtn">
@@ -123,12 +123,12 @@
             @for (item of carsName; track $index ; ) {
             <app-cars-card
             (carDataload)="receiveData($event)"
-            [carDataGetted]="item"
-            [carName]="item.name" 
-            [isVisible]="item.showLike" 
-            (onBtnClick)="getLikeImg($index)" 
-            [pkr]="item.rentPrice" 
-            [carImg]="item.image" 
+            [carDataGetted] ="item"
+            [carId]="item.carId"
+            [carName]="item.title" 
+            [isVisible]="item.isFavorite" 
+            [pkr]="item.pricePerDay" 
+            [carImg]="item.imageUrl" 
             [tankCapacity]="item.tankCapacity" 
             [transmission]="item.transmission"
             [sittingCapacity]="item.sittingCapacity"
@@ -143,7 +143,7 @@
         </div>
 
         <div class="carsCard col">
-            @for (item of topRate; track $index ; ) {
+            <!-- @for (item of topRate; track $index ; ) {
                 <app-cars-card 
                 (carDataload)="receiveData($event)"
                 [carDataGetted]="item"
@@ -156,7 +156,7 @@
                 [transmission]="item.transmission"
                 [sittingCapacity]="item.sittingCapacity"
                     ></app-cars-card>
-                }
+                } -->
         </div>
     </div>
 </div>

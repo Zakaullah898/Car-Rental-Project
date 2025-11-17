@@ -13,7 +13,7 @@
         <!-- [style.pointer-events]="isFavouritePage && isVisible ? 'none' : 'auto'" -->
     </div>
     <h2>Sport</h2>
-    <div class="imgContainer" (click)="carsDetailPage()">
+    <div class="imgContainer" (click)="carsDetailPage(carId)">
         <!-- <img src="`data:image/jpeg;base64,${carImg}`" alt=""> -->
         <img [src]="carImg" alt="Car Image">
 

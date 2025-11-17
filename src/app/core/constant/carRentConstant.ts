@@ -19,6 +19,7 @@ export const carRentApiConst = {
     REMOVE_FROM_FAVOURITE : 'FavouriteCars/RemoveFromFavourites',
     // ADD_CARS : 'add',
     GET_ALL_CARS : 'Cars/get-all',
+    GETTING_CAR_BY_Id :'Cars/GetById'
     // GET_USER_ID : 'get/1',
     // AVAILABLE_CARS : 'cars/available',
     // ADD_BOOKING : 'add?carId=3&startDate=2024-10-08 10:00&endDate=2024-10-10 10:00',

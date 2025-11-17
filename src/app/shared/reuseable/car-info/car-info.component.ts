@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 import { review } from '../../../core/models/class/review';
 import { CarsDataServService } from '../../../core/services/cars-data-serv.service';
 import { ReviewServService } from '../../../core/services/review-serv.service';
+import { Car } from '../../../core/Interface/car';
 @Component({
   selector: 'app-car-info',
   standalone: true,
@@ -21,7 +22,7 @@ export class CarInfoComponent implements  OnInit,AfterViewChecked{
   arrowUp=faAngleUp;
 arrowDown=faAngleDown;
 isAngelUp!:boolean;
-carData: any = {};
+carData !: Car;
 restImg : any [] =[
   './insightBl.png',
   './insightBl.png',
@@ -42,11 +43,16 @@ reviewServ = inject(ReviewServService)
 reviewContainer : review [] =[]
 
 moreReview : review [] =[]
-carsName : any[] =[]
+carsName : Car[] =[]
 topRate : any[] =[]
 isShowAllCars!: boolean;
 gettingHistory : any;
-constructor(private carRentSrv :CarRentServService, private router : Router, private cdr :ChangeDetectorRef) {
+constructor(
+  private carRentSrv :CarRentServService, 
+  private router : Router,
+  private cdr :ChangeDetectorRef, 
+  private route : ActivatedRoute) {
+
   //   this.carRentSrv.carData.subscribe((res: any)=>{
     //     this.carData =res;
     // console.log(this.carData)
@@ -57,21 +63,44 @@ constructor(private carRentSrv :CarRentServService, private router : Router, pri
     this.getAllUserCars()
     
     // this.carData 
-    this.carsName =this.carDataServ.carsName ;
+    // this.carsName =this.carDataServ.carsName ;
     this.topRate = this.carDataServ.topRate;
     this.moreReview = this.reviewServ.moreReview
-    this.reviewContainer= this.reviewServ.reviewContainer
+    this.reviewContainer= this.reviewServ.reviewContainer;
+    this.route.paramMap.subscribe(params => {
+      const carId = +params.get('id')!;
+      this.loadCarData(carId);
+       // Scroll page to top when clicking another carCard
+      //  window.scrollTo({
+      //   top: 0,
+      //   behavior: 'smooth'  // or 'auto'
+      //   });
+    });
+
+
   }
   
   ngAfterViewChecked(): void {
-      this.carData = history.state
+      
     //   this.carData = this.gettingHistory      
     // console.log(this.carData)
-    if (history.state && history.state.data) {
-        this.carData  = history.state.data;
-      }
+    // if (history.state && history.state.data) {
+    //     this.carData  = history.state.data;
+    //   }
       this.cdr.detectChanges()
   }
+  loadCarData(carId: number) {
+  const cachedCar = this.carDataServ.getCarData();
+  if (cachedCar && cachedCar.carId === carId) {
+    this.carData = cachedCar;
+  }else {
+    this.carDataServ.gettingCarById(carId).subscribe((res: any) => {
+      this.carData = res.data;
+      this.carDataServ.setCarData(res.data);
+    });
+  }
+}
+
 goToRental(){
   
   this.router.navigate(['/rentNow'], {state:this.carData  })
@@ -89,8 +118,8 @@ goToRental(){
   }
 getLikeImg(index : number ){
   debugger
-  this.carsName[index].showLike = !this.carsName[index].showLike
-  this.topRate[index].showLike = !this.carsName[index].showLike
+  // this.carsName[index].showLike = !this.carsName[index].showLike
+  // this.topRate[index].showLike = !this.carsName[index].showLike
  }
 showAll(){
   this.isAngelUp =!this.isAngelUp
@@ -103,12 +132,12 @@ showAll(){
   }
 }
 getAllUserCars(){
-  // this.carRentSrv.getAllCars().subscribe((res:any)=>{
+  this.carDataServ.getAllCarsData().subscribe((res:any)=>{
     
-  //       this.carsName = res.data.slice(0,4)
-  //       this.isShowAllCars=!this.isShowAllCars
-  //       // console.log(this.carsName)
-  // })
+        this.carsName = res.data.slice(0,4)
+        this.isShowAllCars=!this.isShowAllCars
+        console.log("getting all cars in the ",this.carsName)
+  })
 }
 viewAll(){
   // this.carRentSrv.getAllCars().subscribe((res:any)=>{
