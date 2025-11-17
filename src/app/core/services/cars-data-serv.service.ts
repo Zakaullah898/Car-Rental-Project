@@ -2,12 +2,17 @@ import { inject, Injectable } from '@angular/core';
 import { carData } from '../models/class/carData';
 import { HttpClient } from '@angular/common/http';
 import { carRentApiConst } from '../constant/carRentConstant';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CarsDataServService {
 http : HttpClient = inject(HttpClient);
+private sourceData = new BehaviorSubject<boolean>(false);
+isRemoved$ = this.sourceData.asObservable();
+
+
   carsName : carData[] =[
     {name:'Swift', rentPrice :'4000', image:'./swift.png', showLike : false, tankCapacity: 54, transmission : 4, sittingCapacity : 2},
     {name:'Wagon-R', rentPrice :'5000', image:'./wagonR.png', showLike : false , tankCapacity: 54, transmission : 4, sittingCapacity : 2},
@@ -51,9 +56,13 @@ http : HttpClient = inject(HttpClient);
   
       {name:'APV', rentPrice :'3500', image:'./apv.jpg', showLike : false, tankCapacity: 54, transmission : 4, sittingCapacity : 2},
   ]
-  constructor() { }
+  constructor() { 
+    
+  }
 
-
+  reloadingFavouritePage(value : boolean){
+    this.sourceData.next(value)
+  }
   getAllCarsData(){
     return this.http.get(`${carRentApiConst.API_URL}${carRentApiConst.GET_ALL_CARS}`)
   }
@@ -71,5 +80,8 @@ http : HttpClient = inject(HttpClient);
   };
   return this.http.post(`${carRentApiConst.API_URL}${carRentApiConst.ADD_TO_FAVOURITE}`, payload);
 }
-
+// api endpoint calling for deleting car from the favourite 
+deleteCarFromFavourite(userId : string, carId : number){
+  return this.http.delete(`${carRentApiConst.API_URL}${carRentApiConst.REMOVE_FROM_FAVOURITE}/${userId}/${carId}`)
+}
 }

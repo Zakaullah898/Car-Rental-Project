@@ -16,6 +16,7 @@ export const carRentApiConst = {
     updated_user_profile :'UserProfile/UpdateUserProfile',
     FAVOURITE_CARS :'FavouriteCars/GetFavourites',
     ADD_TO_FAVOURITE : 'FavouriteCars/AddToFavourite',
+    REMOVE_FROM_FAVOURITE : 'FavouriteCars/RemoveFromFavourites',
     // ADD_CARS : 'add',
     GET_ALL_CARS : 'Cars/get-all',
     // GET_USER_ID : 'get/1',

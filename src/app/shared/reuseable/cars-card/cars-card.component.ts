@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { state } from '@angular/animations';
 import { CarsDataServService } from '../../../core/services/cars-data-serv.service';
 import Swal from 'sweetalert2';
+import { timer } from 'rxjs';
 
 @Component({
   selector: 'app-cars-card',
@@ -54,7 +55,18 @@ ngOnInit(): void {
 
 addToFavouritCar(){
     if (this.isFavouritePage && this.isVisible) {
-    // Do nothing if already favourite in Favourites page
+      Swal.fire({
+    title: 'Are you sure?',
+    text: 'Do you really want to remove this from your favourites?',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonText: 'Yes, remove it',
+    cancelButtonText: 'Cancel',
+  }).then((result) => {
+    if (result.isConfirmed) {
+      this.callDeleteAPI(this.userId,this.carId);
+    }
+  });
     return;
   }
   this.carDataService.addingToFavourite(this.carId,this.userId).subscribe({
@@ -93,5 +105,23 @@ carsDetailPage(){
   console.log(this.carDataGetted)
   
 }
-
+// api endpoint for deleting car from favourite 
+callDeleteAPI(userId : string, carId : number){
+  this.carDataService.deleteCarFromFavourite(userId,carId).subscribe({
+    next:(res : any)=>{
+      let result = Swal.fire({
+        title: 'Removed!',
+        text: 'Car has been removed from your favourites.',
+        icon: 'success',
+        timer: 1500, // Auto close after 1.5 seconds
+        showConfirmButton: false // Optional: hide the confirm button for auto-close
+        }).then((result) => {
+          // Since the alert auto-closes, `isConfirmed` might not trigger, 
+          // so you can call your method directly if needed after timer
+          this.carDataService.reloadingFavouritePage(true);
+        });
+      },
+      error: err => console.error('Failed to delete favourite', err)
+    })
+}
 }

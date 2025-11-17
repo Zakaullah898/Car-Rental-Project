@@ -24,6 +24,11 @@ export class FavouriteComponent implements OnInit{
       }
     }); 
     console.log("in the favourite component userId : ",this.userId)
+    this.carDataService.isRemoved$.subscribe(isRemoved =>{
+      if(isRemoved){
+        this.gettingFavouriteCars(this.userId);
+      }
+    })
     this.gettingFavouriteCars(this.userId);
   }
   getLikeImg(index : number ){
