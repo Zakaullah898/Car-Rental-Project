@@ -161,7 +161,7 @@ ngOnInit() {
         localStorage.setItem("userId",res.data.userId)
         this.carRentService.setUserData(res.data.userData)
         localStorage.setItem('hasProfile', JSON.stringify(res.data.hasProfile));
-        this.loader.stop()
+        // this.loader.stop()
         if(res.data.hasProfile){
           this.router.navigateByUrl('home')
         }
