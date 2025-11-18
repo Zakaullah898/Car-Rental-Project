@@ -22,6 +22,7 @@ export class CarInfoComponent implements  OnInit,AfterViewChecked{
   arrowUp=faAngleUp;
 arrowDown=faAngleDown;
 isAngelUp!:boolean;
+isDataAvalable : boolean = false;
 carData !: Car;
 restImg : any [] =[
   './insightBl.png',
@@ -70,11 +71,7 @@ constructor(
     this.route.paramMap.subscribe(params => {
       const carId = +params.get('id')!;
       this.loadCarData(carId);
-       // Scroll page to top when clicking another carCard
-      //  window.scrollTo({
-      //   top: 0,
-      //   behavior: 'smooth'  // or 'auto'
-      //   });
+   
     });
 
 
@@ -82,20 +79,19 @@ constructor(
   
   ngAfterViewChecked(): void {
       
-    //   this.carData = this.gettingHistory      
-    // console.log(this.carData)
-    // if (history.state && history.state.data) {
-    //     this.carData  = history.state.data;
-    //   }
+   
       this.cdr.detectChanges()
   }
+
   loadCarData(carId: number) {
   const cachedCar = this.carDataServ.getCarData();
   if (cachedCar && cachedCar.carId === carId) {
     this.carData = cachedCar;
+    this.isDataAvalable = true
   }else {
     this.carDataServ.gettingCarById(carId).subscribe((res: any) => {
       this.carData = res.data;
+      this.isDataAvalable = true;
       this.carDataServ.setCarData(res.data);
     });
   }

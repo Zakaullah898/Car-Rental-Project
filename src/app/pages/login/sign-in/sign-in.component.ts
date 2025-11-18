@@ -10,6 +10,7 @@ import { FormatTimePipe } from '../../../format-time.pipe';
 import { state } from '@angular/animations';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { UserRegistraionService } from '../../../core/services/user-registraion.service';
+import { NgxUiLoaderModule, NgxUiLoaderService } from 'ngx-ui-loader';
 
 @Component({
   selector: 'app-sign-in',
@@ -32,6 +33,7 @@ countDown!: Subscription;
 counter = 60;
 pgValue = 100;
  http = inject(HttpClient)
+ loader = inject(NgxUiLoaderService)
  userRegistrationService : UserRegistraionService = inject(UserRegistraionService)
  carRentService : CarRentServService = inject(CarRentServService)
  logInForm: FormGroup;
@@ -137,7 +139,7 @@ ngOnInit() {
      }
 
   onSignIn(){
-    
+    this.loader.start();
     const ob={
       email: this.logInForm.get('email')?.value,
       password:this.logInForm.get('password')?.value
@@ -159,6 +161,7 @@ ngOnInit() {
         localStorage.setItem("userId",res.data.userId)
         this.carRentService.setUserData(res.data.userData)
         localStorage.setItem('hasProfile', JSON.stringify(res.data.hasProfile));
+        this.loader.stop()
         if(res.data.hasProfile){
           this.router.navigateByUrl('home')
         }

@@ -8,6 +8,7 @@ import { CarsDataServService } from '../../../core/services/cars-data-serv.servi
 import Swal from 'sweetalert2';
 import { timer } from 'rxjs';
 import { Car } from '../../../core/Interface/car';
+import { NgxUiLoaderService } from 'ngx-ui-loader';
 
 @Component({
   selector: 'app-cars-card',
@@ -38,6 +39,7 @@ export class CarsCardComponent implements OnInit{
   router = inject(Router)
   carDataService : CarsDataServService  = inject(CarsDataServService);
   carRentService : CarRentServService = inject(CarRentServService);
+  loader = inject(NgxUiLoaderService)
  
 constructor(){
 
@@ -114,6 +116,7 @@ carsDetailPage(carId : number){
 }
 // api endpoint for deleting car from favourite 
 callDeleteAPI(userId : string, carId : number){
+  // this.loader.start();
   this.carDataService.deleteCarFromFavourite(userId,carId).subscribe({
     next:(res : any)=>{
       let result = Swal.fire({
@@ -127,6 +130,7 @@ callDeleteAPI(userId : string, carId : number){
           // so you can call your method directly if needed after timer
           this.carDataService.reloadingFavouritePage(true);
         });
+        // this.loader.stop();
       },
       error: err => console.error('Failed to delete favourite', err)
     })

@@ -10,10 +10,11 @@ import { SignInComponent } from './pages/login/sign-in/sign-in.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { NavBarComponent } from './pages/nav-bar/nav-bar.component';
 import { UserRegistraionService } from './core/services/user-registraion.service';
+import { NgxUiLoaderModule } from 'ngx-ui-loader';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CalendarModule, DatePickerModule, TimePickerModule, DateRangePickerModule, DateTimePickerModule, RouterOutlet,NavBarComponent,FooterComponent,SignInComponent,CommonModule,],
+  imports: [CalendarModule, DatePickerModule, TimePickerModule, DateRangePickerModule, DateTimePickerModule, RouterOutlet,NavBarComponent,FooterComponent,SignInComponent,CommonModule,NgxUiLoaderModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

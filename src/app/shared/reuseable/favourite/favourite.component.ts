@@ -3,6 +3,7 @@ import { CarsCardComponent } from '../cars-card/cars-card.component';
 import { CarsDataServService } from '../../../core/services/cars-data-serv.service';
 import { Car } from '../../../core/Interface/car';
 import { CarRentServService } from '../../../core/services/car-rent-serv.service';
+import { NgxUiLoaderService } from 'ngx-ui-loader';
 
 @Component({
   selector: 'app-favourite',
@@ -14,6 +15,7 @@ import { CarRentServService } from '../../../core/services/car-rent-serv.service
 export class FavouriteComponent implements OnInit{
   carDataService : CarsDataServService = inject(CarsDataServService);
   carRentService : CarRentServService = inject(CarRentServService);
+  loader = inject(NgxUiLoaderService)
   userId !: string;
   FavouriteCars : Car[] =[
   ]
@@ -35,9 +37,11 @@ export class FavouriteComponent implements OnInit{
     // this.carsName[index].showLike = !this.carsName[index].showLike
    }
    gettingFavouriteCars(userId : string){
+    this.loader.start();
     this.carDataService.gettingFavouriteCars(userId).subscribe((res: any)=>{
       console.log("in the favourite component: ",res.data)
       this.FavouriteCars = res.data;
+      this.loader.stop();
     })
    }
 }

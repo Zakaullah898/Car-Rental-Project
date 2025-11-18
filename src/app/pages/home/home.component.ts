@@ -8,6 +8,7 @@ import { CarsDataServService } from '../../core/services/cars-data-serv.service'
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { CalaendarComponent } from '../../shared/reuseable/calaendar/calaendar.component';
 import { Car } from '../../core/Interface/car';
+import { NgxUiLoaderService } from 'ngx-ui-loader';
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -29,6 +30,7 @@ export class HomeComponent implements OnInit {
   })
   carDataServ = inject (CarsDataServService);
   carRentService : CarRentServService = inject(CarRentServService);
+  loader = inject(NgxUiLoaderService)
   constructor(private breakpointObserver: BreakpointObserver){
     // this.getAllUserCars()
   }
@@ -85,6 +87,7 @@ export class HomeComponent implements OnInit {
         
             this.carsData = res.data.slice(0,4)
             this.isShowAllCars=!this.isShowAllCars
+            this.loader.stop()
             console.log("Cars Data",this.carsData)
       })
         }
