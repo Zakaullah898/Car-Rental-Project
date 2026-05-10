@@ -12,6 +12,7 @@ jobs:
 
     permissions:
       contents: read
+      id-token: write 
 
     steps:
       # STEP 1 — Checkout Code
