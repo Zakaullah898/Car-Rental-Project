@@ -172,17 +172,21 @@ ngOnInit() {
       }
       else if(res.statusCode === 400){
         alert('Wrong Credntial')
+        this.loader.stop();
       }
        else if(res.statusCode === 404){
         alert(`User not found wiht this ${ob.email}`)
+        this.loader.stop();
         console.log(res.errors[0])
       }
       else if(res.statusCode === 500){
         alert('Internal Server error')
+        this.loader.stop();
       }
      
       else{
         alert('An unexpected error occurred');
+        this.loader.stop();
       }
     })
      }
